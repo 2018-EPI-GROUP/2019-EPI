@@ -1,0 +1,17 @@
+#include<stdio.h>
+double s(double F);
+int main()
+{
+	double C , F ;
+	scanf_s("%f", &F);
+	C = s(F);
+	printf("fahr = %f,\n",F);
+	printf("celsius = %f", C);
+	return 0;
+}
+ double s(double F)
+{
+	double k;
+	k = 5.0 * (F - 32) / 9.0;
+	return (k);
+}
