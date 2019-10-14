@@ -1,7 +1,6 @@
 #include<stdio.h>
 int main()
 {
-	printf("2");
 	int a=0,b[100];
 	for (int i = 0; i < 100; i++)
 	{
@@ -13,10 +12,11 @@ int main()
 		{
 			if (i%j == 0)
 				b[i]= 0;
+				
 		}
-		if (b[i] != 0)
-			printf("  %d", b[i]);
+			a+=b[i];
 	}
+	printf("  %d", a+2);
 	getchar();
 	return 0;
 }
