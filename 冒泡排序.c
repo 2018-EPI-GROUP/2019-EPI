@@ -3,7 +3,7 @@ int main()
 {
   int a,b,t;
   int n[10];
-  printf("Ϊ����Ԫ�ظ�ֵ��\n");
+  printf("ÎªÊý×éÔªËØ¸³Öµ£º\n");
   for(a=0;a<10;a++)
   {
      printf("n[%d]=",a);
@@ -13,8 +13,8 @@ int main()
   {
   	 for(b=9;b>=a;b--)
   	 {
-  	 	if(n[b]<n[b-1])
-  	 	{
+  	    if(n[b]<n[b-1])
+  	    {
   	 		t=n[b-1];
   	 		n[b-1]=n[b];
   	 		n[b]=t;
