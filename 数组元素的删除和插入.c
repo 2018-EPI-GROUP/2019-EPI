@@ -3,34 +3,34 @@
 int main()
 {
  int i,j,count =5;
- double powers[]={123,234,345,567,678};
- double del,charu;
- printf("ÇëÊäÈëĞèÒªÉ¾³ıµÄÊı×Ö:\n");
- scanf("%lf",&del);
+ int powers[]={123,234,345,567,678};
+ int del,charu;
+ printf("è¯·è¾“å…¥éœ€è¦åˆ é™¤çš„æ•°å­—:\n");
+ scanf_s("%d",&del);
  for(i = 0;i<count;i++)
  {
    if(del == powers[i])
    {
       j = i;
-      printf("É¾³ı³É¹¦£¡\n");
+      printf("åˆ é™¤æˆåŠŸï¼\n");
       break;
    }
  }
    if(i==count)
-    printf("¸ÃÊı×éÃ»ÓĞÕâ¸öÊı£¬É¾³ıÊ§°Ü£¡\n");
+    printf("è¯¥æ•°ç»„æ²¡æœ‰è¿™ä¸ªæ•°ï¼Œåˆ é™¤å¤±è´¥ï¼\n");
     else
     {
         for(i=j;i<count-1;i++)
             powers[i]=powers[i+1];
-        printf("É¾³ıºóµÄ½á¹ûÎª:\n");
+        printf("åˆ é™¤åçš„ç»“æœä¸º:\n");
         for (i=0;i<count-1;i++)
-            printf("%lf\t",powers[i]);
-    printf("ÇëÊäÈë²åÈëµÄÊı×Ö:");
-    scanf("%lf",&charu);
+            printf("%d\t",powers[i]);
+    printf("è¯·è¾“å…¥æ’å…¥çš„æ•°å­—:");
+    scanf_s("%d",&charu);
     powers[count-1]=charu;
-    printf("²åÈëºóµÄ½á¹ûÎª:\t");
+    printf("æ’å…¥åçš„ç»“æœä¸º:\t");
         for (i=0;i<count;i++)
-            printf("%lf\t",powers[i]);
+            printf("%d\t",powers[i]);
 
     }
 
