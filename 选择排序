@@ -1,0 +1,39 @@
+#include<stdio.h>
+int main()
+{
+	int a[8];
+	int q,w;
+	int ic;
+	int im;
+	printf("为元素赋值：\n");
+	for(q=0;q<8;q++)
+	{
+		printf("a[%d]=",q);
+		scanf("%d",&a[q]);
+	}
+	for(q=0;q<8;q++)
+	{
+		im=a[q];
+		ic=q;
+		for(w=q+1;w<8;w++)
+		{
+			if(a[w]<im)
+			{
+				im=a[w];
+				ic=w;
+			}
+		}
+		a[ic]=a[q];
+		a[q]=im;
+	}
+	printf("排序结果为：\n");
+	for(q=0;q<8;q++)
+	{
+		printf("%d\t",a[q]);
+		if(q==3)
+		{
+			printf("\n");
+		 } 
+	} 
+	return 0;
+}	

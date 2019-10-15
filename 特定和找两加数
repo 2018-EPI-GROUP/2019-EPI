@@ -1,0 +1,26 @@
+#include <stdio.h>
+int nums[10],target,a,b,c,p;
+int main() 
+{
+  printf("输入你的目标值：");
+  scanf("%d",&target);
+  printf("为数组元素赋值：");
+  for(a=0;a<10;a++)
+ {
+  printf("nums[%d]=",a);
+  scanf("%d",&nums[a]);
+ }
+ for(a=0;a<9;a++)
+ {
+  b=nums[a];
+  for(c=1;c<10;c++)
+  {
+  	p=b+nums[c];
+   if(p==target)
+   {
+    printf("[%d,%d]",a,c);
+   }
+  }
+ }
+ return 0;
+}

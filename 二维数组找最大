@@ -1,0 +1,39 @@
+#include<stdio.h>
+int main()
+{
+	int a[3][3];
+	int max,min;
+	int z,x;
+	
+	for(z=0;z<3;z++)
+	{
+		for(x=0;x<3;x++)
+		{
+			printf("a[%d][%d]=",z,x);
+			scanf("%d",&a[z][x]);
+		}
+	}
+	printf("输出二维数组：\n");
+	for(z=0;z<3;z++)
+	{
+		for(x=0;x<3;x++)
+		{
+			printf("%d\t",a[z][x]);
+		}
+		printf("\n");
+	}
+	max=a[0][0];
+	for(z=0;z<3;z++)
+	{
+		for(x=0;x<3;x++)
+		{
+			if(max<a[z][x])
+			{
+				max=a[z][x];
+			}
+	    }
+    }
+    printf("数组中最大元素为:\n");
+    printf("max=%d",max);
+    return 0;
+}
