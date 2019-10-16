@@ -1,1 +1,18 @@
-
+#include<stdio.h>
+int main ()
+{
+	float a,b,c;
+	char d;
+	printf("Please input a+b\n");
+	scanf("%f %c %f",&a,&d,&b);
+	switch(d)
+	{
+	case '+':c=a+b;break;
+	case '-':c=a-b;break;
+	case '*':c=a*b;break;
+	case '/':c=(b==0)?(0):(a/b);break;
+	default:printf("woring!!!");break;
+    }
+	printf("%f%c%f=%f",a ,d, b, c);
+	return 0;
+ } 
