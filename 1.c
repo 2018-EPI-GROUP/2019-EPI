@@ -1,3 +1,26 @@
+//本题集是在VS上测试运行的，保证可以正常运行
+#include<stdio.h>
+void main()
+{
+	printf("[1] crisps\n[2] popcorn\n[3] chocolate\n[4] cola\n[0] exit\n");
+	int i = 0, m = 0;
+loop:scanf_s("%d", &i); m++;
+	if (0 <= i && i <= 4)printf("\0");
+	else printf("price = 0.0\n");
+	switch (i)
+	{
+	case 1:printf("price = 3.0\n"); break;
+	case 2:printf("price = 2.5\n"); break;
+	case 3:printf("price = 4.0\n"); break;
+	case 4:printf("price = 3.5\n"); break;
+	case 0:break;
+	}
+	if (m < 5 && i != 0)
+	{
+		goto loop;
+	}
+	printf("Thanks");
+}//自动售卖机选择列表
 #include <stdio.h>
 int main(void)
 {
@@ -234,3 +257,61 @@ void main()
 
 	printf("product = %.0lf", product);
 }//求n的阶乘
+#include<stdio.h>
+void main()
+{
+	int N = 0, n = 0, i, j = 0, o = 0;
+	scanf("%d\n", &N);
+	if (N <= 1000 && N > 0)
+	{
+		for (i = 1; i <= N; i++)
+		{
+			scanf("%d", &n);
+			if (n >= 0)
+			{
+				if (n % 2 == 0 || n == 0)o++;
+				else j++;
+			}
+		}
+		printf("%d %d", j, o);
+	}
+}//奇偶分家
+#include<stdio.h>
+void main()
+{
+	double x = 0, y = 0;
+	scanf_s("%lf", &x);
+	if (x <= 0)
+	{
+		printf("f(%.2lf) = 0.00", x);
+	}
+	if (x > 0 && x <= 15)
+	{
+		y = 4.0 * x / 3.0;
+		printf("f(%.2lf) = %.2lf", x, y);
+	}
+	if (x > 15)
+	{
+		y = 2.5 * x - 10.5;
+		printf("f(%.2lf) = %.2lf", x, y);
+	}
+
+}//居民生活水费
+#include<stdio.h>
+void main()
+{
+	int num = 38, guess = 0;
+	scanf("%d", &guess);
+	if (guess < 38)
+	{
+		printf("Too small!");
+	}
+	if (guess > 38)
+	{
+		printf("Too big!");
+	}
+	if ((guess - num) == 0)
+	{
+		printf("Good Guess!");
+	}
+}//猜数字小游戏
