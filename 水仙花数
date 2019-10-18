@@ -1,0 +1,58 @@
+//水仙花数是指一个N位正整数（N≥3），它的每个位上的数字的N次幂之和等于它本身。例如：153=1*1*1+5*5*5+3*3*3.本题要求编写两个函数，一个判断给定整数是否水仙花数，
+//另一个按从小到大的顺序打印出给定区间(m,n)内所有的水仙花数。计算所有三位数中的水仙花数，并输出。 
+
+#include<stdio.h>
+int main()
+{
+	int i;
+	int a,b,c;
+	for(i=100;i<1000;i++){
+		a=i;
+		b=a%10;    //个位数
+		a=a/10;
+		c=a%10;    //十位数，此时a为百位数 
+		a=a/10;
+		if(i==(a*a*a+b*b*b+c*c*c)){
+			printf("%d\n",i);
+		}
+	} 
+	return 0;
+} 
+
+//输入任意位数，计算该位数中的所有水仙花数，并输出。 
+
+#include<stdio.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	int first=1;
+	int i=1;
+	while(i<n){
+		first=first*10;
+		i++;
+	}
+	printf("第一个数是%d\n",first);
+	i=first;
+	while(i<first*10){
+		int t=i;
+		int sum=0;
+		do{
+			int d=t%10;
+			t/=10;
+			int p=d;
+			int j=1;
+			while(j<n){
+				p *= d;
+				j ++;
+			}
+			sum += p;
+		} while(t>0);
+		if(sum==i){
+			printf("%3d",i);
+			printf("\n");
+		}
+	i++;
+	}
+	return 0;
+}
