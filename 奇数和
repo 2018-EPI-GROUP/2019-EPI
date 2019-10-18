@@ -1,0 +1,23 @@
+//本题要求实现一个函数，计算N个整数中所有奇数的和，同时实现一个判断奇偶性的函数。
+#include<stdio.h>
+int sum(int i)
+{
+	int num=0;
+	num+=i;
+	printf("%d",num);
+}
+
+int main()
+{
+	int i;
+	scanf("%d",&i);
+	if(i=-1){
+		goto out;
+	} else if(i%2==0){
+		printf("您输入的数为偶数\n");
+	} else if(i%2==1){
+		sum(i);
+	}
+out:
+	return 0;
+} 
