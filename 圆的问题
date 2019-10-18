@@ -1,0 +1,15 @@
+#include<stdio.h>
+main()
+    {
+    float r,h,PI,C,S,Cb,Vb,Vt;
+    PI=3.14159;
+    printf("Please input r and h\n");
+    scanf("%f,%f ",&r,&h);
+    C=2*PI*r;
+    S=PI*r*r;
+    Cb=4*PI*r*r;
+    Vb=1.33333*PI*r*r*r;
+    Vt=S*h;
+    printf("圆周长，圆面积，圆球表面积，圆球体积，圆柱体积分别是%f %f %f %f %f  ",C,S,Cb,Vb,Vt);
+    return 0;
+    } 
