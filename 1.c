@@ -315,3 +315,103 @@ void main()
 		printf("Good Guess!");
 	}
 }//猜数字小游戏
+#include<stdio.h>
+void main()
+{
+	int i, letter = 0, digit = 0, other = 0, k;
+	char ch;
+	for (k = 1; k <= 10; k++) \
+	{
+
+		ch = getchar();
+		if (ch >= 65 && ch <= 123) {
+			letter++;
+		}
+		else if (ch >= 48 && ch <= 64) {
+			digit++;
+		}
+		else {
+			if (ch != 0)other++;
+		}
+	}
+	printf("letter = %d,digit = %d,other = %d", letter, digit, other);
+}//判断字符和数字和其他是符号的个数
+#include<stdio.h>
+int main()
+{
+	int count = 0, i, n;
+	double sum = 0;
+	scanf("%d", &n);
+	if (n == 0) { printf("average = %.2lf\ncount = %d", sum, count); }
+	else
+	{
+		double arr[n];
+		for (i = 0; i < n; i++)
+		{
+			scanf("%lf", &arr[i]);
+		}
+		for (i = 0; i < n; i++)
+		{
+			sum += arr[i];
+			if (arr[i] < 60) { count++; }
+		}
+		sum /= n;
+		printf("average = %.2lf\ncount = %d", sum, count);
+	}
+	return 0;
+}
+//统计学生平均成绩和不及格数
+#include<stdio.h>
+#include<string.h>
+#define N 1000
+
+struct yuan
+{
+	char name[11];
+	double z1;
+	double z2;
+	double z3;
+	double sum;
+
+}ren[N];
+int main()
+{
+	int n, i;
+	scanf("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		scanf("%s %lf %lf %lf", ren[i].name, &ren[i].z1, &ren[i].z2, &ren[i].z3);
+		ren[i].sum = ren[i].z1 + ren[i].z2 - ren[i].z3;
+	}
+	for (i = 0; i < n; i++)
+	{
+		printf("%s %.2lf\n", ren[i].name, ren[i].sum);
+	}
+	return 0;
+}//初试结构体
+#include<stdio.h>
+int main()
+{
+	int i, j, a[20], t;
+	for (i = 0; i <= 3; i++)
+	{
+		scanf("%d", &a[i]);
+	}
+	for (i = 0; i < 3; i++)
+	{
+		for (j = 0; j < 4 - i - 1; j++)
+		{
+			if (a[j] < a[j + 1])
+			{
+				t = a[j];
+				a[j] = a[j + 1];
+				a[j + 1] = t;
+			}
+		}
+	}
+	for (i = 0; i <= 3; i++)
+	{
+		printf("%d ", a[i]);
+	}
+	return 0;
+}//四数排序
