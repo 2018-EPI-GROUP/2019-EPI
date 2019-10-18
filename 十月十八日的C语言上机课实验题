@@ -24,3 +24,16 @@ main()
 	printf("%f",b);
 	
 }
+
+//n的阶乘
+#include<stdio.h>
+int main()
+{
+	int sum=0,n,i;
+	printf("Please input n\n");
+	scanf("%d",&n);
+	for(i=1;i<n;i++)
+	sum=sum+i;
+	printf("%d",sum);
+	return 0;
+}
