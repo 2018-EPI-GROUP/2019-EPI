@@ -11,3 +11,16 @@ int main()
 	printf("x的y次方的值是%d",sum);
 	return 0;
 }
+
+//正余弦函数的求和
+#include<stdio.h>
+#include<math.h>
+main()
+{
+	float a,b;
+	printf("Please input a");
+	scanf("%f",&a);
+	b=sin(a)+cos(a);
+	printf("%f",b);
+	
+}
