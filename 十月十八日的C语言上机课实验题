@@ -1,0 +1,13 @@
+//求x的y次方
+#include<stdio.h>
+int main()
+{
+	int sum ,i,x,y;
+	printf("请输入x，y");
+	scanf("%d,%d",&x,&y);
+	sum=1;
+	for(i=1;i<=y;i++)
+	sum=sum*x;
+	printf("x的y次方的值是%d",sum);
+	return 0;
+}
