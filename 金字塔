@@ -1,0 +1,23 @@
+//本题要求实现函数输出n行数字金字塔。
+#include<stdio.h>
+int main()
+{
+	int a;
+	scanf("%d",&a);
+	int b;   //每一行数字的大小 
+	int num;  //每一行重复几次数字
+	int i;   //每一行数字前面有几个空格 
+	int j;   //储存a的值，并使每一行前面输出相应的空格数 
+	j=a;
+	for(b=1;b<=a;b++){
+		for(i=j;i>0;i--){
+	    		printf(" ");
+			}
+	    for(num=b;num>0;num--){
+	    	printf("%3d",b);
+		} 
+		j--;
+		printf("\n") ;
+	}
+	return 0;
+}
