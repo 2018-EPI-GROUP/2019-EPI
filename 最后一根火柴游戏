@@ -1,0 +1,72 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main(void)
+{
+	int m ,totalNUM=30 ,HGNUM ,CGNUM ;//totalNUM=总共数量（剩余数量），HGNUM=人拿的数量，CGNUM=计算机拿的数量 
+	srand((unsigned)time(NULL));
+	do{ printf("请选择先开始的一方，人类请输1，计算机请输0:");
+		scanf("%d",&m); 
+	}
+	while( m!=0 && m!=1 );
+	
+	while(1)
+	{   //以下是人类先开始的情况 
+		if(m==1)
+		{
+			//人取
+			do{  
+				printf("\n剩余%d根火柴，请输入你要取的火柴：",totalNUM);
+				scanf("%d",&HGNUM); 
+			}	
+			while(HGNUM<=0||HGNUM>2||totalNUM<HGNUM);  //排除错误数据 	
+			totalNUM-=HGNUM;
+			if(totalNUM==0)
+			{	printf("\n你赢了");
+				break;
+			}
+			//计算机取 
+			if(totalNUM%3==0)
+			{CGNUM=rand()%2+1;
+			}
+			else//即totalNUM%3！=0 
+			{CGNUM=totalNUM%3;
+			}
+			printf("\n计算机取了%d根火柴。",CGNUM);
+			totalNUM-=CGNUM;
+			if(totalNUM==0)
+			{   printf("\n计算机赢了");
+				break;
+			} 
+		}
+		//以下是计算机先开始的情况
+		if(m==0)
+		{   //计算机取
+		    if(totalNUM%3==0)
+			{CGNUM=rand()%2+1;
+			}
+			else//即totalNUM%3！=0 
+			{CGNUM=totalNUM%3;
+			}
+			printf("\n计算机取了%d根火柴。",CGNUM);
+			totalNUM-=CGNUM;
+			if(totalNUM==0)
+			{   printf("\n计算机赢了");
+				break;
+			} 	
+			
+		    //人取
+		    do{  
+				printf("\n剩余%d根火柴，请输入你要取的火柴：",totalNUM);
+				scanf("%d",&HGNUM); 
+			}	
+			while(HGNUM<0||HGNUM>2||totalNUM<HGNUM);  //排除错误数据 	
+			totalNUM-=HGNUM;
+			if(totalNUM==0)
+			{	printf("\n你赢了");
+				break;
+			}
+		}
+	}
+return 0;
+}
