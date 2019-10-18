@@ -1,0 +1,24 @@
+//本题要求实现一个函数，对给定平面任意两点坐标(x,y),(a,b)求这两点之间的距离.
+
+#include<stdio.h>
+int main()
+{
+	int x,y,a,b;
+	scanf("%d %d %d %d",&x,&y,&a,&b);
+	int i,j;
+	if(x>=a){
+		i=(x-a);
+	} else {
+		i=(a-x);
+	}
+	
+	if(y>=b){
+		j=(y-b);
+	} else {
+		j=(b-y);
+	}
+	int distance;
+	distance=i*i+j*j;
+	printf("(%d,%d)(%d,%d)该两点距离为%d",x,y,a,b,distance);
+	return 0;
+}
