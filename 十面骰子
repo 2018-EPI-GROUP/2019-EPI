@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int main(void)
+{
+	srand((unsigned)time(NULL));
+	int i,p,n,sum;
+	for(i=1;i<=10000;i++)
+	{
+		n=0;
+		sum=0;
+		while(1)
+		   {p=rand()%10+1;
+			sum=sum+p;
+			n++;
+			if(sum>100)
+				{break;}
+		   }
+		printf("共抛掷%d次，SUM=%d\n",n,sum);
+	}
+return 0;
+
+} 
