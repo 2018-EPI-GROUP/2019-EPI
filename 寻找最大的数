@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main(void)
+{
+	int i,max=1,n[200];
+	srand((unsigned)time(NULL));
+	for(i=1;i<=200;i++)
+		{n[i]=rand()%1000;}
+	for(i=1;i<=200;i++)
+		{if(n[i]>=max)
+			{max=n[i];}
+		}
+	for(i=1;i<=200;i++)
+		{printf("%d ",n[i]);}
+	printf("\n最大的是%d",max);
+return 0;
+} 
