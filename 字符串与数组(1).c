@@ -1,12 +1,12 @@
 #include <stdio.h>
-void say(char string[])
+int s(char bir[])
 {
-    printf("%s\n",string);
+    printf("%s\n",bir);
 }
 
 int main()
 {
-    char string[] = "我要加入EPI实验室";
-    say(string);
+    char bir[] = "我要加入EPI实验室";
+    s(bir);
     return 0;
 }
