@@ -1,0 +1,35 @@
+#include<stdio.h>
+int main(void)
+{
+	char c,p;  //c=输入的正文/密文 p=其映射的密文/正文
+	int k,Iscode;
+	printf("Would you like to Encode(Input 1) or Decode(Input 0):\n");
+	scanf("%d",&Iscode);
+	printf("Please input the key:\n");
+	scanf("%d",&k);
+	printf("Please input data(no capital letter):\n");
+	//加密部分
+	if(Iscode==1)
+		{scanf("%c",&c);//吃enter
+		 while(1)
+			{if(scanf("\n"))
+				{break;}
+			 scanf("%c",&c);
+			 p=(c-'a'+k)%26+'a';
+			 printf("%c",p);
+			}
+		}
+	//解密部分 
+	if(Iscode==0)
+		{scanf("%c",&c);//
+		 while(1)
+		 	{if(scanf("\n"))
+				{break;}
+			 scanf("%c",&c);
+			 p=(c-'a'-k+26)%26+'a';
+   printf("%c",p);
+			 	}
+		}
+
+return 0;
+} 
