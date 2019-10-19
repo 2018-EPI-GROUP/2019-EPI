@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int de(int stu[], int n)
+{
+	int i,j;
+	for(i=0;i<n-1;i++)
+		{for(j=i+1;j<n-1;j++)
+			{if(stu[i]==stu[j])
+				{return 1;}
+			}
+		}
+	return 0;
+}
+
+int main(void)
+{
+	int NOFS,n,count=0,x,t;
+	int stu[366];
+	srand((unsigned)time(NULL));
+	for(NOFS=10;NOFS<=80;NOFS++)
+	{
+	count=0;
+	for(t=1;t<=500000;t++)
+		{for(x=0;x<NOFS;x++)
+			{stu[x]=rand()%365;}
+		if(de(stu,NOFS)==1)
+			{count++;}
+		
+		}
+
+	printf("NOFS=%d,p=%lf\n",NOFS,(double)count/(t-1));
+	}
+return 0;
+}
