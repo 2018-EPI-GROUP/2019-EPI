@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<math.h>
+
+int Isprime(int m)
+{
+	int i;
+	for(i=2;i<=sqrt(m);i++)
+		{if(m%i==0)
+			{return 0;}
+		}
+	return 1;
+}
+
+int main(void)
+{
+	int a,m,count=0;
+	scanf("%d",&a);    
+	for(m=3;m<=a/2;m=m+2)
+		{if(Isprime(m)==1 && Isprime(a-m)==1)
+			{printf("%d=%d+%d\n",a,m,a-m);
+			 count++;
+			}
+		}
+	printf("\n%d",count);
+return 0;
+}
