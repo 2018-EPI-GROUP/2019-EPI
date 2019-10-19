@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<math.h>
+
+long int f(long int n)
+{
+	if(1==n)
+		{return 1;}
+	else
+		{return f(n-1)*n;}
+}
+
+int main(void)
+{
+	long int x;
+	scanf("%d",&x);
+	printf("%ld",f(x));
+return 0;
+}
