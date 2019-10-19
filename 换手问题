@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int trail(int change)
+{
+	int book[3]={0,0,0},m=rand()%3;
+	book[m]=1;
+	int hand=rand()%3;
+	int open=rand()%3;
+	while(open==1 ||open==hand)
+		{open=rand()%3;}
+	if(change==1)
+		{hand=3-open-hand;}
+	if(hand==1)
+		{return 1;}
+	else
+	{return 0;}
+}
+
+int main(void)
+{
+	int i,CW,NCW;
+	srand((unsigned)time(NULL)); 
+	for(i=1;i<=30000;i++)
+		{if(trail(1)==1)
+		 	{CW++;}
+		}
+	for(i=1;i<=30000;i++)
+		{if(trail(0)==1)
+		 	{NCW++;}
+		}
+	printf("%d	%d",CW,NCW);
+return 0;	
+}
