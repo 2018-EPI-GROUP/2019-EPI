@@ -1,0 +1,30 @@
+#include<stdio.h> 
+int main(void)
+{
+	int i,num,tem,q;
+	printf("请输入要验证的正数\n");
+	scanf("%d",&i);
+	tem=i;
+	while(i!= 1)
+	{if(i%2==1)
+		{i=3*i+1;
+		q=i;
+		if(q>tem)
+			{tem=q;
+			}
+		}
+	else
+		{i=i/2;
+		q=i;
+		if(q>tem)
+			{tem=q;
+			}
+		}
+	printf("%d  ",i);
+	
+	num++;
+	}
+	printf("\n一共%d步",num);
+	printf("\n此数列中最大的是%d",tem);
+	return 0;
+}
