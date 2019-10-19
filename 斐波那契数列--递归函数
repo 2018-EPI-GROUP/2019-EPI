@@ -1,0 +1,15 @@
+#include<stdio.h>
+int f(int x)
+{
+    if(1==x || 2==x)
+    	{return 1;}
+	return f(x-1)+f(x-2);
+}
+
+int main(void)
+{
+	int a;
+	scanf("%d",&a);
+	printf("%d",f(a));
+return 0; 
+}
