@@ -1,0 +1,20 @@
+#include<stdio.h> 
+#include<stdlib.h>
+#include<time.h>
+int main(void)
+{
+	int i,boys,girls;
+	srand((unsigned)time(NULL));
+	for(i=1;i<1000000;i++)
+	{if(rand()%2==1)
+		boys++;
+	else
+		girls++;
+		if(rand()%2==1)
+			boys++;
+		else
+			girls++;
+	}
+	printf("boys=%d,girls=%d",boys,girls);
+	return 0;
+}
