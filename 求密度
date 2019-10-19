@@ -1,0 +1,14 @@
+#include"stdio.h" 
+
+int main(int argc,char*argv[])
+{ int a,b,m,n,result;
+  double f,t;
+  scanf("%d %d",&a,&b);
+  m=a-b;
+  n=a+b;
+  f=(double)a/b;
+  t=(m*m*f+n*n*n*n)/3;
+  result=(int)t%1024;
+  printf("result=%d",result);
+  return 0;
+} 
