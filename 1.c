@@ -415,3 +415,27 @@ int main()
 	}
 	return 0;
 }//四数排序
+#include<stdio.h>
+int main()
+{
+	int count = 0, i, n;
+	double sum = 0;
+	scanf("%d", &n);
+	if (n == 0) { printf("average = %.2lf\ncount = %d", sum, count); }
+	else
+	{
+		double arr[n];
+		for (i = 0; i < n; i++)
+		{
+			scanf("%lf", &arr[i]);
+		}
+		for (i = 0; i < n; i++)
+		{
+			sum += arr[i];
+			if (arr[i] < 60) { count++; }
+		}
+		sum /= n;
+		printf("average = %.2lf\ncount = %d", sum, count);
+	}
+	return 0;
+}//关于成绩
