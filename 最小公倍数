@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<math.h>
+int main(void)
+{
+	long long int a,b,c;
+	scanf("%d %d",&a,&b);
+	if(a>b)
+		{c=a;}
+	else
+		{c=b;} 
+	for(;;c++)
+		{if(c%a==0 && c%b==0)
+			{break;}
+		}
+	printf("%lld",c);
+return 0;
+}
