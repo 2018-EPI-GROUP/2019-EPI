@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<math.h>
+double f(double x)
+{return 8*x*x-13*x-23;}
+
+double bisection(double l,double r)
+{
+	double mid;
+	if(f(l)*f(r)>0)
+		{printf("Error");}
+	
+	while(fabs(l-r)>0.00000001)
+		{mid=(l+r)/2;
+		 if(f(l)*f(mid)<0)
+			{r=mid;}
+		 else
+		 {l=mid;}
+		}
+return mid;
+}
+
+int main(void)
+{
+	printf("%lf",bisection(0,10));
+return 0;
+} 
