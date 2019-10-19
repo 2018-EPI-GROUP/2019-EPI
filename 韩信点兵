@@ -1,0 +1,9 @@
+#include<stdio.h>
+ int main()
+ {int a;
+ for(a=500;a<=1000;a++)
+   {if(a%5==3 && a%7==6 &&  a%11==4)//“&&”意为必须同时满足，“==”意为比较两边是否相等 
+   { printf("%d\n",a);}
+   }
+  return 0;
+}
