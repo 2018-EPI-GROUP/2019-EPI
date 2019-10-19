@@ -1,0 +1,25 @@
+#include<stdio.h>
+int count=0;
+void move(char a,char b)
+{
+	printf("%c->%c\n",a,b);
+	count++;
+}
+
+void hnt(int n,char A,char B,char C)
+{
+	if(1==n)
+		{move(A,C);}
+	else
+		{hnt(n-1,A,C,B);
+		 move(A,C);
+		 hnt(n-1,B,A,C);
+		}
+}
+
+int main(void)
+{
+	hnt(15,'A','B','C');
+	printf("%d",count);
+return 0;
+}
