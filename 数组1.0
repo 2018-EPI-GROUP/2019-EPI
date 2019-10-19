@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main(void)
+{
+	char str[10];
+	int m;
+	str[1]='A';
+	for(m=2;m<=9;m++)
+		{str[m]=str[m-1]+1;}
+	printf("%s ",str);
+return 0;
+} 
