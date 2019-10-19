@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+int main(int argc, char *argv[])
+{   int a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, sum;
+	printf("请输入四阶行列式，按照从左向右，从上到下的顺序依次排列，中间用逗号连接\n");
+    scanf("%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d", &a, &b,&c, &d, &e, &f, &g, &h, &i,&j, &k, &l, &m, &n, &o, &p);
+	//输入四阶行列式 
+	sum =//求解四阶行列式（公式穷举法） 
+		(a )*( f) * (k )*(p)-( a) * (f )* (l )* (o) - (a )* (g )* (j )* (p )+ (a) * (g) * (l) * (n )+ (a) * (h) * (j )*(o) -
+	    (a) * (h )* (k )* (n )- (b )* (e )* (k )* (p )- (b )* (h )* (i )* (o )+ (b )* (h )*(k) * (m )+ (b )* (g )*( i) * (p) -
+		(b )* (g )* (l) *( m )+ (c )* (e) * (j )* (p )- (c) *(e) * (l )* (n )- (c )* (f )* (i )* (p )- (c) * (f )* (l) *( m) +
+		(c) * (h) * (i )* (n) - (c) *( h) * (j) * (m) - (d) * (e) * (j )* (o )+ (d) *( e )* (k) * (n) + (d) *( f) * (i) *( o) +
+		(d )* (f) *( k )* (m )+ (d )* (g )*( j) *( m) -( d) * (g) * (i )* (n);
+	printf("结果是%d", sum); 
+	return 0;
+}
