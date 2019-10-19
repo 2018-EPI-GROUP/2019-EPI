@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<math.h>
+int main(void)
+{
+	int i,n,j,k;
+	char c='A';
+	scanf("%d",&n);
+	for(i=1;i<=2*n-1;i++)
+		{
+		k=n-abs(n-i);
+			for(j=1;j<=abs(n-i);j++)//打出字母前的空格 
+				{printf(" ");}
+			for(j=1;j<=2*k-1;j++)//打出字母 
+				{printf("%c",c);}
+		 printf("\n");//换行 
+		 c++;//换字母 
+		}		
+return 0;	
+} 
