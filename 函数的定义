@@ -1,0 +1,16 @@
+#include<stdio.h>
+int PowerX(int x,double n)
+{
+	int i;
+	double y=1.0;
+	for(i=1;i<=n;i++)
+		{y=y*x;}
+	return y;
+}
+
+int main(void)
+{
+	printf("%d",PowerX(3,7.0));
+	
+return 0; 
+}
