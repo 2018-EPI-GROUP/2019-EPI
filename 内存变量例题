@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<math.h>
+
+int a=20;
+int func2()
+{
+	static int m=1;
+	int k=1;
+	k++;
+	m++;
+	printf("a=%d,m=%d,k=%d\n",a,m,k);
+	a++;
+return 0;
+}
+
+int main(void)
+{
+	func2();
+	func2();
+return 0;
+}
