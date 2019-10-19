@@ -1,0 +1,20 @@
+#includ <stdio.h>
+int main
+{
+  //成绩
+  int score
+  printf("请输入你的成绩:\n");
+  scanf("%d",&score);
+  if(score>=0 && score<60);
+  {
+  printf("不及格\n")
+  }
+  else if(60<=score && score<80);
+  {
+  printf("中等\n");
+  }
+  else if(80<=score && score<100);
+  {
+  printf("优秀\n");
+  }
+}
