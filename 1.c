@@ -416,6 +416,41 @@ int main()
 	return 0;
 }//四数排序
 #include<stdio.h>
+void main()
+{
+	int a, b, c, d, t;
+	scanf_s("%d%d%d%d", &a, &b, &c, &d);
+	if (a > d)
+	{
+		t = a; a = b; b = t;
+	}
+	if (b > d)
+	{
+		t = b; b = d; d = t;
+	}
+	if (c > d)
+	{
+		t = c; c = d; d = t;
+	}
+	if (a > c)
+	{
+		t = a; a = c; c = t;
+	}
+	if (b > c)
+	{
+		t = b; b = c;	c = t;
+	}
+	if (a > c)
+	{
+		t = a; a = c; c = t;
+	}
+	if (a > b)
+	{
+		t = a; a = b; b = t;
+	}
+	printf("%d %d %d %d", a, b, c, d);
+}//四个数由低到高
+#include<stdio.h>
 int main()
 {
 	int count = 0, i, n;
@@ -439,3 +474,98 @@ int main()
 	}
 	return 0;
 }//关于成绩
+#include<stdio.h>
+void main()
+{
+	int n = 0, i, j, h, m = 0;
+	scanf_s("%d", &n);
+	char a[28] = { 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b' };
+	if (n >= 1 && n <= 7)
+	{
+		for (i = 1; i <= n; i++)
+		{
+			for (j = i - 1; j < n; j++)
+			{
+
+				printf("%c ", a[m]);
+				m += 1;
+			}
+			printf("\n");
+		}
+	}
+	else {}
+}//字母阵
+#include<stdio.h>
+void main()
+{
+	double m, s = 0;
+	scanf_s("%lf", &m);
+	if (m == 1600.0)printf("0.00");
+	if (m > 1600 && m <= 2500) s = (m - 1600) * 0.05;
+	if (m > 2500 && m <= 3500) s = (m - 1600) * 0.10;
+	if (m > 3500 && m <= 4500) s = (m - 1600) * 0.15;
+	if (m > 4500) s = (m - 1600) * 0.20;
+	printf("%.2f", s);
+}//银行利率
+#include<stdio.h>
+void main()
+{
+	int a, c;
+	char b;
+	scanf("%d %c %d", &a, &b, &c);
+	switch (b)
+	{
+	case'+':printf("%d", a + c); break;
+	case'-':printf("%d", a - c); break;
+	case'*':printf("%d", a * c); break;
+	case'/':
+	{ if (c != 0)
+	{printf("%d", a / c); break;
+	}
+	else {}}
+	case'%':
+	{if (c != 0)
+	{printf("%d", a % c); break;
+	}
+	else {}}
+	default:printf("ERROR");
+	}
+}//输入数字符号并计算
+#include<stdio.h>
+main()
+{
+	int  letter = 0, digit = 0, other = 0, k;
+	char ch;
+	for (k = 1; k <= 10; k++)
+	{
+
+		ch = getchar();
+		if (ch >= 'A' && ch <= 'Z' || ch >= 'a' && ch <= 'z') {
+			letter++;
+		}
+		else if (ch >= '0' && ch <= '9') {
+			digit++;
+		}
+		else {
+			if (ch != '\0') other++;
+		}
+	}
+	printf("letter = %d, digit = %d, other = %d", letter, digit, other);
+	return 0;
+}//测字母数字符号数
+#include<stdio.h>
+void main()
+{
+	int n, i, j;
+	int sum = 1, full = 0;
+	scanf("%d", &n);
+	if (n == 0)sum = 1;
+	else {
+		for (i = 1; i <= n; i++)
+		{
+			sum *= i;
+			full += sum;
+		}
+	}
+	printf("%d", full);
+}//1到n的阶乘
