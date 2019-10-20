@@ -1,0 +1,28 @@
+//本题要求编写程序，输出指定的由“*”组成的倒三角图案。
+#include<stdio.h>
+int main()
+{
+	int a,b,c;
+	scanf("%d",&a);
+	
+	c=a;
+	int m=1;
+	
+	for(a;a>0;a--){
+	   printf("*");
+	   
+	   if(a==1){
+	   	printf("\n");
+	   	
+	   	for(b=0;b<m;b++){
+	   		printf(" ");
+		   }
+		   
+		a=--c;
+		c--;
+		m++;
+		
+	   }
+	} 
+	return 0;
+} 
