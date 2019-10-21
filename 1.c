@@ -569,3 +569,30 @@ void main()
 	}
 	printf("%d", full);
 }//1µ½nµÄ½×³Ë
+#include<stdio.h>
+void main()
+{
+	int i, n, arr[100] = { 0 }, j, t;
+	scanf_s("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		scanf_s("%d", &arr[i]);
+	}
+	for (i = 0; i < n - 1; i++)
+	{
+		for (j = 0; j < n - i - 1; j++)
+		{
+			if (arr[j] > arr[j + 1])
+			{
+				t = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = t;
+			}
+			else {}
+		}
+	}
+	for (i = 0; i < n; i++)
+	{
+		printf("%d\t", arr[i]);
+	}
+}//Ã°ÅÝÅÅÐò
