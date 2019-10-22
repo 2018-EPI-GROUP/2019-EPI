@@ -596,3 +596,36 @@ void main()
 		printf("%d\t", arr[i]);
 	}
 }//冒泡排序
+#include<stdio.h>
+void main()
+{
+	long int i = 0, n, m, x, y, h;
+	m = 1, n = 1;
+	{
+		printf("%d %d ", m, n);
+		for (i; ; i++)
+		{
+			x = m + n;
+			y = x + n;
+			printf("%ld %ld ", x, y);
+			m = x, n = y;
+		}
+	}
+}//输出斐波那契数列（10位以下数字为十进制）
+#include<stdio.h>
+int f(int i)
+{
+	if (i <= 1)
+		return 1;
+	else if (i == 2)
+		return 2;
+	else
+		return f(i - 1) + f(i - 2);
+}
+void main()
+{
+	int n, i;
+	scanf_s("%d", &n);
+	for (i = 0; i < n; i++)
+		printf("%d ", f(i));
+}//递归输出斐波那契数列（前n项）
