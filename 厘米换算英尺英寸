@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+	int a;
+	printf("请输入厘米:");
+	scanf_s("%d",&a);
+	int b = a /30.48;
+	int c = (a / 30.48-b)*12;
+	printf("转换成%d英尺 %d英寸",b,c);
+	return 0;
