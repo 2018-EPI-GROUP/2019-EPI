@@ -629,3 +629,99 @@ void main()
 	for (i = 0; i < n; i++)
 		printf("%d ", f(i));
 }//递归输出斐波那契数列（前n项）
+#include<stdio.h>
+void main()
+{
+	int low = 0, high, n = 0, a[10], i, t;
+	scanf_s("%d", &n);
+	high = n - 1;
+	for (i = 0; i < n; i++)
+	{
+		scanf_s("%d", &a[i]);
+	}
+	while (low < high)
+	{
+		for (i = low; i < high; i++)
+		{
+			if (a[i] > a[i + 1])
+			{
+				t = a[i];
+				a[i] = a[i + 1];
+				a[i + 1] = t;
+			}
+		}high--;
+		for (i = high; i > low; i--)
+		{
+			if (a[i] < a[i - 1])
+			{
+				t = a[i - 1];
+				a[i - 1] = a[i];
+				a[i] = t;
+			}
+		}low++;
+	}
+	for (i = 0; i < n; i++)
+		printf("%d  ", a[i]);
+}//双向冒泡排序
+#include<stdio.h>
+int main()
+{
+	int i, s, count = 0, flag = 0;
+	double c = 0, average = 0;
+	for (i = 1;; i++)
+	{
+		scanf_s("%d", &s);
+		if (s < 0) { break; }
+		c++;
+		average += s;
+		if (s < 60 && s >= 0) {
+			count++;
+		}
+	}
+	if (i != 1) {
+		printf("Average = %.2lf\n", average / c);
+		printf("Count = %d", count);
+	}
+	else printf("Average = 0.00");
+}
+//学生平均成绩及不及格人数
+#include<stdio.h>
+void main()
+{
+	int  s, year = 0;
+	printf("please enter a year after 1998:\n");
+	scanf_s("%d", &year);
+	s = (year - 1996) % 28;
+	switch (s)
+	{
+	case 0:printf("%d年9月13日\n%d年12月13\n", year, year); break;
+	case 1:printf("%d年6月13日\n", year); break;
+	case 2:printf("%d年2月13日\n%d年3月13日\n%d年11月13日\n", year, year, year); break;
+	case 3:printf("%d年8月13日\n", year); break;
+	case 4:printf("%d年10月13日\n", year); break;
+	case 5:printf("%d年4月13日\n%d7月13日\n", year, year); break;
+	case 6:printf("%d年9月13日\n%d12月13日\n", year, year); break;
+	case 7:printf("%d年6月13日\n", year); break;
+	case 8:printf("%d年2月13日\n%d年8月13日\n", year, year); break;
+	case 9:printf("%d年5月13日\n", year); break;
+	case 10:printf("%d年1月13日\n%d年10月13日\n", year, year); break;
+	case 11:printf("%d年4月13日%d7月13日\n", year, year); break;
+	case 12:printf("%d年6月13日\n", year); break;
+	case 13:printf("%d年2月13日\n%d年3月13日\n%d年11月13日\n", year, year, year); break;
+	case 14:printf("%d年8月13日\n", year); break;
+	case 15:printf("%d年5月13日\n", year); break;
+	case 16:printf("%d年1月13日\n%d年4月13\n", year, year); break;
+	case 17:printf("%d年9月13日\n%d年12月13日\n", year, year); break;
+	case 18:printf("%d年6月13日\n", year); break;
+	case 19:printf("%d年2月13日\n%d年3月13日\n%d年11月13日\n", year, year, year); break;
+	case 20:printf("%d年5月13日\n", year); break;
+	case 21:printf("%d年1月13日\n%d年10月13日\n", year, year); break;
+	case 22:printf("%d年4月13日\n%d年7月13日\n", year, year); break;
+	case 23:printf("%d年9月13日\n%d年12月13日\n", year, year); break;
+	case 24:printf("%d年11月13日\n%d年3月13日\n", year, year); break;
+	case 25:printf("%d年8月13日\n", year); break;
+	case 26:printf("%d年5月13日\n", year); break;
+	case 27:printf("%d年1月13日\n%d年10月13日\n", year, year); break;
+	case 28:printf("%d年9月13日\n%d年12月13日\n", year, year); break;
+	}
+}//黑色星期五。。。。。。。。。。
