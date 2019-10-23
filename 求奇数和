@@ -1,0 +1,17 @@
+输入在一行中给出一系列正整数，其间以空格分隔。当读到零或负整数时，表示输入结束，该数字不要处理。
+#include<stdio.h>
+void main()
+{
+    int a,b,sum=0;
+    scanf("%d",&a);
+    do
+    {
+      b=a;
+      if(b<0)
+      break;
+       if(a%2)
+       sum+=a;
+       scanf("%d",&a);
+    }while(b>0);
+    printf("%d",sum);
+}
