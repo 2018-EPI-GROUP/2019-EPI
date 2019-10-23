@@ -1,0 +1,20 @@
+根据下面的关系式，寻求边界率的值，直到最后一项的值小于给定阈值。
+π/2=1+1/3+(2!/3*5)+```+[n!/3*5*7*```(2n+1)]
+
+#include<stdio.h>
+void main()
+{
+    double b,c,d,i=0,a=1,sum=1;
+    scanf("%lf",&c);
+    do
+    {
+        i++;//i=1  i=2  i=3
+        b=i/(2*i+1);
+        d=b*a;
+        sum+=d;
+        a=d;
+    }while(d>c);
+    sum*=2;
+printf("%.6lf",sum);
+}
+
