@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+  int a,b,i,max,min;
+  scanf("%d %d",&a,&b);
+  for(i=a>b?b:a;i>0;i--)
+  { 
+    if(!(a%i)&&!(b%i))
+      {
+        max=i;
+        break;
+      }
+  }
+  for(i=a>b?a:b;;i++)
+    {
+      if(!(i%a)&&!(i%b))
+        {
+          min=i;
+          break;
+        }
+    }
+  printf("%d %d",max，min);
+return 0;
+}
