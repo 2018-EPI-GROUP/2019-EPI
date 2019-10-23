@@ -1,0 +1,88 @@
+#include<stdio.h>
+#include<stdlib.h>
+typedef struct node{
+	char zimu;
+	node* next;
+	node* prior;
+}node;
+typedef struct {
+	node* head;
+	node* tail;
+}lists;
+void add(lists* list, char a);
+void print(lists* list);
+void frees(lists* list);
+void yidong(lists* list);
+int main() {
+	lists list;
+	list.head = nullptr;
+	list.tail = nullptr;
+	char a = 'A',b='Z';
+	b++;
+	 for(;a!=b;a++){
+		 add(&list,a);
+	}
+	 print(&list);
+	 yidong(&list);
+	 print(&list);
+	 frees(&list);
+	return 0;
+}
+
+void add(lists* list, char a){
+	node* p;
+	p = (node*)malloc(sizeof(node));
+	p->zimu = a;
+	if (list->head==nullptr)
+	{
+		list->head = p;
+	}
+	else {
+		list->tail->next = p;
+		p->prior = list->tail;
+	}
+	list->tail = p;
+	p->next = list->head;
+	list->head->prior = p;
+}
+
+void print(lists* list){
+	node* p;
+	p = list->head;
+	do
+	{
+		printf("%c ", p->zimu);
+		p = p->next;
+	} while (p!=list->head);
+}
+
+void frees(lists* list){
+	node* p, * q;
+	p = list->head->next;
+	q = list->head;
+	for (; p!=list->head;q=p,p = p->next) {
+		free(q);
+	}
+
+}
+
+void yidong(lists* list)
+{
+	int a;
+	scanf_s("%d", &a);
+	a %= 26;
+	int b=0;
+	if (a > 0) {
+		for (; b < a; b++) {
+			list->head = list->head->next;
+			list->tail = list->tail->next;
+		}
+	}
+	else if(a!=0){
+		a = -a;
+		for (; b < a; b++) {
+			list->head = list->head->prior;
+			list->tail = list->tail->prior;
+		}
+	}
+}
