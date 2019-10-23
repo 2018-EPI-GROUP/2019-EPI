@@ -1,0 +1,28 @@
+#include<stdio.h>
+int didi(n)
+{
+int i,max=0;
+printf("你将输入多少个数字?");
+scanf("%d",&n);
+int b[n];
+for(i=0;i<n;i++)
+ {
+  printf("输入第%d个数字:",i+1);
+  scanf("%d",&b[i]);
+ }
+ for(i=0;i<n;i++)
+  {
+    if(max<b[i])
+    max=b[i];
+  }
+return max;
+
+}
+
+int main()
+{
+  int big;
+   big=didi();
+   printf("%d",big);
+return 0;
+}
