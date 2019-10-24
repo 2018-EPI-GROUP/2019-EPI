@@ -1,0 +1,26 @@
+#include <stdio.h>
+ main ()
+ {
+	 int a,t,c;
+	 printf ("请输入一个数");
+	 scanf ("%d",&a);
+     c=0;
+	 int i=2;
+	 while (i<=a-1)
+	 {
+		 t=a%i;
+	  if (t==0)
+	  {
+		  printf("不为素数");
+	      c++;
+		  break;
+	  }
+	  else 
+		  i++;
+	 }
+	 if (c=0)
+	 printf ("为素数");
+	 else
+	 printf ("\n");
+      return 0;
+ }
