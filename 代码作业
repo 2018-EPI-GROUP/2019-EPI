@@ -1,4 +1,4 @@
-//±¾Ìâ¼¯ÊÇÔÚVSÉÏ²âÊÔÔËĞĞµÄ£¬±£Ö¤¿ÉÒÔÕı³£ÔËĞĞ
+//æœ¬é¢˜é›†æ˜¯åœ¨VSä¸Šæµ‹è¯•è¿è¡Œçš„ï¼Œä¿è¯å¯ä»¥æ­£å¸¸è¿è¡Œ
 #include<stdio.h>
 void main()
 {
@@ -20,7 +20,7 @@ loop:scanf_s("%d", &i); m++;
 		goto loop;
 	}
 	printf("Thanks");
-}//×Ô¶¯ÊÛÂô»úÑ¡ÔñÁĞ±í
+}//è‡ªåŠ¨å”®å–æœºé€‰æ‹©åˆ—è¡¨
 #include <stdio.h>
 int main(void)
 {
@@ -47,7 +47,7 @@ int main(void)
 		printf("You are ok.");
 	}
 	return 0;
-}//¹ØÓÚÌåÖØ
+}//å…³äºä½“é‡
 #include<stdio.h>
 int s(int F)
 {
@@ -61,7 +61,7 @@ int main()
 	C = s(100);
 	printf("When fahr = 100,celsius=%d", C);
 	return 0;
-}//ÎÂ¶È×ª»»1
+}//æ¸©åº¦è½¬æ¢1
 #include<stdio.h>
 double s(double F)
 {
@@ -76,7 +76,7 @@ int main()
 	C = s(F);
 	printf("When fahr = %.2lf ,celsius = %.4lf", F, C);
 	return 0;
-}//ÎÂ¶È×ª»»2
+}//æ¸©åº¦è½¬æ¢2
 #include<stdio.h>
 float froc(float f)
 {
@@ -85,12 +85,12 @@ float froc(float f)
 int main()
 {
 	float f;
-	printf("ÇëÊäÈëÒ»¸ö»ªÊÏÎÂ¶È£º");
+	printf("è¯·è¾“å…¥ä¸€ä¸ªåæ°æ¸©åº¦ï¼š");
 	scanf_s("%f", &f);
-	printf("ÉãÊÏÎÂ¶ÈÎª£º%f", froc(f));
+	printf("æ‘„æ°æ¸©åº¦ä¸ºï¼š%f", froc(f));
 	return 0;
-}//ÎÂ¶È×ª»»3
-//ÎÄ¼ş1
+}//æ¸©åº¦è½¬æ¢3
+//æ–‡ä»¶1
 #include<stdio.h>
 int x = 10;
 int y = 10;
@@ -108,12 +108,12 @@ int main()
 	sub;
 	printf("x=%d,y=%d\n", x, y);
 }
-//ÎÄ¼ş2
+//æ–‡ä»¶2
 int sub() {
 	extern int x;
 	x = x - 5;
 	return (x);
-}//Íâ²¿±äÁ¿ÉùÃ÷²âÊÔ
+}//å¤–éƒ¨å˜é‡å£°æ˜æµ‹è¯•
 #include<stdio.h>
 long int fac(unsigned int n)
 {
@@ -125,11 +125,11 @@ long int fac(unsigned int n)
 int  main()
 {
 	unsigned  int n;
-	printf("ÊäÈëÊı×Ö£º\n");
+	printf("è¾“å…¥æ•°å­—ï¼š\n");
 	scanf_s("%u", &n);
 	printf("%u!=%ld", n, fac(n));
 	return 0;
-}//ÓÃµİ¹é¼ÆËãn£¡
+}//ç”¨é€’å½’è®¡ç®—nï¼
 #include <stdio.h>
 double fact(int n);
 int main()
@@ -158,7 +158,7 @@ double fact(int n)
 		return (k);
 	}
 	else {}
-}//Êä³ö0£¡-N£¡
+}//è¾“å‡º0ï¼-Nï¼
 #include<stdio.h>
 float f(float x)
 {
@@ -178,7 +178,7 @@ void main()
 
 	scanf_s("%f", &x);
 	printf("f(%.2f) = %.2f", x, f(x));
-}//¾ÓÃñÓÃË®¼Û¸ñÎÊÌâ
+}//å±…æ°‘ç”¨æ°´ä»·æ ¼é—®é¢˜
 #include<stdio.h>
 #include"math.h"
 void main()
@@ -189,7 +189,7 @@ void main()
 	c = pow(1 + rate, year);
 	money *= c;
 	printf("sum = %.2lf", money);
-}//¼ÆËãÒøĞĞ´æ¿îÀûÈó
+}//è®¡ç®—é“¶è¡Œå­˜æ¬¾åˆ©æ¶¦
 #include<stdio.h>
 void main()
 {
@@ -200,7 +200,7 @@ void main()
 		sum += i;
 	}
 	printf("sum = %d", sum);
-}//1-nÖ®ºÍ
+}//1-nä¹‹å’Œ
 #include<stdio.h>
 #include"math.h"
 void main()
@@ -212,7 +212,7 @@ void main()
 		a = pow(2, i);
 		printf("pow(2,i) = %d\n", a);
 	}
-}//2µÄ´Î·½±í£¨nÏî£©
+}//2çš„æ¬¡æ–¹è¡¨ï¼ˆné¡¹ï¼‰
 #include<stdio.h>
 void main()
 {
@@ -229,7 +229,7 @@ void main()
 		}
 	}
 	else printf("Invalid.");
-}//»ªÎÂµ½ÉãÎÂ×ª»»ÁĞ±í
+}//åæ¸©åˆ°æ‘„æ¸©è½¬æ¢åˆ—è¡¨
 #include<stdio.h>
 #include<math.h>
 void main()
@@ -243,7 +243,7 @@ void main()
 		sum += c;
 	}
 	printf("sum = %.6lf", sum);
-}//Çó1/2*n-1µÄÇ°nÏîºÍ
+}//æ±‚1/2*n-1çš„å‰né¡¹å’Œ
 #include<stdio.h>
 void main()
 {
@@ -256,7 +256,7 @@ void main()
 	}
 
 	printf("product = %.0lf", product);
-}//ÇónµÄ½×³Ë
+}//æ±‚nçš„é˜¶ä¹˜
 #include<stdio.h>
 void main()
 {
@@ -275,7 +275,7 @@ void main()
 		}
 		printf("%d %d", j, o);
 	}
-}//ÆæÅ¼·Ö¼Ò
+}//å¥‡å¶åˆ†å®¶
 #include<stdio.h>
 void main()
 {
@@ -296,7 +296,7 @@ void main()
 		printf("f(%.2lf) = %.2lf", x, y);
 	}
 
-}//¾ÓÃñÉú»îË®·Ñ
+}//å±…æ°‘ç”Ÿæ´»æ°´è´¹
 #include<stdio.h>
 void main()
 {
@@ -314,7 +314,7 @@ void main()
 	{
 		printf("Good Guess!");
 	}
-}//²ÂÊı×ÖĞ¡ÓÎÏ·
+}//çŒœæ•°å­—å°æ¸¸æˆ
 #include<stdio.h>
 void main()
 {
@@ -335,7 +335,7 @@ void main()
 		}
 	}
 	printf("letter = %d,digit = %d,other = %d", letter, digit, other);
-}//ÅĞ¶Ï×Ö·ûºÍÊı×ÖºÍÆäËûÊÇ·ûºÅµÄ¸öÊı
+}//åˆ¤æ–­å­—ç¬¦å’Œæ•°å­—å’Œå…¶ä»–æ˜¯ç¬¦å·çš„ä¸ªæ•°
 #include<stdio.h>
 int main()
 {
@@ -360,7 +360,7 @@ int main()
 	}
 	return 0;
 }
-//Í³¼ÆÑ§ÉúÆ½¾ù³É¼¨ºÍ²»¼°¸ñÊı
+//ç»Ÿè®¡å­¦ç”Ÿå¹³å‡æˆç»©å’Œä¸åŠæ ¼æ•°
 #include<stdio.h>
 #include<string.h>
 #define N 1000
@@ -388,7 +388,7 @@ int main()
 		printf("%s %.2lf\n", ren[i].name, ren[i].sum);
 	}
 	return 0;
-}//³õÊÔ½á¹¹Ìå
+}//åˆè¯•ç»“æ„ä½“
 #include<stdio.h>
 int main()
 {
@@ -414,7 +414,7 @@ int main()
 		printf("%d ", a[i]);
 	}
 	return 0;
-}//ËÄÊıÅÅĞò
+}//å››æ•°æ’åº
 #include<stdio.h>
 void main()
 {
@@ -449,7 +449,7 @@ void main()
 		t = a; a = b; b = t;
 	}
 	printf("%d %d %d %d", a, b, c, d);
-}//ËÄ¸öÊıÓÉµÍµ½¸ß
+}//å››ä¸ªæ•°ç”±ä½åˆ°é«˜
 #include<stdio.h>
 int main()
 {
@@ -473,7 +473,7 @@ int main()
 		printf("average = %.2lf\ncount = %d", sum, count);
 	}
 	return 0;
-}//¹ØÓÚ³É¼¨
+}//å…³äºæˆç»©
 #include<stdio.h>
 void main()
 {
@@ -494,7 +494,7 @@ void main()
 		}
 	}
 	else {}
-}//×ÖÄ¸Õó
+}//å­—æ¯é˜µ
 #include<stdio.h>
 void main()
 {
@@ -506,7 +506,7 @@ void main()
 	if (m > 3500 && m <= 4500) s = (m - 1600) * 0.15;
 	if (m > 4500) s = (m - 1600) * 0.20;
 	printf("%.2f", s);
-}//ÒøĞĞÀûÂÊ
+}//é“¶è¡Œåˆ©ç‡
 #include<stdio.h>
 void main()
 {
@@ -530,7 +530,7 @@ void main()
 	else {}}
 	default:printf("ERROR");
 	}
-}//ÊäÈëÊı×Ö·ûºÅ²¢¼ÆËã
+}//è¾“å…¥æ•°å­—ç¬¦å·å¹¶è®¡ç®—
 #include<stdio.h>
 main()
 {
@@ -552,7 +552,7 @@ main()
 	}
 	printf("letter = %d, digit = %d, other = %d", letter, digit, other);
 	return 0;
-}//²â×ÖÄ¸Êı×Ö·ûºÅÊı
+}//æµ‹å­—æ¯æ•°å­—ç¬¦å·æ•°
 #include<stdio.h>
 void main()
 {
@@ -568,7 +568,11 @@ void main()
 		}
 	}
 	printf("%d", full);
+<<<<<<< HEAD:1.c
 }//1µ½nµÄ½×³Ë
+=======
+}//1åˆ°nçš„é˜¶ä¹˜
+>>>>>>> 2725fa9e78e1c330dd259c626c41fb6ae92b1eb2:ä»£ç ä½œä¸š
 #include<stdio.h>
 void main()
 {
@@ -595,7 +599,11 @@ void main()
 	{
 		printf("%d\t", arr[i]);
 	}
+<<<<<<< HEAD:1.c
 }//Ã°ÅİÅÅĞò
+=======
+}//å†’æ³¡æ’åº
+>>>>>>> 2725fa9e78e1c330dd259c626c41fb6ae92b1eb2:ä»£ç ä½œä¸š
 #include<stdio.h>
 void main()
 {
@@ -611,7 +619,11 @@ void main()
 			m = x, n = y;
 		}
 	}
+<<<<<<< HEAD:1.c
 }//Êä³öì³²¨ÄÇÆõÊıÁĞ£¨10Î»ÒÔÏÂÊı×ÖÎªÊ®½øÖÆ£©
+=======
+}//è¾“å‡ºæ–æ³¢é‚£å¥‘æ•°åˆ—ï¼ˆ10ä½ä»¥ä¸‹æ•°å­—ä¸ºåè¿›åˆ¶ï¼‰
+>>>>>>> 2725fa9e78e1c330dd259c626c41fb6ae92b1eb2:ä»£ç ä½œä¸š
 #include<stdio.h>
 int f(int i)
 {
@@ -628,7 +640,11 @@ void main()
 	scanf_s("%d", &n);
 	for (i = 0; i < n; i++)
 		printf("%d ", f(i));
+<<<<<<< HEAD:1.c
 }//µİ¹éÊä³öì³²¨ÄÇÆõÊıÁĞ£¨Ç°nÏî£©
+=======
+}//é€’å½’è¾“å‡ºæ–æ³¢é‚£å¥‘æ•°åˆ—ï¼ˆå‰né¡¹ï¼‰
+>>>>>>> 2725fa9e78e1c330dd259c626c41fb6ae92b1eb2:ä»£ç ä½œä¸š
 #include<stdio.h>
 void main()
 {
@@ -662,7 +678,11 @@ void main()
 	}
 	for (i = 0; i < n; i++)
 		printf("%d  ", a[i]);
+<<<<<<< HEAD:1.c
 }//Ë«ÏòÃ°ÅİÅÅĞò
+=======
+}//åŒå‘å†’æ³¡æ’åº
+>>>>>>> 2725fa9e78e1c330dd259c626c41fb6ae92b1eb2:ä»£ç ä½œä¸š
 #include<stdio.h>
 int main()
 {
@@ -684,7 +704,11 @@ int main()
 	}
 	else printf("Average = 0.00");
 }
+<<<<<<< HEAD:1.c
 //Ñ§ÉúÆ½¾ù³É¼¨¼°²»¼°¸ñÈËÊı
+=======
+//å­¦ç”Ÿå¹³å‡æˆç»©åŠä¸åŠæ ¼äººæ•°
+>>>>>>> 2725fa9e78e1c330dd259c626c41fb6ae92b1eb2:ä»£ç ä½œä¸š
 #include<stdio.h>
 void main()
 {
@@ -694,6 +718,7 @@ void main()
 	s = (year - 1996) % 28;
 	switch (s)
 	{
+<<<<<<< HEAD:1.c
 	case 0:printf("%dÄê9ÔÂ13ÈÕ\n%dÄê12ÔÂ13\n", year, year); break;
 	case 1:printf("%dÄê6ÔÂ13ÈÕ\n", year); break;
 	case 2:printf("%dÄê2ÔÂ13ÈÕ\n%dÄê3ÔÂ13ÈÕ\n%dÄê11ÔÂ13ÈÕ\n", year, year, year); break;
@@ -725,3 +750,36 @@ void main()
 	case 28:printf("%dÄê9ÔÂ13ÈÕ\n%dÄê12ÔÂ13ÈÕ\n", year, year); break;
 	}
 }//ºÚÉ«ĞÇÆÚÎå¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£
+=======
+	case 0:printf("%då¹´9æœˆ13æ—¥\n%då¹´12æœˆ13\n", year, year); break;
+	case 1:printf("%då¹´6æœˆ13æ—¥\n", year); break;
+	case 2:printf("%då¹´2æœˆ13æ—¥\n%då¹´3æœˆ13æ—¥\n%då¹´11æœˆ13æ—¥\n", year, year, year); break;
+	case 3:printf("%då¹´8æœˆ13æ—¥\n", year); break;
+	case 4:printf("%då¹´10æœˆ13æ—¥\n", year); break;
+	case 5:printf("%då¹´4æœˆ13æ—¥\n%d7æœˆ13æ—¥\n", year, year); break;
+	case 6:printf("%då¹´9æœˆ13æ—¥\n%d12æœˆ13æ—¥\n", year, year); break;
+	case 7:printf("%då¹´6æœˆ13æ—¥\n", year); break;
+	case 8:printf("%då¹´2æœˆ13æ—¥\n%då¹´8æœˆ13æ—¥\n", year, year); break;
+	case 9:printf("%då¹´5æœˆ13æ—¥\n", year); break;
+	case 10:printf("%då¹´1æœˆ13æ—¥\n%då¹´10æœˆ13æ—¥\n", year, year); break;
+	case 11:printf("%då¹´4æœˆ13æ—¥%d7æœˆ13æ—¥\n", year, year); break;
+	case 12:printf("%då¹´6æœˆ13æ—¥\n", year); break;
+	case 13:printf("%då¹´2æœˆ13æ—¥\n%då¹´3æœˆ13æ—¥\n%då¹´11æœˆ13æ—¥\n", year, year, year); break;
+	case 14:printf("%då¹´8æœˆ13æ—¥\n", year); break;
+	case 15:printf("%då¹´5æœˆ13æ—¥\n", year); break;
+	case 16:printf("%då¹´1æœˆ13æ—¥\n%då¹´4æœˆ13\n", year, year); break;
+	case 17:printf("%då¹´9æœˆ13æ—¥\n%då¹´12æœˆ13æ—¥\n", year, year); break;
+	case 18:printf("%då¹´6æœˆ13æ—¥\n", year); break;
+	case 19:printf("%då¹´2æœˆ13æ—¥\n%då¹´3æœˆ13æ—¥\n%då¹´11æœˆ13æ—¥\n", year, year, year); break;
+	case 20:printf("%då¹´5æœˆ13æ—¥\n", year); break;
+	case 21:printf("%då¹´1æœˆ13æ—¥\n%då¹´10æœˆ13æ—¥\n", year, year); break;
+	case 22:printf("%då¹´4æœˆ13æ—¥\n%då¹´7æœˆ13æ—¥\n", year, year); break;
+	case 23:printf("%då¹´9æœˆ13æ—¥\n%då¹´12æœˆ13æ—¥\n", year, year); break;
+	case 24:printf("%då¹´11æœˆ13æ—¥\n%då¹´3æœˆ13æ—¥\n", year, year); break;
+	case 25:printf("%då¹´8æœˆ13æ—¥\n", year); break;
+	case 26:printf("%då¹´5æœˆ13æ—¥\n", year); break;
+	case 27:printf("%då¹´1æœˆ13æ—¥\n%då¹´10æœˆ13æ—¥\n", year, year); break;
+	case 28:printf("%då¹´9æœˆ13æ—¥\n%då¹´12æœˆ13æ—¥\n", year, year); break;
+	}
+}//é»‘è‰²æ˜ŸæœŸäº”ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚
+>>>>>>> 2725fa9e78e1c330dd259c626c41fb6ae92b1eb2:ä»£ç ä½œä¸š
