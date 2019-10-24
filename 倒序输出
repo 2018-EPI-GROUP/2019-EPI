@@ -1,0 +1,17 @@
+#include <stdio.h>
+main ()
+{
+	int t,i,j;
+	printf ("输入一个四位数");
+	scanf ("%d",&t);
+	i=1;
+	while (i<=4)
+	{
+		j=t%10;
+		printf ("%d",j);
+		i++;
+		t=t/10;
+	}
+	return 0;
+}
+	
