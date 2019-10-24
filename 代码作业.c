@@ -725,3 +725,56 @@ void main()
 	case 28:printf("%d年9月13日\n%d年12月13日\n", year, year); break;
 	}
 }//黑色星期五。。。。。。。。。。
+#include<stdio.h>
+void main()
+{
+	int s;
+	scanf("%d", &s);
+	if (s < 60)printf("E");
+	if (s < 70 && s >= 60)printf("D");
+	if (s < 80 && s >= 70)printf("C");
+	if (s < 90 && s >= 80)printf("B");
+	if (s <= 100 && s >= 90)printf("A");
+}//成绩转换
+#include<stdio.h>
+void main()
+{
+	int a, b;
+	char c;
+	scanf("%d %c %d", &a, &c, &b);
+	switch (c)
+	{
+	case '+':printf("%d", a + b); break;
+	case '-':printf("%d", a - b); break;
+	case '*':printf("%d", a * b); break;
+	case '/':printf("%d", a / b); break;
+	case '%':printf("%d", a % b); break;
+	default:printf("ERROR");
+	}
+}//数字符号计算
+#include<stdio.h>
+void main()
+{
+	int year, month, days;
+	scanf("%d %d", &year, &month);
+	switch (month)
+	{
+	case 1:days = 31; break;
+	case 2:if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+	{
+		days = 28; break;
+	}
+		  else { days = 29; break; }
+	case 3:days = 31; break;
+	case 4:days = 30; break;
+	case 5:days = 31; break;
+	case 6:days = 30; break;
+	case 7:days = 31; break;
+	case 8:days = 31; break;
+	case 9:days = 30; break;
+	case 10:days = 31; break;
+	case 11:days = 30; break;
+	case 12:days = 31; break;
+	}
+	printf("year = %d month = %d days=%d", year, month, days);
+}//输入年月，输出年月日
