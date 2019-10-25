@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+ char grade='A';
+
+ switch(grade)
+ {case'A':
+   printf("很棒！");
+   break;
+  case'B':
+  case'C':
+   printf("Just so-so.");
+   break;
+  case'D':
+   printf("你是猪吗？！");
+   break;}
+ }
+
