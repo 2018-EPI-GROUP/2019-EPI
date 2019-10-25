@@ -1,4 +1,3 @@
-//本题集是在VS上测试运行的，保证可以正常运行
 #include<stdio.h>
 void main()
 {
@@ -316,26 +315,28 @@ void main()
 	}
 }//猜数字小游戏
 #include<stdio.h>
-void main()
+main()
 {
-	int i, letter = 0, digit = 0, other = 0, k;
+	int  letter = 0, digit = 0, other = 0, k, blank = 0;
 	char ch;
-	for (k = 1; k <= 10; k++) \
+	for (k = 1; k <= 10; k++)
 	{
 
 		ch = getchar();
-		if (ch >= 65 && ch <= 123) {
+		if (ch >= 'A' && ch <= 'Z' || ch >= 'a' && ch <= 'z') {
 			letter++;
 		}
-		else if (ch >= 48 && ch <= 64) {
+		else if (ch >= '0' && ch <= '9') {
 			digit++;
 		}
-		else {
-			if (ch != 0)other++;
-		}
+		else if
+			(ch == ' ' || ch == '\n') blank++;
+
+		else other++;
 	}
-	printf("letter = %d,digit = %d,other = %d", letter, digit, other);
-}//判断字符和数字和其他是符号的个数
+	printf("letter = %d, blank = %d, digit = %d, other = %d", letter, blank, digit, other);
+	return 0;
+}//判断字符数字空格回车
 #include<stdio.h>
 int main()
 {
@@ -778,3 +779,151 @@ void main()
 	}
 	printf("year = %d month = %d days=%d", year, month, days);
 }//输入年月，输出年月日
+#include<stdio.h>
+void main()
+{
+	double Pi, sum = 1, s = 1, eps, n = 1, h, i;
+	scanf("%lf", &eps);
+	if (eps > 4)printf("Pi = 4.0000");
+	else for (i = 1;; i++)
+	{
+		n = n + 2;
+		s = -s;
+		sum += 1 / n * s;
+		h = 4 * sum;
+		if (1 / n < eps)
+			break;
+	}
+	printf("Pi = %.4lf", h);
+}//精确Pi值
+#include<stdio.h>
+#include"math.h"
+int  main()
+{
+	long long a, i, b;
+	scanf("%lld", &a);
+	if (a == -2 || a == 0 || a == 1 || a < 0)printf("No");
+	else if (a == 2)printf("Yes");
+
+	else {
+		for (i = 3; i <= sqrt(a); i++)
+		{
+			b = a % i;
+			if (b == 0) { printf("No"); goto loop; }
+
+			else {}
+		}
+		printf("Yes");
+	loop:return 0;
+	}
+}//判断一个数是不是素数
+#include<stdio.h>
+int main()
+{
+	int num, s, i = 0;
+	scanf("%d", &num);
+	while (1)
+	{
+		scanf("%d", &s);
+		i++;
+		if (i > 7) { printf("Game Over!"); break; }
+		if (s > num)printf("Too big\n");
+		if (s < num)printf("Too small\n");
+		if (s == num) {
+			printf("Lucky You!\n"); break;
+		}
+	}
+}//猜数字小游戏
+#include<stdio.h>
+#define R 1000
+void main()
+{
+	int n, a[R], i, j, t;
+	scanf("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		scanf("%d", &a[i]);
+	}
+	for (i = 0; i < n; i++)
+		for (j = 0; j < n - i - 1; j++)
+		{
+			if (a[j] > a[j + 1])
+			{
+				t = a[j];
+				a[j] = a[j + 1];
+				a[j + 1] = t;
+			}
+		}
+	printf("%d", a[n - 1]);
+}//找最高分
+#include<stdio.h>
+#define N 100000
+void main()
+{
+	char a[N];
+	int i, count = 0, j, t = 0;
+	for (i = 0;; i++)
+	{
+		scanf("%d", &a[i]);
+		count++;
+		if (a[i] < 0)break;
+	}
+	for (i = 0; i < count; i++)
+	{
+		for (j = 0; j < count - i - 1; j++)
+		{
+			if (a[j] > a[j + 1])
+			{
+				t = a[j];
+				a[j] = a[j + 1];
+				a[j + 1] = t;
+			}
+		}
+	}
+	printf("%d", a[count - 1]);
+}//找一群学生最高分
+#include<stdio.h>
+main()
+{
+	long a, s, i, t = 10, j = 1;
+	scanf("%d", &a);
+	if (a < 10)printf("%d ", a);
+	else {
+		for (i = 1;; i++)
+		{
+
+			s = a / j;
+			if (s == 0) break;
+			else
+			{
+				printf("%d ", s % t);
+				j *= 10;
+			}
+		}
+	}
+}//逆序输出一个数
+#include<stdio.h>
+void main()
+{
+	int n = 0, i;
+	double m, w, c;
+	scanf("%d", &n);
+	if (n < 3)printf("None");
+	else {
+		for (m = 0; m <= n; m++)
+		{
+			for (w = 0; w <= n; w++)
+			{
+
+				for (c = 0; c <= n; c++)
+				{
+					if (m + w + c == n && 3 * m + 2 * w + 0.5 * c == n)
+					{
+						printf("men = %.0lf, women = %.0lf, child = %.0lf\n", m, w, c);
+					}
+
+				}
+			}
+		}
+	}
+}//穷举搬砖
