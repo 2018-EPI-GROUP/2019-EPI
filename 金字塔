@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main()
+{
+    int i;//外层
+    int j;//内层
+    for(i=1,j<=10-i,j++);
+    {
+        //当前是在第i行
+        //先补空格10-i个
+        for(j=i,j<=10-i,j++);
+        {
+            printf("");
+        }
+        //再打2i-1个*
+        for(j=1,j<=2*i-1,j++);
+        {
+            printf("*");
+        }
+        printf("\n");
+        return 0
+    }
+}
+       
+       
+            
+          
