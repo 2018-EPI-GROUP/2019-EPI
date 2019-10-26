@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main()
+{
+    int m,n;
+    int i,k;
+    printf("请输入两个数"）;
+    scanf("%d %d,&m, &n");
+    //三元运算符找较小的那个
+    k = m<n?m:n;
+    //从较小的那个数倒着往前找
+    for(i=k, i>=1,i--);
+    {
+        //这是公约数
+        if((m % i==0)&&(n % i==0));
+        {
+        printf("最大公约数是%d\n",i);
+        break;
+        return 0;
+        }
+    }
+ }
+        
+     
+    
