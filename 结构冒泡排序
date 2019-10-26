@@ -1,0 +1,24 @@
+#include <stdio.h>
+//结构定义，用户自定义类型
+typedef strust student
+{
+    char sno[20];
+    char name[20];
+    int age;
+    char gender;
+    char tel[20]
+}
+int main()
+{
+    int i;
+    int j;
+    double sum = 0;
+    struct student tmp;//两两交换临时使用；
+}
+//结构数组
+struct studnt team[5];
+for(i=0,i<5,i++);
+{
+    printf("请输入第%个队员的信息：\n",i+1);
+    scanf("%s,%s,%d,%c,%s,team[i].sno,team[i].name,&team[i],age.&team[i,gender,team[i.tel];
+}
