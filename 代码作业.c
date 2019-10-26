@@ -927,3 +927,167 @@ void main()
 		}
 	}
 }//穷举搬砖
+#include<stdio.h>
+
+void  main()
+{
+	char a[100] = { '\0' };
+	int count = 0;
+	gets(a);
+	for (int i = 0; i < strlen(a); i++)
+	{
+		count++;
+		if (a[i] == '-')count--;
+	}
+	printf("%d", count);
+}//统计一个整数的位数
+#include<stdio.h>
+#include"math.h"
+int  main()
+{
+	long long a, i, b;
+	scanf("%lld", &a);
+	if (a == -2 || a == 0 || a == 1 || a < 0)printf("No");
+	else if (a == 2)printf("Yes");
+
+	else {
+		for (i = 3; i <= sqrt(a); i++)
+		{
+			b = a % i;
+			if (b == 0) { printf("No"); goto loop; }
+
+			else {}
+		}
+		printf("Yes");
+	loop:return 0;
+	}
+}//判断一个数是否为素数
+#include<stdio.h>
+#define N 100000
+void main()
+{
+	char a[N];
+	int i, count = 0, j, t = 0;
+	for (i = 0;; i++)
+	{
+		scanf("%d", &a[i]);
+		count++;
+		if (a[i] < 0)break;
+	}
+	for (i = 0; i < count; i++)
+	{
+		for (j = 0; j < count - i - 1; j++)
+		{
+			if (a[j] > a[j + 1])
+			{
+				t = a[j];
+				a[j] = a[j + 1];
+				a[j + 1] = t;
+			}
+		}
+	}
+	printf("%d", a[count - 1]);
+}//找一批学生最高分
+#include<stdio.h>
+main()
+{
+	long a, s, i, t = 10, j = 1;
+	scanf("%d", &a);
+	if (a < 10)printf("%d ", a);
+	else {
+		for (i = 1;; i++)
+		{
+
+			s = a / j;
+			if (s == 0) break;
+			else
+			{
+				printf("%d ", s % t);
+				j *= 10;
+			}
+		}
+	}
+}//逆序输出数字
+#include<stdio.h>
+#include<math.h>
+main()
+{
+	long n = 0, i, j, flag, count = 0;
+	scanf("%ld", &n);
+	for (i = 2; i <= n; i++)
+	{
+		if (i == 2) { printf("%6ld", i); count++; }
+		else
+		{
+			flag = 1;
+			for (j = 2; j <= sqrt(i); j++)
+			{
+				if (i % j == 0)
+				{
+					flag = 0;
+					break;
+				}
+			}
+			if (flag == 1)
+			{
+				printf("%6ld", i);
+				count++;
+				if (count % 10 == 0) printf("\n");
+			}
+		}
+	}
+}//输出2-n所有素数
+#include<stdio.h>
+#define PI 3.1415926
+double cylinder(double r, double h)
+{
+	double volume;
+	volume = PI * r * r * h;
+	return(volume);
+}
+void main()
+{
+	double r, h, volume;
+	scanf("%lf %lf", &r, &h);
+	volume = cylinder(r, h);
+	printf("Volume = %.3lf", volume);
+}//圆柱体积
+#include<stdio.h>
+int main()
+{
+	int i, j, t;
+	for (i = 1; i <= 5; i++)
+	{
+		for (j = 4 - i; j >= 0; j--)
+		{
+			printf(" ");
+		}
+		for (t = 1; t <= i; t++)
+		{
+			printf("%d ", i);
+		}
+		printf("\n");
+	}
+	return 0;
+}//数字金字塔
+#include<stdio.h>
+void main()
+{
+	double x1, y1, x2, y2, a, b, c, d;
+	scanf("%lf %lf %lf %lf", &x1, &y1, &x2, &y2);
+	a = x1 + x2;
+	b = y1 + y2;
+	c = x1 * x2 - y1 * y2;
+	d = x1 * y2 + x2 * y1;
+	printf("addition of complex is %.6lf+%.6lfi\nproduct of complex is %.6lf+%.6lfi", a, b, c, d);
+}//复数的和与积
+#include<stdio.h>
+int main()
+{
+	char a[10];
+	int i = 0;
+	scanf("%s", a);
+
+	for (i = 0; i < 6; i++)
+		printf("%c->%c->%d\n", a[i], a[i] - 32, (a[i] - 32) % 10);
+}//单词解析加密
