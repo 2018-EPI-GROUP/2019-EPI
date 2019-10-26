@@ -1,0 +1,70 @@
+//猜数字游戏是令游戏机随机产生一个100以内的正整数，用户输入一个数对其进行猜测，需要你编写程序自动对其与随机产生的被猜数进行比较，并提示大了（“Too big”），还是小了（“Too small”），
+//相等表示猜到了。如果猜到，则结束程序。程序还要求统计猜的次数，如果1次猜出该数，提示“Bingo!”；
+//如果3次以内猜到该数，则提示“Lucky You!”；如果超过3次但是在N（>3）次以内（包括第N次）猜到该数，则提示“Good Guess!”；如果超过N次都没有猜到，则提示“Game Over”，并结束程序。
+//如果在到达N次之前，用户输入了一个负数，也输出“Game Over”，并结束程序。
+
+#include<stdio.h>
+void start(int num);
+void judge(int num);
+void input(int num)
+{
+	printf("请输入一个数字%d",num);
+	scanf("%d",&num);
+	judge(num);
+}
+
+
+void judge(int num)
+{
+	if(num>100){
+		printf("输入数字过大，请更新输入"); 
+		input(num);
+	} else {
+		start(num);
+	}
+}
+
+void start(int num)
+{
+	int cot = 1;
+	for(cot=1;cot<4;cot++){
+	   int a;
+	   scanf("%d",a);
+	   if(a>num){
+		    printf("too big\n");
+	   }  else if(a<num) {
+	    	printf("too small\n");
+	   }  else if(a==num){
+	   	    printf("it's right\n");
+	   	    goto out;
+	   }
+    }  
+    out:
+    	if(cot==3)
+    	printf("很遗憾你失败了\n");
+
+    
+}
+
+
+//在中国数学史上，广泛流传着一个“韩信点兵”的故事：韩信是汉高祖刘邦手下的大将，他英勇善战，智谋超群，为汉朝建立了卓越的功劳。据说韩信的数学水平也非常高超，他在点兵的时候，为了知道有多少兵，同时又能保住军事机密，便让士兵排队报数：
+//按从1至5报数，记下最末一个士兵报的数为1；
+//再按从1至6报数，记下最末一个士兵报的数为5；
+//再按从1至7报数，记下最末一个士兵报的数为4；
+//最后按从1至11报数，最末一个士兵报的数为10；
+//请编写程序计算韩信至少有多少兵。
+
+#include<stdio.h>
+int main()
+{
+	int num=1;
+	for(num=1;num>0;num++){
+	if(num%5==1&&num%6==5&&num%7==4&&num%11==10){
+		printf("%d",num);	
+		goto out;
+	    }
+  }
+    out:
+    return 0; 
+}
+
