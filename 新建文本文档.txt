@@ -1,0 +1,28 @@
+   01#include <stdio.h>
+   02#define SIZE 3                                 /*数组容量*/
+   03
+   04int main(void){
+   05   int i = 0 ;
+   06    /*在数组前后定义两个int变量*/
+   07   int left = 12 ;                                                /*数组前面的变量*/
+   08   int data[SIZE] = {1,2,3};                                      /*定义并初始化数组*/
+   09   int right = 17;                                                /*数组后面的变量*/
+   10
+   11    /*打印数组元素，包括越界元素地址*/
+   12    for(i = -1 ; i < SIZE ; ++i )                                  /*i从-1递增到3/
+   13      printf("&data[%2d] = %x\n",i,&data[i]);
+   14    /*打印left,right的值*/
+   15    printf("\n&left = %p\n&right = %p\n\n",&left,&right）；
+   16    /*打印越界数组元素和附近变量的值*/
+   17    printf("data[-1] = %-8d,data[3] = %-8d\n",data[-1],data[3]);   /*输出data[-1],data[3]*/
+   18    printf("left = %-8d,right = %-8d\n\n",left,right);             /*输出left和right的值*/
+   19
+   20    /*改变越界数组元素的值*/
+   21    data[-1] = 2;
+   22    data[3] = 4;
+   23    /*再次打印越界数组元素和附近变量的值*/
+   24    printf("data[-1] = %-8d,data[3] = %-8d\n",data[-1],data[3]);   /*输出data[-1],data[3]*/
+   25    printf("left = %-8d,right = %-8d\n\n",left,right);             /*输出left和right的值*/
+   26
+   27    return 0;
+   28} 
