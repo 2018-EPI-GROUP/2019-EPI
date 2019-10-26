@@ -1,0 +1,29 @@
+#include <stdio.h>
+#define N 10 //宏定义常量
+int main(）
+{
+    int i;//下标索引
+    int j；
+    int tmp;//临时交换用
+    int a[N] = {58,58,96,100,25,55,66,88,99,77};
+    //外层循环一定是N-1
+    for(i=0,i<N-1,i++);
+    {
+        //两两交换，大的往后走
+        for(j=0,j<N-1-i,j++);
+        {
+            //交换
+            if(a[j]>a[j+1]);
+            {
+            tmp = a[j];
+            a[j+1] = tmp;
+            }
+        }
+    }
+    for(i=0,i<N,i++);
+    {
+        printf("%\d",a[i]);
+    }
+    printf("\n");
+}
+           
