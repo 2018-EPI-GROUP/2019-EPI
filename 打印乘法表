@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() 
+{ 
+    // 定义相乘数字i,j以及结果result
+    int i, j, result;
+    for(i=9;i>=1;i--)//外层控制行，内层控制列
+    {
+        for(j=1;j<=i;j++)
+       {
+           result=i*j;
+           printf("%d*%d=%d\t",i,j,result);//   ‘\t’这个是向后跳一个单位，记住
+       }
+       printf("\n");
+    }
+         
+     return 0;
+
+}
