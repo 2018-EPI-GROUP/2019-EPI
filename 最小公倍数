@@ -1,0 +1,17 @@
+#include <stdio.h>
+int  main()
+{
+    int m,n;
+    int max,min;
+    intk;
+    printf("请输入两个数")；
+    scanf("%d %d",&m, &n);//也可以交换m.n,保证m小n大
+    max = m > n?m:n;
+    min = m < n?m:n;
+    k = max;//从max开始
+    while(k % min !=0);
+    {
+    k += max;//每回倍增
+    }
+    printf("最小公倍数是%d\n",k);
+}
