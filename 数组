@@ -1,0 +1,111 @@
+int main08()
+{
+	int arr[10] = { 9,4,2,1,8,5,3,6,10,7 };
+for (int i = 0; i < 10; i++)
+{
+	printf("%d\n", arr[i]);
+}
+return 0;
+	}
+#include <stdio.h>
+int main09(void)
+{
+	int arr[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+	//数组参与计算
+	arr[3] = arr[5];
+	arr[2] = arr[3] * 2;
+
+	for (int i = 0; i < 10; i++)
+	{
+		printf("%d\n", arr[i]);
+	}
+	return 0;
+}
+#include <stdio.h>
+int main10(void)
+{
+	int arr[10] = { 1,2,3,4,5,6,7,8,9,0 };
+	printf("%d\n", arr[0]);
+	printf("%d\n", arr[1]);
+	return 0;
+}
+#include <stdio.h>
+int main11(void)
+{
+	int arr[10] = { 0,1,2,3,4,5,6,7,8,9 };
+	for (int i = 0; i < 10; i++)
+	{
+		printf("%d\n", arr[i]);
+		}
+	return 0;
+
+}
+#include<stdio.h>
+int main12(void)
+{
+	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	//printf("%p\n", &arr[0]);
+	//printf("%p\n", &arr[1]);
+	printf("数组在内存中占的大小：%d\n", sizeof(arr));
+	printf("数组中元素的大小：%d\n", sizeof(arr[0]));
+	printf("数组元素个数：%d\n", sizeof(arr) / sizeof(arr[0]));
+	for (int i = 0; i < sizeof(arr) / sizeof(arr[0]);i++)
+	{
+		printf("%d\n", arr[i]);
+	}
+	return 0;
+}
+#include <stdio.h>
+int main13()
+{
+	//int arr[10] = {1,2,3,4,5,6,7,8,9,10}
+	//int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+	//int arr[10] = { 1,2,3,4,5 };
+	int arr[10];
+	arr[0] = 1;
+	//
+	for (int i = 0; i < sizeof(arr) / sizeof(arr[0]);i++)
+	{
+		printf("%d\n", arr[i]);
+	}
+	return 0;
+}
+#include <stdio.h>
+int main14()
+{
+	int arr[10] = { 9,4,2,1,8,5,3,6,10,7 };
+	printf("%d\n", arr[0]);
+	printf("%d\n", arr[1]);
+	return 0;
+}
+
+#include<stdio.h>
+int main16(void)//变量赋值
+{
+	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	arr[3] = arr[5];
+	arr[2] = arr[3] * 2;
+	for (int i = 0; i < 10; i++)
+	{
+		printf("%d\n", arr[i]);
+	}
+	return 0;
+}
+#include<stdio.h>
+int main17(void)
+{
+	int arr[10] = { 1,2,3,4,5,6,7,8,9,0 };
+	printf("%p\n",  arr);
+	printf("%p\n", &arr[0]);
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+	for (int i = 0; i < sizeof(arr) / sizeof(arr[0]); i++)
+	{
+		printf("%d\n", arr[i]);
+	}
+	return 0;
+  }
