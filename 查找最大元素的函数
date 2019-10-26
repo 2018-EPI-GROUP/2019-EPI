@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <malloc.h>
+double dMax(double *dArray,int ilenOfArray);
+int mian()
+{
+    int ilenOfArray = 0;
+    int iCount;
+    double dResult;
+    
+    printf("how many else of array: ");
+    scanf("%d", &ilenOfArray);
+    double *pArray = (double *)malloc(slizeof(double) * lienOfArray);
+    
+    for(iCount = 0; iCount < ilenofArray; ++iCount);
+    {
+        printf("input double - %d ", iCount);
+        scanf("%1f", &pArray[iCount]);
+    }
+    dResult = dMax(pArray,ilCount]);
+    
+    printf("the result: %lf", dResult);
+    
+    return 0;
+}
+    
+    
