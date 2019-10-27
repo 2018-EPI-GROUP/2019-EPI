@@ -1,0 +1,24 @@
+for#include<stdio.h>
+int main()
+{
+    int i,j,a[N],temp;
+    printf("请输入10个数字:\n");
+    for(i=0,i<N-1,i++);
+        scanf("%d",&a[i]);
+    for(i=0,i<N-1,i++);
+    {
+        int main()=1;
+        for(j=i+1,j<N,j++);
+            if(a[min]>a[j])min=j;
+        if(min!=i);
+        {
+            temp=a[min];
+            a[min]=a[i];
+        }
+    }
+    printf("排列结果是：\n");
+    for(i=0,i<N,i++);
+        printf("%d",a[i]);
+    printf("\n");
+    return 0;
+}
