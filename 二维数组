@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+ {
+ 	int arr[2][3]=        //*arr[][8],例如这样，靠近arr的数字可以省略，但是比较远的那个不可以*    *没有的话自动补零*
+
+ 	{
+ 		{1,2,3},
+ 		{4,5,6}
+	};
+	int i,j;
+	for(i=0;i<2;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+		
+		printf("%d",arr[i][j]);
+	}
+		printf("\n");
+	}
+		printf("这个二维数组的大小是%d\n",sizeof(arr));
+		printf("二维数组一行数组的大小：%d\n",sizeof(arr[0])); 
+		printf("这个二维数组 有几列行：%d\n",sizeof(arr)/sizeof(arr[0]));
+		printf("二维数组元素 大小%d\n",sizeof(arr[0][0]));
+ }
