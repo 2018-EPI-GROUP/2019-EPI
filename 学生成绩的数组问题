@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main()
+//定义一个数组，输入五名学生的三门成绩 arr[5][3]
+//求出每个学科的平均成绩，总成绩 
+//求每名学生的总成绩，平均成绩 
+ {//输入学生成绩 
+    int i,j,sum;
+ 	int arr[5][3];
+	 for(i=0;i<5;i++)
+	 {
+	 	for(j=0;j<3;j++)
+	 	scanf("%d",&arr[i][j]);
+	  } 
+	 for(i=0;i<5;i++)
+	 {
+	 	sum=0;
+	 	for(j=0;j<3;j++)
+	 	{
+	 		sum=sum+arr[i][j];
+		}
+	    printf("第%d名学生的总成绩是%d,平均成绩是%d\n",i+1,sum,sum/3);
+	} 
+	for(j=0;j<3;j++)
+	{
+		sum=0;
+		for(i=0;i<5;i++)
+		{
+			sum=sum+arr[i][j];
+		}
+		printf("第%d门学科的总成绩是%d,平均成绩是%d\n",j+1,sum,sum/5);
+	}
+	return 0;
+ }   
