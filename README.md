@@ -1,5 +1,2 @@
 HELLO WORLD!! 
-THIS IS MY LITTLE WORLD!
 
-I AM   张朕！！yeah!!!`
-I WANT TO PLAY A GAME!
