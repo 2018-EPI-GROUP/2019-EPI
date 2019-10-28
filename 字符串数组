@@ -1,0 +1,21 @@
+#include<stdio.h>
+ main()
+{
+	char ch1[]="hello";      //定义两个字符串数组，然后把他们合起来
+	char ch2[]="world";
+	char ch3[40];
+	int i=0;
+	while(ch1[i] != '\0')   //然后分别赋值，当读取到   /0   的时候就停了
+	{
+	
+	ch3[i]=ch1[i];
+	i++;
+    }
+    int j=0;
+    while(ch2[j]!='\0')
+    {
+    ch3[i+j]=ch2[j];
+    j++;
+}
+	printf("%s",ch3);
+ } 
