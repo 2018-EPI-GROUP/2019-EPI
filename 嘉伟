@@ -1,1 +1,35 @@
+//输入参数《-10000000---10000000》计算特定范围内的所有整数的平方和；
+#include<stdio.h>
 
+#include<stbool.h>
+//验证输入是一个整数
+long get_long();
+//上下限是否有效
+bool bad_limits(long begin,long end,
+                  long low,long high);
+//计算整数所有平方和
+double sum_squares(long a,long b);
+int main()
+{
+  const long MIN =-10000000L;   //下界
+  const long MAX =-10000000L;   //上界
+  long start;     //交互指定的最小值
+  long stop;     //交互指定的最大值
+  double answer;
+  printf("这个程序用于求您所给的两个参数之间《须在-10000000至10000000之间》的所有整数的平方和，您可以输入0来退出")；
+  start = get_long();
+  printf("upper limit!:");
+  stop = get_long();
+  while（start !=o|| stop!=0）
+  {
+    if(bad_limits(start,stop.MIN,MAX))
+      printf("再试一次嘛!");
+    else 
+    {
+      answer = sum_squares(start,end);
+      printf("你输入的下界是%ld,上界是%ld,总和是%g\n",
+                          start,stop,answer);
+    }
+    printf("输入界（同时输入0退出）：\n");
+    
+      
