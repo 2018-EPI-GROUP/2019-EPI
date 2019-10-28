@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+main()
+{
+	int A,B,C;
+	printf ("A,B,C:");
+  scanf ("%d,%d,%d",&A,&B,&C);
+if (A<0&&B<0&&C<0)
+{   printf("\"It's not an triangle\"");
+}
+
+if (A-B<C&&A-C<B&&B-C<A)
+{	printf("It's not an triangle");
+}
+if( (pow(A,2))+(pow(B,2))==(pow(C,2))||
+(pow(A,2))+(pow(C,2))==(pow(B,2))||
+(pow(B,2))+(pow(C,2))==(pow(A,2)) )
+ printf ("YES");
+else
+printf("NO!");
+return 0;
+}
