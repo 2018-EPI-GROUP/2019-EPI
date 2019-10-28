@@ -1,0 +1,128 @@
+#include<stdio.h>
+int main25()
+{
+	//外层控制行
+	//外层执行元素个数-1次
+
+	int arr[] = { 9,1,5,7,2,10,8,4,6,3 };
+	for (int i = 0; i < 10 - 1; i++)
+	{
+		//内层控制列
+		//内层执行元素个数-1-执行次数
+		for (int j = 0; j < 10 - 1 - i; j++)
+		{
+			//比较两个元素 满足条件交换
+			//通过符号控制排序的方式
+			if (arr[j] < arr[j + 1])
+			{
+				int temp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
+			}
+		}
+	}
+	for (int i = 0; i < 10; i++)
+	{
+		printf("%d\n", arr[i]);
+	}
+	return 0;
+}
+#include<stdio.h>
+int main26()
+{
+	int arr[2][3] =
+	{
+		{1,2,3},
+	{4,5,6}
+	};
+	for (int i = 0; i < 2; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			printf("%d", arr[i][j]);
+			printf("二维数组大小：%d\n", sizeof(arr));
+			printf("二维数组一行大小：%d\n", sizeof(arr[0]));
+			printf("二维数组元素大小：%d\n", sizeof(arr[0][0]));
+			printf("二维数组行数：%d\n", sizeof(arr) / sizeof(arr[0]));
+			printf("二位数组列数：%d\n", sizeof (arr[0]) / sizeof(arr[0][0]));
+
+		}
+		printf("\n");
+	}
+	return 0;
+}
+#include<stdio.h>
+int main27()
+{
+	int arr[2][3] =
+	{
+		{1,2,3},
+	{4,5,6}
+
+	};
+	printf("%p\n", arr);
+	printf("%p\n", arr[0]);
+	printf("%p\n", &arr[0][0]);
+	printf("%p\n", &arr[0][1]);
+	printf("%p\n", arr[1]);
+	for (int i = 0; i < 2; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			printf("%p\n", &arr[i][j]);
+		}
+
+	}
+	return 0;
+}
+#include<stdio.h>
+int main28()
+{
+	//int arr[2][3] = { {1,2,3},{4,5,6} };
+	//int arr[2][3] = { 1,2,3,4,5,6 };
+	//int arr[][3] = { 1,2,3,4,5,6,7};//只有挨着数组名的可以省略
+	int arr[][3] = { 0 };//第二行为乱码
+	for (int i = 0; i < 2; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			printf("%d", arr[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+
+}
+#include<stdio.h>
+int main29()
+{
+	int arr[5][3];
+	for (int i = 0; i < 5; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			scanf_s("%d", &arr[i][j]);
+
+		}
+	}
+	for (int i = 0; i < 5; i++)
+	{
+		int sum = 0;
+		for (int j = 0; j < 3; j++)
+		{
+			sum += arr[i][j];
+
+		}
+		printf("第%d名学生的总成绩为：%d\t平均成绩为：%d\n", i + 1, sum, sum / 3);
+	}
+	for (int i = 0; i < 3; i++)
+	{
+		int sum = 0;
+		for (int j = 0; j < 5; j++)
+		{
+			sum += arr[j][i];
+		}
+		printf("第%d门功课的总成绩为;%d\t平均成绩：%d\n", i + 1, sum, sum / 5);
+	}
+	return 0;
+}
