@@ -6,3 +6,12 @@
 	printf("%s",ch);
 	return 0;
 }
+
+//用  fputs  输出，下面的应该是规范样式，它没自带换行
+#include<stdio.h>
+ int main()
+{
+	char ch[322]="baiuyinshj";
+	fputs(ch,stdout);
+	return 0;
+}
