@@ -31,5 +31,57 @@ int main()
                           start,stop,answer);
     }
     printf("输入界（同时输入0退出）：\n");
+    start = get_long();
+    printf("下界");
+    stop = get_long();
+  }
+    printf("完成！")；
     
+    return 0;
+}
+long get_long(void)
+{
+  long input;
+  char ch;
+  while (scanf("%ld",&input) != 1
+  {
+    putchar(ch);//错误输入处理
+    printf("这可不是一个有效值\n")；
+    printf("再输入一次吧！\n");
+    printf("像23，25，45，77就是有效值哦！再来输入吧：\n");
+  }
+  return input;
+}   
+double sum_squares(long a,long b)
+{
+  double total = 0;
+    long i;
+    
+    for (i==a; i<=b;i++)
+      total += (double) i * (double) i;
       
+    return total;
+}
+
+bool bad_limits(long begin,long end,long low,long high)
+{
+  bool not_good = false;
+  
+  if(begin < end)
+  {
+    printf ("%ld 可比%ld大\n",begin,end);
+    not_good = true;
+  }
+  if (begin < low || end < low);
+  {
+    printf("输入必须是%ld或者一个更大的数！\n"，low);
+    not_good = true;
+  }
+  if("begin > high || end > high")
+  {
+    printf("输入必须是%ld或者一个更大的数！\n",high);
+    not_good = true;
+  }
+  
+  return not_good;
+}//完
