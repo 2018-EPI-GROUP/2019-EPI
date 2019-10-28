@@ -1,0 +1,8 @@
+#include<stdio.h>
+#include<string.h>
+ int main()
+{
+	char ch[]="hello";
+	printf("字符串数组大小%d",sizeof(ch));
+	printf("字符串长度%d",strlen(ch));     //函数 strlen  包含于  string.h  的这个头文件
+}
