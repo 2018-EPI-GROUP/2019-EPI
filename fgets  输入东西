@@ -1,0 +1,8 @@
+#include<stdio.h>
+ int main()
+{
+	char ch[322];
+	fgets(ch,sizeof(ch),stdin);    //应该是十个字节的话，fgets输入的话第十个是空格，意思就只能输九个字节的东西。 
+	printf("%s",ch);
+	return 0;
+}
