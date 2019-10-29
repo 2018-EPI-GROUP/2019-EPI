@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main()
+{
+	char ch[100];
+	//scanf_s("%[^\n]", ch);
+	gets(ch);
+	printf("%s\n", ch);
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	char ch[10];
+	fgets(ch, sizeof(ch), stdin);
+	printf("%s", ch);
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	char ch[] = "hello world";
+	//puts(ch);
+	puts("hello\0 world");
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+	char ch[] = "hello world";
+	fputs(ch, stdout);
+	//printf("%s", ch);
+	return 0;
+}
