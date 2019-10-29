@@ -1091,3 +1091,29 @@ int main()
 	for (i = 0; i < 6; i++)
 		printf("%c->%c->%d\n", a[i], a[i] - 32, (a[i] - 32) % 10);
 }//单词解析加密
+#include<stdio.h>
+int main()
+{
+	int i, s, count = 0;
+	double c = 0, average = 0;
+	for (i = 1;; i++)
+	{
+		scanf_s("%d", &s);
+		if (i == 1 && s < 0) { printf("Average = 0.00"); goto loop; }
+		else {
+			if (s < 0) { break; }
+			c++;
+			average += s;
+			if (s < 60 && s >= 0) {
+				count++;
+			}
+		}
+	}
+	if (s == 0)printf("Average = 0.00");
+	else {
+		printf("Average = %.2lf\n", average / c);
+		printf("Count = %d", count);
+	}
+loop: return 0;
+}//学生平均成绩和不及格数
+
