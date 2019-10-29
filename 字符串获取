@@ -1,0 +1,72 @@
+#include<stdio.h>
+
+int main01()
+
+{
+
+	char ch1[] = "hello";
+
+	char ch2[] = "world";
+
+	char ch3[20];
+
+	int i = 0;
+
+	int j = 0;
+
+	while (ch1[i] != '\0')
+	{
+		ch3[i] = ch1[i];
+
+		i++;
+	}
+
+	while (ch2[j] != '\0')
+	{
+		ch3[i + j] = ch2[j];
+
+		j++;
+
+	}
+	ch3[i + j] = '\0';
+
+	printf("%s", ch3);
+	
+	return 0;
+}
+#include<stdio.h>
+int main02()
+{
+	char arr[] = { 110,111,112,101,123,98,99 };
+	printf("%s\n", arr);
+	return 0;
+}
+#include<stdio.h>
+int main03()
+{
+	char arr[100] = { 110,111,112,101,123,98,98 };
+	printf("%s\n", arr);
+	return 0;
+}
+#include<stdio.h>
+int main04()
+{
+	char arr[] = { 110,111,112,101,123,98,99,0 };
+	printf("%s\n", arr);
+	return 0;
+}//遇零可以
+#include<stdio.h>
+int main05()
+{
+	char arr[] = { "hello" };
+	printf("%s\n", arr);
+	return 0;
+}
+int main()
+{
+	char ch[11];
+	scanf_s("%10s", ch);
+
+	printf("%s", ch);
+	return 0;
+}
