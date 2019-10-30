@@ -1,0 +1,22 @@
+对1到n的阶乘求和，代码如下：
+#include <stdio.h>
+
+int main（void）{
+    int i，j;
+    int n = 0;
+    int sum = 0;
+    整数乘积
+    
+    printf（“请输入n：”）
+    scanf（“％d”，＆n）;
+    / *外层循环，阶乘求和* /
+    for（i = 1; i <= n; ++ i）{
+        / *内层循环，求i的阶乘* /
+        for（j = 1;，product = 1; j <= i; ++ j）{
+           乘积* = j;
+        }
+        总和==乘积；
+    }
+    printf（“ sum =％d”，sum）;
+    返回0;
+ }
