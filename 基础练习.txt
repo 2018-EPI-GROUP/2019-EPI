@@ -1,0 +1,217 @@
+1，
+#inclued <stdio.h>
+#include <math.h>
+    int main(void){ 
+    int a,b;
+    int sum;
+
+    printf("please input two integers:"\n);
+    scanf("%d%d",&a,&b);
+    sum = a*a + b*b;
+    printf("sum = %d\n",sum);
+    
+    return 0;
+}
+    
+2,
+#inclued <stdio.h>
+ int main(void){
+     float r;
+	 float C = 0,S = 0;
+	 printf("请输入半径r：\n")；
+	 scanf("%f",&r);
+	 C = 2*3.14*r;
+	 S = 3.14*r*r;
+	 
+	if(i >= 0){
+		printf("C = %f,S = %f",C,S);
+	}
+	else
+	    printf("输出有误！")；
+	return 0; 
+	}
+	
+3,
+#include <stdio.h>
+int main(void){
+	float x,y;
+	printf("请输入一个数：\n");
+	scanf("%f",&x);
+	
+	if(x > 0)
+	    y = 2*x - 1;
+	    printf("%f",y);
+	else if(x = 0);
+	    y = 0;
+	    printf("%f",y);
+    else if(x < 0)
+        y = 2*x + 1;
+		printf("%f",y);
+    return 0;
+}
+
+
+4,
+#include <stdio.h>
+int main(void){
+	int a,b,c,d,m,n;
+	printf("请输入4个整数：\n");
+	scanf("%d%d%d%d",a,b,c,d);
+	
+	if(a > b)
+	m = b;
+	else
+	t = a;
+	if(c > d)
+	n = d;
+	else
+	n = c;
+	if(m > n){
+		printf("最小整数为%d",n);
+	}
+	else
+	    printf("最小整数为%d",m);
+	    
+	return 0;		
+}
+
+5,
+#include <stdio.h>
+int main(void){
+	
+	float x,y;
+	printf("请输入一个数：\n");
+	scanf("%f",&x);
+	
+	if(x < 0){
+	    y = 1;
+	    printf("y = %d",y);
+    }
+    else if(x = 0){
+    	y = 5;
+    	printf("y = %f",y);
+	}
+	else if(x > 0){
+	    y = 3;
+	    printf("y = %f",y);
+	}
+	    
+    return 0;  
+}
+
+6,
+#include <stdio.h>
+void max(float a,float b){
+	printf("%f",max);
+	return 0;
+}
+
+int main(void){
+	int x,y;
+	printf("请输入两个数：\n");
+	scanf("%f%f",&x,%y);
+	
+	max(x,y);
+	printf("最大数为：%f",max);
+	
+	return 0;
+}
+
+7,
+#include <stdio.h>
+void max(float a,float b){
+	printf("%f",max);
+	return 0;
+}
+
+int main(void){
+	int x,y;
+	printf("请输入两个年龄：\n");
+	scanf("%f%f",&x,%y);
+	
+	max(x,y);
+	printf("最大年龄为：%f",max);
+	
+	return 0;
+}
+
+8，
+#include <stdio.h>
+int main(void){
+    
+	int float a,b,c;
+	printf("请输入两个加数：\n");
+	scanf("%f%f",&a,&b);
+	
+	c = a + b;
+	if(c = a + b)
+	    printf("right");
+	else
+	    printf("error");
+	    
+	return 0;
+	} 
+	
+9，
+
+#include <stdio.h>
+int main(void){
+	
+	float x,y;
+	printf("请输入一个数：\n");
+	scanf("%f",&x);
+	
+	if(x <= 10){
+	    y = 30;
+	    printf("y = %d",y);
+    }
+    else if(x > 10 && x < 50){
+    	y = 3*x;
+    	printf("y = %f",y);
+	}
+	else if(x >= 50){
+	    y = 2.5*x;
+	    printf("y = %f",y);
+	}
+	    
+    return 0; 
+	
+	10，
+	
+	#include <stdio.h>
+    int main(void){
+
+        float x,y1,y2;
+  
+        printf("请输入一个月的通话时间：\n");
+        gets(x);
+    
+        y1 = 0.6 * x;
+        y2 = 0.4 * x + 50;
+
+        if(y1 < y2){
+            printf("神州行便宜\n");
+        }
+        else if(y1 = y2){
+            printf("一样便宜\n");
+        }
+        else if(y1 > y2){
+            printf("全球通便宜\n");
+        }
+   
+        return 0;
+    } 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
