@@ -1,0 +1,18 @@
+# include <stdio.h>
+
+void paintN (int N)
+{
+	int i;
+	for (i=1;i<=N;i++)
+		printf ("%d\n",i);
+}
+
+main ()
+{
+	int N;
+	int i;
+	printf ("请输入一个数");
+	scanf ("%d", &N);
+	paintN (N);
+	return 0;
+}
