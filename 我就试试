@@ -1,0 +1,35 @@
+#include<iostream>
+#include<cstring>
+#include<cstdio>
+int A[600000]; 
+int S[600000];
+using namespace std;
+int main()
+{
+  int n,ans=1,max=-300000;
+  scanf("%d",&n);
+  for(int i=1;i<=n;i++)
+  {
+  	scanf("%d",&A[i]);
+	if(A[i]>0)
+	{
+	  S[ans]=i;
+	  ans++; 
+	} 
+	if(A[i]>max)max=A[i];
+  }
+  ans--;
+  for(int i=1;i<=ans;i++)
+  {
+  	int m=0,mmax=0;
+	for(int j=S[i];j<=n;j++)
+  	{
+       m+=A[j];  
+	   if(m>mmax)mmax=m;  	  
+	   if(m<A[j])break;	
+	}
+    if(mmax>max)max=mmax; 
+  }
+  printf("%d",max);
+  return 0;
+}
