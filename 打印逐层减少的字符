@@ -1,0 +1,23 @@
+# include < stdio.h>
+
+  int f(int i)
+{
+	while (i>=0)
+    {
+		printf ("*");
+		i--;
+	}
+	printf ("\n");
+	return 0;
+}
+int main ()
+{
+   int  i = 6;  f(i);  
+    i = 5;  f(i);
+    i = 4;  f(i);
+    i = 3;  f(i);
+    i = 2;  f(i);
+    i = 1;  f(i);
+    i = 0;  f(i);
+	return 0;
+}
