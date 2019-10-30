@@ -1,0 +1,22 @@
+输出水仙花数。所谓水仙花数，是指一个三位数，其代表数字立方之和等于该数本身。代码如下：
+ #include <stdio.h>
+ int main（void）{
+     int a，b，c;
+     水仙
+     printf（“ Naraissus数字：\ n”）;
+     for（a = 1; a <10; ++ a）{
+         for（b = 0; b <10; ++ b）{
+            for（c = 0; c <10; ++ c）{
+                水仙= a * 100 + b * 10 + c;
+                
+                if（a * a * a + b * b * b + c * c * c ==水仙）
+                    printf（“％5d”，narcissus）;
+            }
+         }
+     }
+  printf（“ \ n”）;
+  
+  返回0;
+  }
+  运行结果为：
+    153370371407
