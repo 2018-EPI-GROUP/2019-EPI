@@ -1,0 +1,49 @@
+#include<iostream>
+#include<cstdio>
+#include<cstring>
+#include<algorithm>
+using namespace std;
+int A[1200000];
+int C[1200000];
+int main()
+{
+  int n,m;
+  scanf("%d%d",&n,&m);
+  for(int i=1;i<=n;i++)
+    scanf("%d",&A[i]);
+  for(int i=1;i<=m;i++)
+  {
+    int s;
+    scanf("%d",&s);
+    if(s==1)
+    {
+      int x,y,k;
+      scanf("%d%d%d",&x,&y,&k);
+      y++;
+      while(x<=n)
+      {
+        C[x]+=k;
+        x+=x&-x;
+	  }
+	  while(y<=n)
+	  {
+	  	C[y]-=k;
+	  	y+=y&-y;
+	  }
+    }
+    if(s==2)
+    {
+      int x;
+      scanf("%d",&x);
+      int q=x;
+	  int sum=0;
+      while(x>0)
+      {
+      	sum+=C[x];
+		x-=x&-x; 
+	  }
+	  printf("%d\n",sum+A[q]);
+    }
+  }
+  return 0;
+}
