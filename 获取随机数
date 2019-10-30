@@ -1,0 +1,20 @@
+#include<stdlib.h>
+#include<time.h> 
+#include<stdio.h>
+/*  time _t timer =  time(NULL);
+    srand((size_t)timer);
+    添加随机数种子； 
+*/
+int main()
+{
+	int i;
+	  time_t timer =  time(NULL);
+    srand((size_t)timer);
+	//srand((size_t)time(NULL));     //timer=time(NULL)
+	for( i=0;i<1000;i++)
+	{
+	printf("%d\n",rand());
+	}
+	return 0;
+
+}
