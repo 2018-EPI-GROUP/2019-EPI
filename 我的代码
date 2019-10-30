@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+	int a,b,c;
+	for(a=2;a<=100;a++)
+	{
+		for(b=2;b<a;b++)
+		{
+			if(a%b==0)
+			break;
+		}
+		if(b==a)
+		printf("%d\n",a);
+	}
+	return 0;
+}
