@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include  <string.h>
+int main()
+{        char str1[]="YYF";
+         char str2[]="YYF";
+         if(!strcmp(str1,str2))
+         {
+            printf("They are the same"\n);
+         }
+         else
+         {   
+            printf("They are not the same"\n);
+         }
+         
+         return 0;
+}
