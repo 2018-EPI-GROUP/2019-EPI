@@ -1,0 +1,55 @@
+ / * break语句* /
+  （1）用break语句终止多层循环
+   输入3 * 3矩阵，暂时元素求和，元素必须是正数，实现代码如下：
+   #include <stdio.h>
+   
+   int main（void）{
+       int i，j;
+       数据
+       int sum = 0;
+       
+       const int m = 3;
+       const int n = 3;
+       
+       printf（“请输入％d *％d矩阵：\ n”，i，j）;
+       
+       for（i = 0; i <m; ++ i）
+           for（j = 0; j <n; ++ j）
+               printf（“ matrix [％d] [％d]（> 0）=”，i，j）;
+               scanf（“％d”，＆data）;
+               
+               if（数据<= 0）{
+                   printf（“错误：错误的数据！！！存在内循环\ n”）;
+                   打破;
+               }
+               
+               总和==数据;
+           }
+           
+           if（数据<= 0）{
+               printf（“错误：错误的数据！！！存在外循环\ n”）;
+               打破;
+           }
+       }
+       
+       if（i == m && j == n）{
+           printf（“此矩阵中的数字总和为％d。\ n”，sum）;
+           
+       返回0;
+   }
+   注意：break语句只能跳出本层循环。若要跳出多层循环，则需要多次调用break语句。
+   / * goto语句* /
+   goto语句由关键字goto和一个代码中存在的标签名组成。
+   goto标记名
+   其执行逻辑为：当程序执行该步骤后，将无条件替换到标记名所在位置，然后执行该位置后面的代码。
+   使用goto语句实现的死循环，示例代码如下：
+   #include <stdio.h>
+   
+   int main（void）{
+   无限循环：
+       printf（“这是一个无限循环！！ \ n”）;
+       转到infinite_loop;
+       
+       返回0;
+   }
+   程序执行后，进入了死循环，反复打印“他是一个无限循环！！！”
