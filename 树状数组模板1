@@ -1,0 +1,56 @@
+#include<iostream>
+#include<cstring>
+#include<cstdio>
+using namespace std;
+const int maxn=1200000;
+int A[maxn];
+int C[maxn];
+int main()
+{
+  int n,m;
+  scanf("%d%d",&n,&m);
+  for(int i=1;i<=n;i++)
+  {
+  	int s,p=i;
+    scanf("%d",&s);
+    while(p<=n)
+    {
+      C[p]+=s;
+      p+=p&-p;
+	}
+  }
+  for(int i=1;i<=m;i++)
+  {
+     int s;
+     scanf("%d",&s);
+     if(s==1)
+     {
+       int d,c;
+       scanf("%d%d",&d,&c);
+       while(d<=n)
+       {
+         C[d]+=c;
+         d+=d & -d;
+	   }
+	 }
+	 if(s==2)
+	 {
+	   int x,y;
+	   scanf("%d%d",&x,&y);
+	   int sum=0;
+	   while(y>0)
+	   {
+	     sum+=C[y];
+	     y-=y & -y;
+	   }
+	   x--; 
+	   while(x>0)
+	   {
+	     sum-=C[x];
+	     x-=x & -x;
+	   }
+	   printf("%d\n",sum);
+     }
+  }
+  return 0;
+}
