@@ -1,0 +1,23 @@
+
+       #include <stdio.h>
+       ＃定义N
+       
+       int main（void）{
+           int i，j，t;
+           int array [N];
+           printf（“请输入％d个整数”，N）;
+           for（i = 0; i <= N-1; i ++）
+               scanf（“％d”，＆array [i]）;
+           for（i = 0; i <= N -2; i ++）{
+               for（j = i + 1; j <= N-1; j ++）
+                   if（array [i] <array [j]）{
+                       t = array [i];
+                       array [i] = array [j];
+                       array [j] = t;
+                   }
+           }
+           printf（“按升序打印这些整数：\ n”）;
+           for（i = 0; i <= N-1; i ++）
+               printf（“％d”，array [i]）;
+           返回0;
+        } 
