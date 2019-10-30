@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<time.h>
+//双色球  6个红球 1-32 1个蓝球 1-16随机的
+srant((unsigned int)time(NULL));
+int arr[6]={0};
+int value=0;
+int flag =0;
+for(int i=0;i<6;i++)
+{
+value=rand()%32+1
+//去重
+for(int j=0;j<flag;j++)
+{
+if(value==arr[j])
+{
+        i--;
+	break;
+	}
+	}
+	if(j==flag)
+	{
+	arr[flag]=value;
+	flag++;
+	}
+	}
+	for(int i=0;i<6;i++)
+	{
+	printf("%d\n",arr[i]);
+	}
+	return 0;
+	}
