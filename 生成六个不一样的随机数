@@ -1,0 +1,42 @@
+#include<stdlib.h>
+#include<time.h> 
+#include<stdio.h>
+  //time _t timer =  time(NULL);
+    //srand((size_t)timer);
+    //添加随机数种子； 
+
+int main()
+{
+//	time_t timer =  time(NULL);
+  //  srand((size_t)timer);
+    //添加随机数种子； 
+
+	int j,i;
+	int arr[6]={0};
+	int value=0;
+	int flag=0;
+	srand((unsigned int)time(NULL));
+	for(i=0;i<6;i++)
+	{
+		value=rand()%32+1;
+		for(j=0;j<flag;j++)
+		{
+			if(value=arr[j])
+			{
+			i--;
+			break;
+		    }
+		}
+		if(j==flag)
+		{
+		arr[flag]=value;
+		flag++;
+	    }
+	}
+	for(i=0;i<6;i++)
+    {
+		printf("%d",arr[i]);
+    }
+	return 0;
+
+}
