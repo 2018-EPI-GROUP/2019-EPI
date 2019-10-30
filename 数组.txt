@@ -1,0 +1,282 @@
+数组都是统一数据类型的许多数据元素按某种顺序分开在一起的集合。
+   （1）使用循环语句给一维数组赋值并打印数组，实现方法如下：
+   #include <stdio.h>
+   ＃定义大小10
+   
+   int main（void）{
+       int i = 0;
+       int array [SIZE];
+       
+       for（i = 0; i <SIZE; ++ i）
+           array [i] = i;
+           
+       for（i = 0; i <SIZE; ++ i）
+           printf（“ array [％d] =％d”，i，array [i]“）;
+       }
+       返回0;
+    }
+    输出结果为：array [0] = 0
+                数组[1] = 1
+                数组[2] = 2
+                数组[3] = 3
+                数组[4] = 4
+                数组[5] = 5
+                数组[6] = 6
+                数组[7] = 7
+                数组[8] = 8
+                数组[9] = 9
+    （2）一维整数示例
+     在一个无序序中中查找一个数，代码如下：
+ #include <stdio.h>
+ ＃定义大小10
+
+ int main（void）{
+    我
+    int targrt;
+    
+    int sequence [SIZE] = {3,78,41,2,40,5,33,8,7,24};
+    for（i = 0; i <SIZE; ++ i）
+        printf（“％-4d”，sequence [i]）;
+    printf（“ \ n输入目标值：”）;
+    scanf（“％d”，＆target）;
+
+    for（i = 0; i <SIZE; ++ i）
+        if（sequence [i] ==目标）
+            打破;
+    }
+    
+    if（SIZE == i）
+        printf（“在此序列中找不到％d。\ n”）；
+    其他
+        printf（“％d是此序列中的％dth（st / nd）元素\ n”，target，i + 1）;
+
+    返回0;
+ }
+  当输入为4时，结果为找不到此序列中的4。
+  当输入为7时，结果为7是此序列中的第9个（st / nd）元素。
+   （3）数列排序
+   把无序整数数列按照从大到小的顺序输出。示例代码如下：
+   ①
+   #include <stdio.h>
+   ＃定义大小10
+   
+   int main（void）{
+       int i，j;
+       int键值[SIZE] = [0];
+       int maxindex;
+       int tmp;
+       
+       printf（“请输入％d个片段：\ n”，SIZE）;
+       
+       for（i = 0; i <SIZE; ++ i）
+           scanf（“％d”，＆keyvalue [i]）;
+           
+       for（i = 0; i <SIZE-1; ++ i）
+           maxindex = i;
+           
+           for（j = i + 1; j <SIZE; ++ j）
+           
+               if（keyvalue [maxindex] <keyvalue [j]）
+                   maxindex = j;
+                   
+               if（maxindex！= i）{
+               
+                   tmp =键值[maxindex];
+                   keyvalue [maxindex] <keyvalue [i];
+                   keyvalue [i] = tmp;
+               }
+           }
+           printf（“按升序打印这些整数：\ n”）;
+           
+           for（i = 0; i <SIZE; ++ i）
+               printf（“％-4d”，keyvalue [i]“）;
+               
+           printf（“ \ n”）;
+           
+           返回0;
+       }
+       ②
+       #include <stdio.h>
+       ＃定义N
+       
+       int main（void）{
+           int i，j，t;
+           int array [N];
+           printf（“请输入％d个整数”，N）;
+           for（i = 0; i <= N-1; i ++）
+               scanf（“％d”，＆array [i]）;
+           for（i = 0; i <= N -2; i ++）{
+               for（j = i + 1; j <= N-1; j ++）
+                   if（array [i] <array [j]）{
+                       t = array [i];
+                       array [i] = array [j];
+                       array [j] = t;
+                   }
+           }
+           printf（“按升序打印这些整数：\ n”）;
+           for（i = 0; i <= N-1; i ++）
+               printf（“％d”，array [i]）;
+           返回0;
+        } 
+        / *二维数组* /
+        （1）访问二维数组元素
+        给二位矩阵赋值，并输出赋值结果，实现代码如下：
+        #include <stdio.h>
+        ＃定义ROW_SIZE 5
+        ＃定义COLUMN_SIZE 4
+        
+        int main（void）{
+            int i = 0，j = 0;
+            int array [ROW_SIZE] [COLUMN_SIZE];
+            
+            for（i = 0; i <ROW_SIZE; ++ i）{
+                for（j = 0; j <COLUMN_SIZE; ++ j）
+                    array [i] [j] = i * 10 + j;
+            }
+            
+             for（i = 0; i <ROW_SIZE; ++ i）{
+                for（j = 0; j <COLUMN_SIZE; ++ j）
+                    printf（“ array [％d] [％d] =％2d”，i，j，array [i] [j]）;
+                    
+                printf（“ \ n”）;
+             }
+             
+             返回0;
+         }
+         / *二维整数示例* /
+         1，矩阵转置的实现
+         使用两个副本实现矩阵的转置，方法一的代码如下：
+         #include <stdio.h>
+         ＃定义SIZE 4 / *分散容量* /
+         
+         int main（void）{
+             int i，j;
+             int array [SIZE] [SIZE] = {{0,1,2,3} / *定义并初始化二维数组* /
+                               {4,5,6,7}
+                               {8,9,10,11}
+                               {12,13,14,15}}；
+             int transpose [SIZE] [SIZE] = {0}; / *定义二维矩阵并初始化全为0 * /
+             
+             / *打印二维数组* /
+             printf（“主数组：\ n”）; / *输出辅助信息* /
+             for（i = 0; i <SIZE; ++ i）/ * i为行号* /
+                 for（j = 0; j <SIZE; ++ j）/ * j为列号* /
+                     printf（“ \ t％-4d”，array [i] [j]“）; / *输出第i行第j列元素* /
+                 printf（“ \ n”）;
+                 
+              / *将副本转置结果存入另一个副本中* /   
+              for（i = 0; i <SIZE; ++ i）{
+                 for（j = 0; j <SIZE; ++ j）
+                     转置[j] [i] =数组[i] [j];
+                                                / *为transpose中第j行第i列元素* /
+              }
+              
+              / *打印二维数组* /
+              printf（“ \ n最终数组：\ n”）; / *输出辅助信息* /
+              for（i = 0; i <SIZE; ++ i）
+                  for（j = 0; j <SIZE; ++ j）
+                      printf（“ \ t％-4d”，transpose [i] [j]）; / *输出第i行第j列元素* /
+                  printf（“ \ n”）;
+              }
+              
+                  返回0;
+          }
+     第377〜381行，使用4 * 4的数值矩阵序列将数组的全都元素初始化。
+     第384〜388行，使用二层循环实现多重内容的输出。
+     第391〜393行，完成了拆分转置并存到另一个数组中的过程，循环结束后，transpose的结果就是array的转置矩阵。
+     第398〜402行与384〜388行的内容相同，输出数组内容。
+     方法二：
+     #include <stdio.h>
+     ＃定义尺寸4
+     
+     int main（void）{
+         int array [SIZE] [SIZE] = {{0,1,2,3} / *定义并初始化二维数组* /
+                               {4,5,6,7}
+                               {8,9,10,11}
+                               {12,13,14,15}}；
+         int tmp = 0;
+         int i = 0;
+         int j = 0;
+         
+         / *打印二维数组* /
+             printf（“主数组：\ n”）; / *输出辅助信息* /
+             for（i = 0; i <SIZE; ++ i）{/ * i为行号* /
+                 for（j = 0; j <SIZE; ++ j）/ * j为列号* /
+                     printf（“ \ t％-4d”，array [i] [j]“）; / *输出第i行第j列元素* /
+                 printf（“ \ n”）;
+             }
+             
+             
+             for（i = 0; i <SIZE; ++ i）{                 
+                 for（j = 0; j <SIZE; ++ j）{
+                     
+                     tmp = array [j] [i];
+                     array [j] [i] = array [i] [j];
+                     array [i] [j] = tmp;
+                 }
+             }
+             
+             
+             printf（“ \ n最终数组：\ n”）; / *输出辅助信息* /
+              for（i = 0; i <SIZE; ++ i）
+                  for（j = 0; j <SIZE; ++ j）
+                      printf（“ \ t％-4d”，transpose [i] [j]）; / *输出第i行第j列元素* /
+                  printf（“ \ n”）;
+              }
+              
+                  返回0;
+         }
+         使用这种方法也可以实现层叠的转置。
+         / *多维整数示例* /
+         看代码：
+         #include <stdio.h>
+         #include <stdlio.h> / *随机函数需要的头文件* /
+         #include <time.h> / *函数time（）需要的头文件* /
+         
+         #define SIZE_13 / *一维多重容量* /
+         #define SIZE_22 / *一维多重容量* /
+         #define SIZE_33 / *一维多重容量* /
+         #define SIZE_42 / *一维多重容量* /
+         #define SIZE_53 / *一维多重容量* /
+         
+         int main（void）{
+             int i1，i2，i3，i4，i5;
+             int array [SIZE_1] [SIZE_2] [SIZE_3] [SIZE_4] [SIZE_5] = {0}；
+                                                           / *定义一个五维整数，并全初始化为0 * /
+             int main;
+             
+             / *使用随机数给分散赋值* /
+             srand（（unsigned）time（NULL））; / *以当前时间为随机数的种子* /
+             for（i1 = 0; i1 <SIZE_1; ++ i1）
+                 for（i2 = 0; i2 <SIZE_2; ++ i2）
+                     for（i3 = 0; i3 <SIZE_3; ++ i3）
+                         for（i4 = 0; i4 <SIZE_4; ++ i4）
+                             for（i5 = 0; i5 <SIZE_5; ++ 5）
+                                 array [i1] [i2] [i3] [i4] [i5] = rand（）;
+                                                           / *取下一个随机数，并赋值给多个元素* /
+                                 
+             min = array [0] [0] [0] [0] [0];
+             
+             / *在所有元素中查找替代* /
+             for（i1 = 0; i1 <SIZE_1; ++ i1）/ *第一维* /
+                 for（i2 = 0; i2 <SIZE_2; ++ i2）/ *第二维* /
+                     for（i3 = 0; i3 <SIZE_3; ++ i3）/ *第三维* /
+                         for（i4 = 0; i4 <SIZE_4; ++ i4）/ *第四维* /
+                             for（i5 = 0; i5 <SIZE_5; ++ 5）{
+                                                           / *第五维* /
+                                 / *如果矩阵元素比min小，将其值赋值给min * /
+                                 if（min> array [i1] [i2] [i3] [i4] [i5]）
+                                     min = array [i1] [i2] [i3] [i4] [i5];
+                                                           / *重新为min赋值* /
+                              }
+                              
+             printf（“此集合的最小值为：％d”，min）; / *打印出预设* /
+             
+             返回0;
+         }
+         第473〜478行，使用了5个用于循环为五维数组赋值，各个循环变量依次为各维的索引值；第478行使用rand（）函数得到下一个随机数，赋值给相应的数组元素。
+         第484〜494行，通过5层用于循环遍历5维数组，将其中所有元素与min进行比较，如果比min小，则将值赋值给min；最后，min肯定是替代。
+         
+         
+         （对于这最后的文章，我对其中的srand（（unsigned）time（NULL））; / *以当前时间为随机数的种子* /这步
+         ，以及头文件的概念基本上没有了解，仅属于转载，以后会花时间了解它们的。）
