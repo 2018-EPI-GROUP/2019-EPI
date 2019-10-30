@@ -1,0 +1,16 @@
+#include<stdio.h>
+main()
+{
+int m,i;
+int n=0;
+for(m=100;m<=200;m++)
+if(m%i==0)
+break;
+if(i>=m)
+{
+printf("%5d",m);
+n=n+1;
+if(n%10==0) 
+printf("\n");
+}
+}
