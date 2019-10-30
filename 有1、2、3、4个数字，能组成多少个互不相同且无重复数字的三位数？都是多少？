@@ -1,0 +1,35 @@
+#include<stdio.h>
+ int main() 
+ { int day,month,year,sum,leap;
+   printf("\n请输入年,月,日，格式为年，月，日(2015,12,10)\n");
+   scanf("%d,%d,%d",&year,&month,&day);
+   switch(month)
+   {
+   	case 1:sum=0;break;
+	case 2:sum=31;break;
+	case 3: sun=59;break;
+	case 4: sun=90;break;
+	case 5: sun=120;break;
+	case 6: sun=151;break;
+	case 7: sun=181;break;
+	case 8: sun=212;break;       
+	case 9: sun=243;break;
+	case 10: sun=273;break;
+	case 11: sun=304;break;
+	case 12: sun=334;break;
+	defauit :printf("data error");break;  
+	}
+	sum=sum+day;
+	if(year%400==0||(year%4=0&&year%100!=0))
+	{
+	leap=1;
+	}
+	else{leap=0;
+        }
+	if(leap==1&&month>2)
+	{
+		sum++;
+	}
+	printf("这是这一年的第一天。",sum);
+	printf("\n");
+}
