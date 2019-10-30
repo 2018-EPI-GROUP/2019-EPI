@@ -1,0 +1,16 @@
+#include<stdio.h>//加法
+int add(int a,int b)
+{
+	int sum=a+b;
+	return sum;
+	}//函数定义
+	int main()
+	{
+	int a=10;
+	int b=20;
+	int c;
+	c=add(a,b);//函数调用
+
+printf("%d\n",c);
+return 0;
+}
