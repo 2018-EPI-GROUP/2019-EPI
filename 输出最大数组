@@ -1,0 +1,34 @@
+#include<stdio.h>
+int main()
+{
+	int i, j;
+	int a[6][6] = { 1 }, { 1,1 }, { 1,2,1 }, { 1,3,3,1 }
+	{1, 4, 6, 4, 1}, { 1,5,10,10,5,1 };
+	printf("%d", i, j);
+	printf("\n");
+	return 0;
+}
+
+
+
+
+#include<string.h>
+int main()
+{
+	char str[3][20];                     //定义二维字符数组
+
+	char string[20];                     //定义一维字符数组，作为交换字符串时的临时字符数组
+	int i;
+	for (i = 0;i < 3;i++)
+		gets(str[i]);                       //读入3个字符串，分别给str[0],str[i],str[2]
+	if (strcmp(str[0], str[1] > 0))
+		strcpy(string, str[0]);
+	else
+		strcpy(string, str[1]);
+	if (strcmp(str[2], string) > 0)
+		strcpy(string, str[2]);
+	printf("\nthe largest string is:\n%s\n", string);
+	return 0;
+
+
+}
