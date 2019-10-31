@@ -1,0 +1,12 @@
+#include <stdio.h>
+main()
+{   float  a,b,c,d,e,f;
+    
+    scanf(%f,%f,%f,%f,%f);
+    
+    e=(c-a)*(c-a);
+    f=(d-b)*(d-b);
+    g=sqrt(e+f);
+    
+    printf("D=%.2f",g);
+}
