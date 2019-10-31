@@ -1,0 +1,20 @@
+# include <stdio.h>
+ int main (void)
+ {
+	char ch;
+	int l=0,c=0,s=0,o=0;
+	ch=getchar();
+	while ( (ch=getchar())!='\n' )
+	{
+		if ((ch >= 'a'&& ch <= 'z')|| (ch >= 'A' &&ch <= 'Z'))
+			l++;
+		else if (ch >= '0' && ch <= '9')
+			c++;
+		else if (ch ==' ')
+			s++;
+		else 
+			o++;
+    }
+	printf ( " l=%d,c=%d,s=%d,o=%d ",l, c, s, o);
+    return 0;
+ }
