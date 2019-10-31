@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+	float a;
+	float b;
+	float c; 
+	printf("输入第一个数\n"); 
+	scanf("%f",&a);
+	printf("输入第二个数\n");
+	scanf("%f",&b);
+	printf("输入结果\n");
+	scanf("%f",&c);
+	if(c=a+b)
+	printf("right");
+	else 
+	printf("false");
+	return 0;
+}
