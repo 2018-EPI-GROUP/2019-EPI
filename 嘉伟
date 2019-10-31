@@ -240,5 +240,30 @@ int mian ()
     int top,seek;
     
     for(top = 0;top<num-1;top++)
-      for(seek = top +1)
+      for(seek = top +1;seek<num;seek++)
+        if(strcmp(strings[tops],strings[seek])>0)
+        {
+          temp = strings[top];
+          strings[top]=strings[seek];
+          strings[seek] = temp;
+        }
+  }
+  char * s_gets(char * st,int n)
+  {
+    char * ret_val;
+    int i =0;
+    
+    ret_val = fgets(sst,n,stdin);
+    if (ret_val)
+    {
+      while(st[i] != '\n'&&st[i] !='0')
+        i++;
+      if(st[i]=='\n')
+        st[i] = '\0';
+      else
+        while (gether() !='\n')
+            conitnue;
+    }
+    return ret_val;
+  }
     
