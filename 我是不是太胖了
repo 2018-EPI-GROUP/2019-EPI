@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+  int H[20]={0},i,W[20]={0},b[20]={0},N;
+  scanf("%d",&N);
+  for(i=0;i<N;i++)
+  	scanf("%d %d",&H[i],&W[i]);             //避开难点，先初始化数组，然后差的绝对值小于那个，就正常，不然纠纷类讨论
+  for(i=0;i<N;i++)
+  {
+    b[i]=(H[i]-100)*2*0.9;
+    if(abs(W[i]-b[i])<(b[i]*0.1))
+  	printf("You are wan mei!\n");
+    else if(abs(W[i]-b[i])>=(b[i]*0.1)&&(W[i]>b[i]))
+  		printf("You are tai pang le!\n");	
+	else
+   		printf("You are tai shou le!\n");
+  }
+ 
+}
