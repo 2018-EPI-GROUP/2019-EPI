@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main(void) 
+{
+	int i,a,b,c,sum;
+	sum=1;
+	for(i=100;i<=999;i++)
+	{
+		a=(i%100)%10;
+		b=(i%100)/10;
+		c=i/100;
+		if (a+b>c && b+c>a && a+c>b)
+		{
+			 if (a==b || a==c || b==c)
+		{                
+			printf("是三角形%d 次\n",sum);
+			sum++;}
+		}
+	}
+	return 0;
+}
