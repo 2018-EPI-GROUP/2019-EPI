@@ -7,6 +7,7 @@ int main()
 	{
 		a[x]=0;
 	}
+	printf("杈撳叆绗竴涓暟\n"); 
 	scanf("%d",&x); 
 	while(x!=-1);
 	{
@@ -15,11 +16,12 @@ int main()
 		{
 			a[x]+=1;
 		}
+		printf("涓嬩竴涓暟\n"); 
 		scanf("%d",&x);
 	}
 	for(x=0;x<=9;x++)
 	{
-		printf("数字%d出现的次数为-----%d\n",x,a[x]);
+		printf("鏁板瓧%d鍑虹幇鐨勬鏁颁负-----%d\n",x,a[x]);
 	}
 	return 0;
 } 
