@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main()
+{   int  fahr,celsius;
+         fahr=100;
+         celsius=5*(fahr-32)/9;
+         printf("fahr = 100, celsius = %d" , celsius);
+ return 0;
+}    
