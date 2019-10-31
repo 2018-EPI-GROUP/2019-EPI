@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main(void)
+{
+	int M,N,m,sum,flag,i,cnt;
+	sum=0;
+	cnt=0;
+	printf("1<m<n<500\n");
+	scanf("%d%d",&M,&N);
+	for(m=M;m<=N;m++)
+	{
+		flag=1;
+	
+		for(i=2;i<=m-1;i++)           
+        { 
+		if(m%i==0)
+		{
+			flag=0;
+			break;
+     	 }             
+		}
+        if(flag)              
+        {
+		  sum=sum+i;cnt++;}
+     }
+     printf("%d %d",cnt,sum);
+
+}
