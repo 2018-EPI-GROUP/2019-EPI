@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+	float a[4];
+	float min;
+	int i;
+	printf("请输入第1个数\n");
+	scanf("%f",&a[0]);
+	printf("请输入第2个数\n");
+	scanf("%f",&a[1]);
+	printf("请输入第3个数\n");
+	scanf("%f",&a[2]); 
+	printf("请输入第4个数\n");
+	scanf("%f",&a[3]);
+	min=a[1];
+	for(i=0;i<=3;i++)
+	{
+		if(a[i]<=a[i+1])
+		{
+			min=a[i];   
+		}
+	} 
+	printf("最小的数为%d",min);
+	
+	return 0;
+}
