@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+	float r,c,s;
+	printf("请输入半径");
+	scanf("%f",&r); 
+	c=2*3.14*r;
+	s=3.14*r*r;
+	if(r>=0)
+	{
+		printf("面积为%f，周长为%f",s,c);
+	}
+	else
+	{
+		printf("您输入的数有误"); 
+	}
+	return 0;
+}
