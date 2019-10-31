@@ -1,0 +1,18 @@
+﻿生成启动时间为 2019/10/4 17:55:19。
+     1>项目“D:\编程\10.03\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\编程\wuyu\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "源.cpp"
+         源.cpp
+     1>d:\编程\10.03\consoleapplication1\consoleapplication1\源.cpp(129): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+     1>d:\编程\10.03\consoleapplication1\consoleapplication1\源.cpp(157): warning C4996: 'kbhit': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _kbhit. See online help for details.
+                 d:\编程\wuyu\vc\include\conio.h(133) : 参见“kbhit”的声明
+     1>d:\编程\10.03\consoleapplication1\consoleapplication1\源.cpp(159): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+                 d:\编程\wuyu\vc\include\conio.h(131) : 参见“getch”的声明
+       Link:
+         D:\编程\wuyu\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\编程\10.03\ConsoleApplication1\Debug\ConsoleApplication1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\编程\10.03\ConsoleApplication1\Debug\ConsoleApplication1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\编程\10.03\ConsoleApplication1\Debug\ConsoleApplication1.lib" /MACHINE:X86 "Debug\源.obj"
+         ConsoleApplication1.vcxproj -> D:\编程\10.03\ConsoleApplication1\Debug\ConsoleApplication1.exe
+     1>已完成生成项目“D:\编程\10.03\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.08
