@@ -1,0 +1,14 @@
+/*Fibonacci数列第一项为1，第二项为2，从第三项开始，每项等于前两项之和*/
+#include <stdio.h>
+main()
+{
+    int i;
+    long int f,f1=1,f2=1;
+    printf("%10ld%10ld",f1,f2);
+    for (i=3;i<=30;i++)
+    {
+        f=f1+f2;
+        printf("%10ld",f);
+        f1=f2;
+     }
+}
