@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+	int a,b,c;
+	printf("输入第一个数\n"); 
+	scanf("%d",&a);
+	printf("输入第二个数\n");
+	scanf("%d",&b);
+	c=a*a+b*b;
+	printf("平方和为%d",c);
+	return 0;
+}
