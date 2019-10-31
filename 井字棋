@@ -1,0 +1,80 @@
+//判断井字棋numofo，numofx谁输谁赢，输入1或0为两个人 
+#include<stdio.h>
+int main()
+
+{
+	const int size = 3;
+	int board[size][size];
+	int i,j;
+	int numofx;
+	int numofo;
+	int result = -1;
+	
+	//输入井字棋 
+	for(i=0;i<size;i++){
+		for(j=0;j<size;j++){
+			scanf("%d",&board[i][j]);
+		}
+	}
+	
+	//检查行 
+	for(i=0;i<size&&result == -1;i++){
+		numofo = numofx = 0;
+		for (j=0;j<size;j++){
+			if(board[i][j]==1){
+				numofx ++;
+			} else {
+				numofo ++;
+			}
+		}
+		if ( numofo == size){
+			result = 0;
+		} else if(numofx == size){
+			result = 1;
+		}
+	}
+	
+	//检查列 
+	if(result == -1){
+		for(j=0;j<size && result == -1;j++){
+			numofo = numofx = 0;
+			for(i=0;i<size;i++){
+				if(board[i][j] == 1){
+					result = 0;
+				} else if(numofx == size){
+					result = 1;
+				}
+			}
+		}
+	}	
+	
+	//检查对角线 
+	numofo =numofx = 0;
+	for(i=0;i<size;i++){
+		if(board[i][i] == 1){
+			numofx ++;
+		} else {
+			numofx ++;
+		}
+	}
+	if(numofo == size ){
+		result = 0;
+	} else if (numofx == size ){
+		result = 1;
+		numofo = numofx = 0;
+		for(i=0;i<size;i++){
+			if(board[i][size-i-1] == 1){
+				numofx ++;
+			} else {
+				numofo ++;
+			} 
+		}
+	}
+	
+	//输出输赢结果 
+	if(result == 0){
+		printf("numofo获胜！"); 
+	} else if(result == 1){
+		printf("numofx获胜！"); 
+	}
+ } 
