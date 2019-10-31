@@ -1,0 +1,23 @@
+#include<stdio.h>
+//void fun()
+//{
+//printf("hello world\n");
+//printf("hello world\n");
+
+//exit(0);
+//return 0;
+//printf("hello world\n");
+//return;
+
+//}
+int main()
+
+{
+	//fun();
+	printf("hello world\n");
+	printf("hello world\n");
+	exit(0);
+	//return -1;
+	printf("hello world\n");
+	return ;
+}
