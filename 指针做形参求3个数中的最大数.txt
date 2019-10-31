@@ -1,10 +1,12 @@
 #include <stdio.h>
-void(int a,int b,int c,int *p){
+void find(int a,int b,int c,int *p){
     int m;
     if(a > b)
     m = a;
     else m = b;
-    
+    if(m < c)
+    m = c;
+      
     *p = m;
     return;
 }
