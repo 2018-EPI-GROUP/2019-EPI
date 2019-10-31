@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int i;
+	int o,t,h,s,a;
+	for(i=1000;i<10000;i++)   //4396
+	{
+		o=i%10;
+		t=(i/10)%10;
+		h=(i/100)%10;
+		s=i/1000;
+		a=pow(o,4)+pow(t,4)+pow(h,4)+pow(s,4);
+		if(i==a)
+		{
+			printf("%d  ",i);
+		}
+	}
+	return 0;
+} 
