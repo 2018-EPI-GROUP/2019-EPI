@@ -1,0 +1,27 @@
+#include<stdio.h>
+int maopao(int arr[],int lens)
+{
+	int i,j,t;
+	for ( i = 0; i < lens-1; i++)
+	{
+		for(j=0;j<lens-1-i;j++)
+		{
+			if(arr[j]>arr[j+1])
+			{
+		    t=arr[j];
+		    arr[j]=arr[j+1];
+		    arr[j+1]=t;
+	        }     
+	
+	    }  
+
+    }
+ } 
+ int main()
+ {
+ 	int arr[]={11,4,2,6,9};
+ 	maopao(arr,sizeof (arr)/sizeof (arr[0]));
+ 	int i;
+ 	for(i=0;i<5;i++)
+	    printf("%d\n", arr[i]);
+ }
