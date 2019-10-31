@@ -178,6 +178,7 @@ int mian ()
   scanf("%s",answer[1]);
   switch(answer[0])
   {
+  
     case'a':
       printf("你来到了荒郊野外，路途上遇到了很多猛兽，不出意外的，你成为了“food”\n");
       break;
@@ -196,11 +197,48 @@ int mian ()
    printf("嘿，朋友，别生气，毕竟这样显得真实一点。你知道的，这就是**的生活与现实啊****\n");
    printf("你不开心的话，游戏到这里就结束了吧，毕竟只是某个人拿来练手的无赖代码，这个小游戏，说现实的，可能那个人自己敲完之后都不会瞅一眼的。\n");
    printf("再见，如果我有幸能看见人的交互的话\n");
-   return 0;
+   return 0；
    }
    
     
+  //读入字符串，排序字符串
+  //一直都听说指针是个分水岭，我就来预习预习。
+  #include<stdio.h>
+  #include<string.h>
+  #define SIZE 81   /*限制字符串长度，包括\0*/
+  #define LIM 20 /*可读入最多行数*/
+  #define HALT ""  /*空字符停止输入*/
+  void stsrt(char *srings [],int num); /*字符串排序*/
+  char * s_gets(char * st,int n);
   
+  int mian(void)
+  {
+    char input[LIM][SIZE];   /*储存输入的数组 */
+    char *ptstr[LIM];     /*内含指针变量的数组 */
+    int ct =0;  /*输入计数*/
+    int k;  /*输出计数*/
+    
+    printf("input up to %d lines,and i will sort them.\n",LIM);//切换中英实在是难受
+    printf("to stop ,press the enter key at a lines's start.\n");
+    while(ct< LIM&& s_gets(input[ct],SIZE)!=NULL&& input[ct][0]!= '\0')
+    {
+      ptstr[ct] = input[ct]; /*设置指针指向字符串*/
+      ct++;
+    }
+  start(prstr,ct); /*字符串排序函数*/
+  puts("\nHere's the sorted list:\n");
+  for (k = 0;k< ct;k++)
+    puts(ptstr[k]);  /*排序后的指针*/
+    
+    return 0;
+  }
   
-  
-  
+  /*字符串-指针-排序函数*/
+  void stsrt(char *strings [],int num)
+  {
+    char *temp;
+    int top,seek;
+    
+    for(top = 0;top<num-1;top++)
+      for(seek = top +1)
+    
