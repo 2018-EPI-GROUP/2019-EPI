@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+	int a, n, Sn;  //a为一个数字，n表示a的位数,Sn是代数和
+	while (n <= 5);
+	{
+		Sn = a;
+		n++;
+
+	}
+	printf("Sn=%d\n", Sn);
+
+	return 0;
+}
