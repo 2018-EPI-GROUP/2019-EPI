@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+	float szx,qqt,x;
+	printf("输入打电话的小时数\n");
+	scanf("%f",&x);
+	szx=0.6*x;
+	qqt=0.4*x+50;
+	printf("神州行通话费用为%f元\n全球通通话费用为%f元\n",szx,qqt);
+	if(szx<qqt)
+	{
+		printf("神州行话费更低");
+	}
+	else
+	{
+		printf("全球通话费更低");
+	} 
+	return 0;
+}
