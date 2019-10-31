@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+	float x,y;
+	printf("请输入小时数\n");
+	scanf("%f",&x);
+	if(x<=10)
+	{
+		printf("网费为30元"); 
+	} 
+	else if(50>=x>10)
+	{
+		y=3*x;
+		printf("网费为%f元",y);
+	}
+	else if(x>50)
+	{
+		y=150+2.5*(x-50);
+		printf("网费为%f元",y);
+	}
+	else
+	printf("数据有误");
+	return 0;
+}
