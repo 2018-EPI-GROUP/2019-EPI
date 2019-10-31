@@ -193,10 +193,6 @@ int main()
 			system("cls");
 		}
 	}
-	
-	
-		
-
 	/*getchar();*/
 	return 0;
 }

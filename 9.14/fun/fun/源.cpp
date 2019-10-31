@@ -2,15 +2,8 @@
 
 int main()
 {
-
-
-
-
 	return 0;
 }
-
-
-
 
 //ÇóÊı×é Ê§°Ü¡£¡£¡£¡£¡£
 //int Sum(int m, int n);
@@ -34,25 +27,6 @@ int main()
 //		return Sum(2, 2) + Sum((m - 1), (n - 1));
 //	}
 //}
-//
-//
-//
-//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //
 //int Sum(int m);
 //int main()
@@ -79,20 +53,6 @@ int main()
 //}
 //
 //
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //int Num(int m);
 //int main()
@@ -150,8 +110,6 @@ int main()
 
 
 
-
-
 //int Fact(int m);
 //int main()
 //{
@@ -175,7 +133,6 @@ int main()
 //		return m*Fact(m - 1);
 //	}
 //}
-
 
 
 //int Max(int a, int b);
