@@ -1,0 +1,34 @@
+//小数点后200位！ 
+#include<stdio.h>
+int s=1;
+int chu(int m,int n)
+{
+	if(s==1)
+	{ 
+		printf("结果为%d.",m/n);
+
+	}
+	if(s<=200)
+	{
+		m=(m%n)*10;
+		printf("%d",(m/n));
+		s++;
+		chu(m,n);
+	}
+} 
+
+
+
+
+int main()
+{
+	int m,n; //  m/n 
+	printf("请输入一个整数分子\n");
+	scanf("%d",&m);
+	printf("请输入一个整数分母\n");
+	scanf("%d",&n);
+	chu(m,n);
+
+	
+	return 0;
+}
