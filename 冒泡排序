@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{
+	int number;
+	scanf("%d",&number);
+	int a[number];
+	int i;
+	int j;
+	
+	for(i=0;i<number;i++){
+		scanf("%d",&j);
+		a[i]=j;
+	}
+	
+	for(j=0;j<number-1;j++){
+		for(i=0;i<number-1;i++){
+			if(a[i]>a[i+1]){
+				int m=a[i+1];
+				a[i+1]=a[i];
+				a[i]=m;
+			}
+		}
+	}
+	
+	for(i=0;i<number;i++){
+	printf("%d",a[i]);
+    }
+    
+    return 0;
+}
