@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+int year,hour;
+double wage,salary;
+scanf("%d %d",&year,&hour);
+if(year<5) wage=30;
+else wage=50;
+if(hour<=40) salary=wage*hour;
+else salary=40*wage+(hour-40)*1.5*wage;
+printf("%.2lf",salary);
+}
+//他的思路是先判断年份确定基础工资，然后再看时间确定最后工资，
+//也可以两个if  else 里面分别嵌套if else，比如如果年份大于五年，然后看工作时间是多少
