@@ -1,0 +1,15 @@
+# include < stdio.h >
+# define MAXN 6 
+int main (void)
+{
+	int i, j , a [6]= {1};
+	for ( i = 0;i < 6; i++)
+	{
+		for ( j = i;j > 0; j--)
+			a [j] += a [j-1 ];
+		    for ( j = 0; j <= i; j++ )
+				printf ( "%5d",a[j]);
+			 printf ( "\n");
+	}
+	return 0;
+}
