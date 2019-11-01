@@ -1,7 +1,7 @@
-#include<stdio.h>
+#include"stdio.h"
 main()
 {
-	int i=0,n,d[40];
+        int i=0,n,d[40];
 	scanf("%d",&n);
 	while(n>0)
 	{
