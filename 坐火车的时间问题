@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main()
+{
+int h,m,d,a;
+scanf("%d %d",&d,&a);
+h=a/100-d/100;
+m=a%100-d%100;
+if(m<0)
+{
+m=60+m;
+h=h-1;
+}
+printf("%02d:%02d",h,m);
+}
+
+//坐火车问题，时间上就是小时的相减，有两种思路，上边的是小时减小时，分钟减分种，贱不过的话就界一位，
+//下面的是算出两个时间的总分钟，然后做差，再换算成小时
+#include<stdio.h>
+int main()
+{
+int a,b,c,d,sum,hours,min;
+printf("Please input a and b:\n");
+scanf("%d %d",&a,&b);
+c=a/100*60+a%100;
+d=b/100*60+b%100;
+sum=d-c;
+hours=sum/60;
+min=sum%60;
+printf("%02d:%02d\n",hours,min);
+return 0;
+}
