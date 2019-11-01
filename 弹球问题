@@ -1,0 +1,19 @@
+# include < stdio.h >
+
+int main ( void )
+{
+	int i;
+	double s;
+	double h= 100;
+	for ( i = 1 ; i < 10 ; i++)
+	{
+		s = s + h;
+		h=h - h / 2;
+		if ( i != 9.0)
+		{  
+		   s = s + h;
+		}
+	}
+	printf ( " 总高度s= %.2f \n十次所在高度 h = % .2f \n" ,s,h);
+	return 0;
+}
