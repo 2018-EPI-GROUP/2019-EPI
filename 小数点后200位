@@ -1,0 +1,21 @@
+//小数点后200位！ 
+#include<stdio.h>
+int main()
+{
+	int m,n; //  m/n 
+	int i,s;
+	printf("请输入一个整数分子\n");
+	scanf("%d",&m);
+	printf("请输入一个整数分母\n");
+	scanf("%d",&n);
+	i=m/n; 
+	printf("结果为%d.",i);
+	for(s=1;s<=200;s++)
+	{
+		m=(m-i*n)*10;
+		i=m/n;
+		printf("%d",i);
+	}
+	
+	return 0;
+}
