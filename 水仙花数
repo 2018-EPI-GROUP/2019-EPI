@@ -1,0 +1,21 @@
+#include<stdio.h> 
+int main () 
+{
+     int n,i,x=1,y=1; 
+     scanf("%d",&n); 
+     for(i=0;i<n-1;i++) x=x*10;
+     for(i=0;i<n;i++) y=y*10;
+     for(i=x;i<y;i++) 
+            {
+                int t=i,sum=0;
+                while(t!=0)
+                {
+                    int tt=1,m=n;
+                    while(m--) tt=tt*(t%10);
+                    sum=sum+tt;
+                    t=t/10;
+                } 
+            if(sum==i)   printf("%d\n",i); 
+         }
+         return 0;
+}
