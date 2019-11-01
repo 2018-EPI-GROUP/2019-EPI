@@ -1,0 +1,21 @@
+#include<stdio.h>
+//a,b是全局变量
+int a = 3, b = 5;    
+
+int main()
+{
+	//函数声明。a，b是形参
+	int max(int a, int b);
+	//a是局部变量
+	int a = 8;
+	printf("max=%d\n", max(a, b));
+	return 0;
+}
+//a，b是函数形参
+int max(int a, int b)
+{
+	int c;
+	//把a和b中最大的存放在c中
+	c = a > b ? a : b;
+	return(c);
+}
