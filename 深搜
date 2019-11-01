@@ -1,0 +1,34 @@
+#include<iostream>
+#include<cstdio>
+#include<cstring>
+#include<algorithm>
+using namespace std;
+const int b=3000;
+bool S[3000];
+int F[b][b];
+int n,sum=0; 
+void ss(int a)
+{
+	 sum++;
+	 S[a]=true;
+	 printf("%d ",a);
+	 if(sum==n)return;
+	 for(int i=1;i<=n;i++)
+	   if(F[a][i]==1 && S[i]==false)ss(i);
+	 return;
+} 
+int main()
+{
+  memset(S,false,sizeof(S));
+  memset(F,404,sizeof(F));
+  int x,y,m;
+  scanf("%d%d",&n,&m);//m线路数 
+  for(int i=1;i<=m;i++)
+  {
+    scanf("%d""%d",&x,&y);
+    F[x][y]=1;
+    F[y][x]=1;
+  }
+  ss(1);
+  return 0;
+} 
