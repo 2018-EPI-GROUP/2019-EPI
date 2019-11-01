@@ -1,3 +1,4 @@
+//大部分在vs上运行，小部分在dev-c++运行
 #include<stdio.h>
 void main()
 {
@@ -450,7 +451,7 @@ void main()
 		t = a; a = b; b = t;
 	}
 	printf("%d %d %d %d", a, b, c, d);
-}//四个数由低到高
+}//四数排序
 #include<stdio.h>
 int main()
 {
@@ -597,6 +598,56 @@ void main()
 		printf("%d\t", arr[i]);
 	}
 }//冒泡排序
+#include<stdio.h>
+void main()
+{
+	int i, n, arr[100] = { 0 }, j, t;
+	scanf_s("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		scanf_s("%d", &arr[i]);
+	}
+	for (i = 0; i < n - 1; i++)
+	{
+		for (j = i + 1; j <= n; j++)
+		{
+			if (arr[i] < arr[j])
+			{
+				t = arr[i];
+				arr[i] = arr[j];
+				arr[j] = t;
+			}
+			else {}
+		}
+	}
+	for (i = 0; i < n; i++)
+	{
+		printf("%d\t", arr[i]);
+	}
+}//选择排序
+#include<stdio.h>
+int main()
+{
+	int b[1000], i, j, n, t;
+	for (i = 0; i <= 1000; i++)
+	{
+		b[i] = 0;
+	}
+	scanf("%d", &n);
+	for (i = 1; i <= n; i++)
+	{
+		scanf("%d", &t);
+		b[t]++;
+	}
+	for (i = 0; i <= 999; i++)
+	{
+		for (j = 0; j < b[i]; j++)
+		{
+			printf("%d ", i);
+		}
+	}
+	return 0;
+}//桶排序
 #include<stdio.h>
 void main()
 {
@@ -1092,6 +1143,24 @@ int main()
 		printf("%c->%c->%d\n", a[i], a[i] - 32, (a[i] - 32) % 10);
 }//单词解析加密
 #include<stdio.h>
+void main()
+{
+	int n, a[100], i, j, t;
+	scanf("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		scanf("%d", &a[i]);
+	}
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < n - i; j++)
+		{
+			if (a[j] > a[j + 1])t = j + 1;
+		}
+	}
+	printf("%d %d", a[t], t);
+}//求最小值下标
+#include<stdio.h>
 int main()
 {
 	int i, s, count = 0;
@@ -1116,4 +1185,116 @@ int main()
 	}
 loop: return 0;
 }//学生平均成绩和不及格数
+#include<stdio.h>
+struct st_type
+{
+	int  a;
+	char e;
+	double b;
+	double c;
+	double d;
+	double f;
+}s[10];
+void main()
+{
+	int n, i, sum[10], j, t;
+	scanf_s("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		scanf_s("%d %s %lf %lf %lf", &s[i].a, &s[i].e, &s[i].b, &s[i].c, &s[i].d);
+		s[i].f = (s[i].b + s[i].c + s[i].d) / 3;
 
+	}
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < n - i; j++)
+		{
+			if (s[i].f < s[i + 1].f)
+			{
+				t = s[i].f;
+				s[i].f = s[i + 1].f;
+				s[i + 1].f = t;
+			}
+		}
+	}
+	printf("num:%d,name:%s,average:%.2lf", s[n - 1].a, s[n - 1].b, s[0].f);
+}//再试结构体
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char a[1000], b[1000], t;
+	int i, j, max, a1, b1;
+	scanf("%s", a);
+	scanf("%s", b);
+	a1 = strlen(a);
+	max = b1 = strlen(b);
+	if (a1 > b1)
+	{
+		max = a1;
+		for (i = 0; i < 101; i++)
+		{
+			t = b[i];
+			b[i] = a[i];
+			a[i] = t;
+		}
+	}
+	a[max + 1] = 0;
+	a1 = strlen(a);
+	b1 = strlen(b);
+	for (i = 0; i < max; i++)
+		a[max - i] = a[a1 - i];
+	for (i = 0; i < max - a1; i++)
+		a[i] = '0';
+	j = 0;
+	for (i = 0; i < max; i++)
+	{
+		j = (a[max - i - 1] + b[max - i - 1] + j - 96);
+		a[max - i - 1] = j % 10 + 48;
+		j = j / 10;
+	}
+	if (a[0] == '0')
+		printf("%s\n", a + 1);
+	else printf("%s\n", a);
+	return 0;
+}//无限位整数的加法
+#include<stdio.h>
+int main()
+{
+	double a, b, d, f, n;
+	char c, e;
+	scanf("%lf%c%lf", &a, &c, &b);
+	switch (c)
+	{
+	case '+':printf("%.0lf\n", d = a + b); break;
+	case '-':printf("%.0lf\n", d = a - b); break;
+	case '*':printf("%.0lf\n", d = a * b); break;
+	case '/':if (b == 0) { printf("ERROR!\n"); goto loop2; }
+			else
+	{
+		d = a / b;
+		if (d - int(d) == 0) { printf("%.0lf\n", d); break; }
+		else printf("%.5lf\n", d); break;
+	}
+	}printf("如果想退出请让结果为0\n");
+loop:;
+	getchar();
+	scanf("%c%lf", &e, &f);
+	switch (e)
+	{
+	case '+':d = d + f; printf("%.0lf\n", d); break;
+	case '-':d = d - f; printf("%.0lf\n", d); break;
+	case '*':d = d * f; printf("%.0lf\n", d); break;
+	case '/':if (b == 0) { printf("ERROR!\n"); goto loop2; }
+			else
+	{
+		d = d / b;
+		if (d - int(d) == 0) { printf("%.0lf\n", d); break; }
+		else printf("%.5lf\n", d); break;
+	}
+	}
+	if (d == 0)goto loop3;
+	goto loop;
+loop2:return 0;
+loop3:return 0;
+}//连续运算计算器
