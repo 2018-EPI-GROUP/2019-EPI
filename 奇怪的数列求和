@@ -1,0 +1,25 @@
+#include<stdio.h>
+int a0;
+long long sumn(int a,long n)
+{
+	long long sum=0;	
+	for(n;n>=1;n--)
+	{
+		sum=sum+a;// 11 111 1111
+		a=a*10+a0;
+	}
+	return sum;
+}
+
+int main()//给定某数字A（1≤A≤9）以及非负整数N（0≤N≤100000），求数列之和S=A+AA+AAA+?+AA?A（N个A）。例如A=1, N=3时，S=1+11+111=123。 
+{
+	int a;
+	long n; 
+	printf("输入A\n");
+	scanf("%d",&a);
+	a0=a;
+	printf("输入项数N\n");
+	scanf("%d",&n); 
+	printf("%d",sumn(a,n));
+	return 0;
+}
