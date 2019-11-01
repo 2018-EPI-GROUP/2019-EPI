@@ -1,0 +1,34 @@
+#include <stdio.h>
+int main()
+{
+int c,x,e;
+scanf("%d %d",&c,&x);
+e=(double)(c-x)/x*100;
+if(e<10)
+printf("OK");
+else if(e<50)
+printf("Exceed %d%%. Ticket 200",e);
+else
+printf("Exceed %d%%. License Revoked",e);
+}
+// 上面那个是先算出百分比，然后分别比较他到底超了多少
+//下面这个是实际速度与限速的百分之多少比，然后确定他的情况
+#include<stdio.h>
+int highway(int a,int b)
+{
+if(a<(b+b*0.1))
+printf("OK");
+else if(a>=(b+b*0.1)&&a<=(b+b*0.5))
+printf("Exceed %d%%.Ticket 200",(a-b)*100/b);
+else if(a>=(b+b*0.5))
+printf("Exceed %d%%.License Revoked",(a-b)*100/b);
+return 0;
+}
+int main()
+{
+int a,b;
+printf("Please input a and b:\n");
+scanf("%d %d",&a,&b);
+highway(a,b);
+return 0;
+}
