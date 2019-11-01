@@ -1,0 +1,18 @@
+#include<studo.h>
+#include<studio.h>
+int main()
+{
+	int a,b;
+	srand((unsigned)time(NULL));
+	a=rand()%100;
+	scanf_s("%d",&b);
+	if(b>a)
+		printf("大了，请继续\n");
+	if(b<a)
+		printf("小了，请继续\n");
+		if(b==a)
+		{
+			printf("恭喜\n");
+		}
+		return 0;
+}
