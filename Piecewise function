@@ -3,15 +3,18 @@
 int main()
 {    
      float x,result;
+     
      scanf("%f",&x);
-    if(x>=0)
-    {
-      result=pow(x,0.5);
-    }
-    else
     
-      result=pow((x+1),2)+2*x+1/x;
+     if(x>=0)
+     {
+     result=pow(x,0.5);
+     }
+     else
+    
+     result=pow((x+1),2)+2*x+1/x;
       
-      printf("f(%.2f) = %.2f",x,result);
-      return 0;
+     printf("f(%.2f) = %.2f",x,result);
+    
+     return 0;
 }
