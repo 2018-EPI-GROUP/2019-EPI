@@ -2,7 +2,7 @@
 int main(void)
 {
 	int  n, i , tem ;
-	printf("Please input how many number you want to input\n");
+	printf("Please input how many number you want to statistics\n");
 	scanf("%d",&n);
 	int a[20];
 	for( i = 1 ; i <= 20 ; i++ )
@@ -19,6 +19,6 @@ int main(void)
 		{if(a[i]==0)
 			continue;
 		else
-			printf("数字%d共出现了%d次\n",i , a[i]);}
+			printf("脢媒脳脰%d鹿虏鲁枚脧脰脕脣%d麓脦\n",i , a[i]);}
 	return 0;
 }
