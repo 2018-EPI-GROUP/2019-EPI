@@ -1,0 +1,27 @@
+# include < stdio.h>
+# include <stdlib.h>
+int main ( void )
+{
+	long x;
+	int ge,shi,qian,wan;
+	printf (" 请输入一个5位数 ");
+	scanf ("%ld", & x);
+	if ( x >= 10000 && x < 100000)
+	{
+		wan = x/10000;
+        qian = x % 10000 / 1000 ;
+		shi = x % 100 / 10;
+		ge = x % 10;
+	  if (ge == wan && shi == qian )
+		  printf (" yes ");
+	  else 
+		  printf (" no ");
+	}
+	else 
+	{
+		printf (" sorry ,请输入5位数 ");
+	    exit (1); /* 程序出错 */
+	}
+	return 0;
+}
+   
