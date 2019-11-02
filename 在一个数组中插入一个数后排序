@@ -1,0 +1,26 @@
+# include < stdio.h >
+
+int main ( void )
+{
+	int i,j,n,a[ 101 ];
+	printf ( " \ninput number : \n");
+	scanf ( " %d ",&n );
+	if ( n<=0 )
+		return 0;
+	else 
+		a [1] = n;
+	    i = 1;
+	scanf ( " %d ",&n );
+	while ( n > 0 )
+	{
+		for ( j = i;n > a [j] && j > 0; j--)
+			a [j + 1 ]= a [ j ];
+		a[ ++j ]=n;
+		i++;
+		scanf ( "%d", &n);
+	}
+	for ( j = 1; j <= i;j++)
+		printf ( " %d ", a[j] );
+	printf ( "\n ");
+	return 0;
+}
