@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main()
+{
+	int a,b1,b2,b3;
+	printf("请输入一个三位数\n");
+	scanf("%d",&a);
+	
+	b1=a%10;
+	a/=10;
+	b2=a%10;
+	a/=10;
+	b3=a;
+	
+	if(b1*b1==b1+b2+b3){
+		printf("Yes");
+	}else{
+		printf("no");
+	}
+	return 0;
+}
