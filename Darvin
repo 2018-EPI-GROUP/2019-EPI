@@ -1,4 +1,4 @@
-/输入大写字母，输出小写字母
+//输入大写字母，输出小写字母
 #include<stdio.h>
 int main()
 {
@@ -9,3 +9,242 @@ int main()
 	putchar('\n');
 	return 0;
  } 
+//求和1-1/2+1/3-1/4+...-1/100
+#include<stdio.h>
+int main()
+{
+	int sign=1;
+	double deno=2.0,sum=1.0,term;
+	while(deno<=100)
+	{
+		sign=-sign;
+		term=sign/deno;
+		sum=sum+term;
+		deno=deno+1;
+	}
+	printf("%f\n",sum);
+	return 0;
+} 
+//输出小写，输出ASCII值
+#include<stdio.h>
+int main()
+{
+	char c1,c2;
+	c1='A';
+	c2=c1+32;
+	printf("%c\n",c2);
+	printf("%d\n",c2);
+	return 0;
+}
+//一元二次方程求根
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	double a,b,c,disc,x1,x2,p,q;
+	scanf("%lf%lf%lf",&a,&b,&c);
+	disc=b*b-4*a*c;
+	p=-b/(2*a);
+	q=sqrt(disc)/(2*a);
+	x1=p-q;
+	x2=p+q;
+	printf("x1=%lf,x2=%lf",x1,x2);
+	return 0;
+}
+//给定三边长度，求三角形面积 
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	double a,b,c,s,area;
+	a=3.67;
+	b=5.34;
+	c=6.21;
+	s=(a+b+c)/2;
+	area=(s*(s-a)*(s-b)*(s-c));
+	printf("a=%f\tb=%f\tc=%f\n",a,b,c);
+	printf("area=%f\n",area);
+	return 0;
+ } 
+//先后输出B O Y三个字符
+#include<stdio.h>
+int main () 
+{
+	char a='B',b='O',c='Y';
+	putchar(a);
+	putchar(b);
+	putchar(c);
+	putchar('\n');
+	return 0;
+}
+//输入三个字符，输出这三个字符 
+#include<stdio.h>
+int main()
+{
+	char a,b,c;
+	a=getchar();
+	b=getchar();
+	c=getchar();
+	putchar(a);
+	putchar(b);
+	putchar(c);
+	putchar('\n');
+	return 0;
+ } 
+/*假如我国国民生产总值的年增长率为9%，计算10年后我国国民生产总值与现在相比
+增长多少百分比。 计算公式p=(1+r)^n */
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int n;
+	double p,q;
+	p=1;
+	q=0.09;
+	for(n=1;n<=10;n++)
+	p=p*(1+q);
+	p=(p-1)*100;
+	printf("增长了%f%%",p);
+	return 0;
+} 
+/*利息的计算，一年定期4.14%，二年定期4.68%，三年定期5.4%，五年定期5.85%，活期0.72%（一季度结算一次） 
+一5，二23，三32，四11111，五0*4*5*/ 
+#include<stdio.h>
+int main()
+{
+	int n;
+	double a,b,c,d,e;
+	a=b=c=d=e=1;
+	double yi(double x);
+	double er(double x);
+	double san(double x);
+	double wu(double x);
+	double huo(double x);
+	for(n=1;n<=5;n++) a=wu(a);
+	b=san(er(b));
+	c=er(san(c));
+	for(n=1;n<=5;n++) d=yi(d);
+	for(n=1;n<=20;n++) e=huo(e);
+	printf("方案一收益为%f\n",(a-1)*1000);
+	printf("方案二收益为%f\n",(b-1)*1000);
+	printf("方案三收益为%f\n",(c-1)*1000);
+	printf("方案四收益为%f\n",(d-1)*1000);
+	printf("方案五收益为%f\n",(e-1)*1000);
+}
+double yi(double x)  //一年定期的利息 
+{
+	x=x*1.0414; 
+	return(x);
+} 
+double er(double x)
+{
+	x=x*1.0468;
+	return(x);
+}
+double san(double x)
+{
+	x=x*1.054;
+	return(x);
+}
+double wu(double x)
+{
+	x=x*1.0585;
+	return(x);
+}
+double huo(double x)
+{
+	x=x*1.0072;
+	return(x);
+}
+//分析下面的程序 
+#include<stdio.h>
+int main()
+{
+	char c1,c2;
+	c1=97;
+	c2=98;
+	printf("c1=%c,c2=%c\n",c1,c2);
+	printf("c1=%d,c2=%d\n",c1,c2);
+	return 0;
+}
+//scanf的使用 
+#include<stdio.h>
+int main()
+{
+	int a,b;
+	float x,y;
+	char c1,c2;
+	scanf("a=%db=%d",&a,&b);
+	printf("a=%db=%d",a,b);
+	scanf("%f%e",&x,&y);
+	printf("%f%e",x,y);
+	scanf("%c%c",&c1,&c2);
+	printf("%c%c",c1,c2);
+	return 0;
+}
+//字符的运算与输出 
+#include<stdio.h>
+int main()
+{
+	char c1,c2,c3,c4,c5;
+	c1='C';
+	c2='h';
+	c3='i';
+	c4='n';
+	c5='a';
+	printf("%c%c%c%c%c",c1,c2,c3,c4,c5);
+	c1=c1+4;
+	c2=c2+4;
+	c3=c3+4;
+	c4=c4+4;
+	c5=c5+4;
+	printf("%c%c%c%c%c",c1,c2,c3,c4,c5);
+	putchar(c1);
+	return 0;
+}
+//圆的半径r=1.5,圆柱高h=3,求圆周长，圆面积，圆球表面积，圆球体积，圆柱体积 
+#include<stdio.h>
+#define PI 3.1415 
+int main()
+{
+	float r=1.5,h=3;
+	printf("圆周长%f\n",2*PI*r); 
+	printf("圆面积%f\n",PI*r*r);
+	printf("圆球表面积%f\n",4*PI*r*r);
+	printf("圆球体积%f\n",4/3*PI*r*r*r);
+	printf("圆柱体积%f\n",PI*r*r*h);
+	return 0;
+}
+// int,char,getchar区分与使用 
+#include<stdio.h>
+#define PI 3.1415 
+int main()
+{
+	int c1,c2;
+	c1=getchar();
+	c2=getchar();
+	putchar(c1);
+	printf("  %c\n",c2);
+	printf("%d\n%d\n",c1,c2); 
+	return 0;
+}
+//输入三个数，从小到大输出
+#include<stdio.h>
+int main()
+{
+	float a,b,c,t;
+	printf("ÇëÒÀ´ÎÊäÈëa,b,c\n");
+	scanf("%f,%f,%f",&a,&b,&c);
+	if(b>c)  
+	t=b;
+	b=c;
+	c=t;
+	if(a>b)  t=a;
+	a=b;
+	b=t;
+	if(b>c)  t=b;
+	b=c;
+	c=t;
+	printf("%f\t%f\t%f\n",a,b,c);
+	return 0;
+}
