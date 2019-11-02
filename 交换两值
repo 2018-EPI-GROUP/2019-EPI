@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+	int a,b,t;
+	printf("请输入两个值，空格隔开：\n"); 
+	scanf("%d %d",&a,&b);
+	t=a;
+	a=b;
+	b=t;
+	printf("交换得%d %d",a,b);
+	
+	return 0;
+}
