@@ -122,8 +122,87 @@ int main()
   po_2 = 23;//error
   po_2 =&a[3];//error
   int y;
-  y =po
-
+  y =po_1*po_2;
+  printf("%d",y);
+  return 0;
+}
+//带有菜单的程序，switch练习
+#include<stdio.h>
+char get_choice();
+char get_first();
+int get_int();
+int main()
+{
+  int choice;
+  vooid count();
+  
+  while((choice = get_choice()) !=;'q')
+  {
+    switch(choice)
+    {
+      case 'a':printf("buy low,sell high\n");
+              bresk;
+      case 'b':putchar('\a');
+              bresk;
+      case 'c':count();
+                break;
+      default:printf("有错误\n");
+              break;
+     }
+   }
+   printf("再见\n");
+   return 0;
+ }
+ 
+ void count()
+ {
+  int n,i;
+  printf("count how far?enter an integer:\n");
+  n = get_int();
+  for(i=1;i<=n;i++)
+    printf("%d\n",i);
+  while (getchar()!='\n')
+    continue;
+ }
+ 
+ char get_choice()
+ {
+  int ch;
+  printf("enter the letter of your choice:\n");
+  printf("a.advice    b.bell\n");
+  printf("c.count     q.quit\n");
+  ch = get_first();
+  while((ch <'a'||ch > 'c')&&ch !='q')
+  {
+    printf("please respond with a,b,  c,or q.\n");
+    ch = get_first();
+  }
+  return ch;
+}
+char get_first()
+{
+  int ch;
+  
+  ch = getchar();
+  while(getchar() !='\n')
+    continue;
+  return ch;
+}
+int gei_int()
+{
+  int input;
+  char ch;
+  
+  while(scanf("%d",&inout) !=1 )
+  {
+    while((ch = getchar()) !='n'
+        putcahr(ch);  //处理错误的输出
+    printf("is not an integer.\nplease enter an");
+    printf("integer value,suan as 25,-154:");
+  }
+  
+  return input;
+}
 //这是一个交互文字游戏
 
 #include<stdio.h>
