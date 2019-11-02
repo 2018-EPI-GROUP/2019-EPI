@@ -203,6 +203,7 @@ int gei_int()
   
   return input;
 }
+
 //这是一个交互文字游戏
 
 #include<stdio.h>
@@ -358,3 +359,136 @@ int mian ()
     return ret_val;
   }
     
+
+//数组小练习
+#include<stdio.h>
+int main()
+{
+  int x,y;
+  char a[9][4];
+  for(x = 9;x>=0;x--)
+  {
+    a[x][0] == x*x;
+    printf("%d",a[x][5]);
+  }
+
+  for(y=0;y<=9;y++)
+  {
+    a[y][1]  == 10-x;
+    printf("%d",a[y][1]);
+  }
+ 
+  for(x=0;x<=9;x++)
+  {
+    scanf("%s",a[x][2]);//输入小写英文字母
+    printf("%s",a[x][2]+32);  
+  }
+  
+  char yu[9];
+  a[9][3] = {23,34,35,54,56,76,17,87,67,70}
+  for(y=0;y<=9;y++)
+  {
+    printf("%d",a[9][y] % 7);
+    yu[y] = a[y][4]%7;
+  }
+  if(a[9][3] <=10-yu[4])
+    a[9][4] = {1,2,3,4,5,6,7,8,9,10};
+  else
+    a[9][4] = {10,9,8,7,6,5,4,3,2,1};
+  for(y=0;y<=9;y++)
+  printf("%d",a[y][4]);
+
+  return 0;
+}
+
+//实用，房费问题
+#include<stdio.h>
+#include"hotel.h"//接下来的一段
+
+int main()
+{
+  int ns;
+  double hotel_rate;
+  int code;
+  
+  while((code = menu())!= QUIT)
+  {
+    switch(code)
+    {
+      case 1: hotel_rate = HOTEL1;
+        break;
+      case 2: horel_rate = HOTEL2;
+        break;
+      case 3: hotel_rate = HOTEL3;
+        break;
+      case 4: hotel_rate = HOTEL4;
+        break;
+      default: hotel_rate = 0.0;
+                printf("错误\n");
+                break;
+    }
+    ns = getnights();
+    showprice(hotel_rate,ns);
+  }
+  printf("谢谢，再见\n");
+  
+  return 0;
+}
+
+
+//酒店管理函数
+#include<stdio.h>
+#include<hotel.h>
+int menu()
+{
+  int code, status;
+  
+  printf("\n%s%s\n",STARS,STARS);
+  printf("酒店类型\n");
+  printf("1 fairfiled      2 olympic\n");
+  printf("3 chert plaza     4 stockton\n");
+  printf("5 quit\n");
+  printf("%s%s\n",STARS,STARS);
+  while((status = scanf("%d",&code))!=1||(code<1||code>5))
+  {
+    if(status != 1)
+      scanf("%*s");
+    printf("请正确输入\n");
+  }
+  
+  return code;
+}
+
+int getnights()
+{
+  int ns;
+  
+  printf("住几夜？\n");
+  while(scanf("%d",&ns != 1))
+  {
+  scanf("%*s");
+  printf("请正确输入\n");
+  }
+  return ns;
+}
+    
+  void showprice(double rate,int ns)
+  {
+    int n;
+    double total =0.0;
+    double factor = 1.0;
+    
+    dor(n =1; n<= ns;n++,factor *= DISCOUNT)
+      total += rate * factor;
+    printf("总计$%0.2f.\n",total);
+  }
+            
+      
+      
+      
+      
+      
+      
+      
+      
+      
