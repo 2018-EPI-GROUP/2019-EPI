@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int main()
+{
+	srand(time(0));
+	int i,a,b= rand()%1000;
+	
+	printf("请猜测一个三位数：（你只有五次机会）\n");
+	
+	for(i=0;i<5;i++){
+		
+	scanf("%d",&a);
+	if(a>b){
+		printf("你猜大了\n");
+	}else if(a<b){
+		printf("你猜小了\n");
+	}else {
+	printf("太棒了！你只用了%d次就猜中了！",i);
+	break;
+	}
+
+	}
+
+	printf("次数用尽哦！");
+	
+	return 0;
+} 
