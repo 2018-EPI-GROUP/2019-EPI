@@ -14,8 +14,10 @@ int main()
 {
   const long MIN =-10000000L;   //下界
   const long MAX =-10000000L;   //上界
-  long start;     //交互指定的最小值
-  long stop;     //交互指定的最大值
+  long start;    
+ //交互指定的最小值
+  long stop;     
+//交互指定的最大值
   double answer;
   printf("这个程序用于求您所给的两个参数之间《须在-10000000至10000000之间》的所有整数的平方和，您可以输入0来退出")；
   start = get_long();
@@ -213,9 +215,12 @@ int mian ()
   int x,y,z;
   int h=0;
   char name[];
-  printf("你好我的朋友：");
-  scanf("%s",name);
-  printf("ok我的%s,让我们愉快的进行接下来的游戏吧\n",names);
+ 
+ printf("你好我的朋友：");
+  
+scanf("%s",name);
+  
+printf("ok我的%s,让我们愉快的进行接下来的游戏吧\n",names);
   printf("先让我来 了解了解你，你是男生还是小女孩（嘿嘿嘿）呢？\n");
   printf("就说说是：男\n女\n都不是\n");
   scanf("%s"answer[0]);
@@ -244,7 +249,9 @@ int mian ()
   printf("我笑了，不就是几个糖果吗？简单！所以聪明的你，一定有办法将那一串乱码逆序的对吧？让我们一起来想办法！");
   printf("麻烦你给我数数有多少个字母吗？\n");
   x = 0;
+ 
   scanf("%d",x);
+  
   if(x != 60);
     printf("你就不能认真点吗？还是说你真的数不到一块去？\n");
   else
@@ -270,17 +277,20 @@ int mian ()
   scanf("%s",answer[1]);
   switch(answer[0])
   {
-  
+    case'A'
     case'a':
       printf("你来到了荒郊野外，路途上遇到了很多猛兽，不出意外的，你成为了“food”\n");
       break;
+    case'B'
     case'b':
       printf("你甚至没有达到哪里，就已经饥餐露宿而死\n");
       break;
+     case'C'
     case'c':
       printf("你来到了这里，简单，快乐，幸福夫人生活了一辈子，果然男人的快乐就是这么简单（ps：我就不信你会无聊到是个女的）\n");
       break;
     case'd':
+    case'D'
       printf("啊！？你是。。。%s吗？你怎么这个样子？\n");
       printf("怎么回事！这竟然是你以前的同学，还是超级低调又朴素的路人甲同学！他尽然是一位名不见经传老板！\n");
       printf("你尴尬羞愧而死\n");
@@ -483,6 +493,17 @@ int getnights()
     printf("总计$%0.2f.\n",total);
   }
             
+ #include<stdio.h>
+ int mian
+ {
+ int c;
+  int *p1 = c;
+  c = 3;
+  *p1 = 3+3;
+  printf("%d",c);
+  
+  return 0;
+ }
       
       
       
