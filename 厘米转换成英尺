@@ -1,0 +1,15 @@
+
+#include<stdio.h>
+
+int main()
+{
+int cm=0;
+printf("请输入身高：（单位为cm）\n");
+scanf("%d",&cm);
+
+int foot = cm/30.48;
+int inch = ((cm/30.48)-foot)*12;
+printf("身高是%d英尺%d寸",foot,inch);
+
+return 0;
+} 
