@@ -1,0 +1,15 @@
+# include < stdio.h >
+# include <string.h >
+int main ( void )
+{
+  char s1 [ 20 ]=" abcde ",s2 [ 10 ]= " 123456 ";
+  puts ( strcat ( s1 ,s2) );
+  printf ( " %d  %d\n ", strlen ( s1 ), strcmp ( s1, s2 ) );
+  gets ( s1 );
+  printf ( " %d  %d\n ",strlen ( s1 ), strcmp ( s1, s2 ) );
+  puts ( strcpy ( s1, s2 ) );
+  printf ( " %d  %d\n ",strlen ( s1 ), strcmp ( s1, s2 ) );
+  gets ( s1 );
+  puts ( strcat ( s1, s2 ) );
+  return 0;
+}
