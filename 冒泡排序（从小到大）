@@ -1,0 +1,35 @@
+#include <stdio.h> 
+ 
+int main()
+{
+	//输入一个元素数 
+	printf("请输入元素数\n"); 
+	int n;
+	scanf("%d",&n);
+	int a[n],i,j,t;
+	
+	// 输入一组元素 
+	printf("请输入%d个元素\n",n);
+	for(i=0;i<n;i++){
+		scanf("%d",&a[i]);
+	}
+	
+	//冒泡排序从小到大 
+	for(i=1;i<n-1;i++){
+			for(j=0;j<=n-i;j++){
+				if(a[j]>a[j+1]){
+				t=a[j];
+				a[j]=a[j+1];
+				a[j+1]=t;
+			}
+		}
+	}
+	
+	//输出排序结果 
+	printf("冒泡排序结果为:");
+	for(i=0;i<n;i++){
+		printf("%d、",a[i]);
+	}
+	
+	return 0;
+}
