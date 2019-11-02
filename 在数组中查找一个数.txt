@@ -1,0 +1,26 @@
+#include <stdio.h>
+#define SIZE 10
+
+int main(void){
+    int i;
+    int targrt;
+    
+    int sequence[SIZE] = {3,78,41,2,40,5,33,8,7,24};
+    for(i = 0;i < SIZE; ++i)
+        printf("%-4d",sequance[i]);
+
+    printf("\nInput the target value: ");
+    scanf("%d",&target);
+
+    for(i = 0;i < SIZE; ++i)
+        if(sequence[i] == target)
+            break;
+    }
+    
+    if(SIZE == i)
+        printf("Can not find %d in this sequence.\n");
+    else
+        printf("%d is the %dth(st/nd) element in this sequance\n",target,i+1);
+
+    return 0;
+}

@@ -1,0 +1,141 @@
+1. 编写求圆的面积的函数，并调用该函数求出圆环的面积。
+源程序如下：
+
+#include <stdio.h>
+#define PI 3.14159
+
+float area(float r){
+    float s;
+    s = PI*r*r;
+    return (s);
+}
+int main(){
+    float r1,r2,s;
+    printf("输入两个半径:\n");
+    scanf("%f%f",&r1,&r2);
+    s = area(r1)-area(r2);
+    printf("s = %f\n",s);
+
+    return 0;
+}
+2,求特定整数的阶乘
+源程序如下：
+
+#include <stdio.h>
+float jc(int n){
+    float p = 1;
+    int i;
+    for(i = 1;i <=n;i++)
+        p = p*i;
+
+    return(p);
+}
+int main(void){
+    float y;
+    y = jc(10);
+    printf("y = %f\n",y);
+    
+    return 0;
+}
+3，编写判断素数的函数，再调用该函数判断1793是不是素数，源程序如下：
+#include <stdio.h>
+int isprime(int m){
+ 
+    int i;
+    for(i = 2;i < m;i++){
+        if(m%i == 0)
+        return(0);
+    }
+    return(1);
+}
+int main(){
+    int n;
+    printf("input a number:\n");
+    scanf("%d",&n);
+    if(isprime(n) != 0)
+        printf("It is a prime.\n");
+    else
+        printf("It is not a prime.\n");
+ 
+    return 0;
+}
+给n赋值为1793时，输出1793不是素数。
+4，编写判断素数的函数，并调用该函数求出1000以内的所有素数。相应源程序如下：
+
+#include <stdio.h>
+int isprime(int m){
+    
+    int i;
+    for(i = 2;i < n;i++){
+        if(m%i == 0)
+        return (0);
+    }
+    return (1);
+}
+int main(){
+    int j,n;
+    printf("please input a number:\n");
+    scanf("%d",&n);
+
+    for(j = 2;j <= n;j++){
+        if(isprime(j) != 0)
+        printf("%d\t",j);
+    }
+    printf("\n");
+    
+    return 0;
+}    
+5，编写判断素数的函数，并调用该函数求出1000以内的所有素数，并求和。相应源程序如下：
+
+#include <stdio.h>
+int isprime(int m){
+ 
+    int i;
+    for(i = 2;i < m;i++){
+        if(m%i == 0)
+        return(0);
+    }
+    return(1);
+}
+int main(){
+    int n,j,sum=0;
+    printf("plaese input a integer:\n");
+    scanf("%d",&n);
+    
+    for(j = 2;j < n;j++){
+        if(isprime(j) != 0)
+        sum += j;
+    }
+    printf("sum=%d",sum);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

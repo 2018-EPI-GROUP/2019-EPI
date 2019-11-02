@@ -1,0 +1,25 @@
+/ *二维数组* /
+        （1）访问二维数组元素
+        给二位矩阵赋值，并输出赋值结果，实现代码如下：
+        #include <stdio.h>
+        ＃定义ROW_SIZE 5
+        ＃定义COLUMN_SIZE 4
+        
+        int main（void）{
+            int i = 0，j = 0;
+            int array [ROW_SIZE] [COLUMN_SIZE];
+            
+            for（i = 0; i <ROW_SIZE; ++ i）{
+                for（j = 0; j <COLUMN_SIZE; ++ j）
+                    array [i] [j] = i * 10 + j;
+            }
+            
+             for（i = 0; i <ROW_SIZE; ++ i）{
+                for（j = 0; j <COLUMN_SIZE; ++ j）
+                    printf（“ array [％d] [％d] =％2d”，i，j，array [i] [j]）;
+                    
+                printf（“ \ n”）;
+             }
+             
+             返回0;
+         }

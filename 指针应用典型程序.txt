@@ -1,0 +1,235 @@
+1，用间接引用求两个数中的最大数
+
+#include <stdio.h>
+int main(void){
+    int x,y,max,*p1,*p2;
+    p1 = &x;
+    p2 = &y;
+    scanf("%d%d",p1,p2);
+    if(*p1 > *p2)
+        max = *p1;
+    else
+        max = *p2;
+    printf("max = %d\n",max);
+    
+    return 0;
+}
+
+2,用间接引用法求3个数中的最大数
+
+#include <stdio.h>
+int main(void){
+    int x,y,z,max,*p1,*p2,*p3;
+    p1 = &x;
+    p2 = &y;
+    p3 = &z;
+    scanf("%d%d%d",p1,p2,p3);  /*scanf("%d%d%d",x,y,z);*/
+    if(*p1 > *p2)
+        max = *p1;
+    else 
+        max = *p2;
+    if(*p3 > max)
+        max = *p3;
+    printf("max = %d",max);
+    return 0;
+}
+
+3,用间接引用将两个数按升序排序并输出
+
+#include <stdio.h>
+int main(void){
+    float a,b,*p1,*p2;
+    p1 = &a;
+    p2 = &2;
+    scanf("%f%f",p1,p2);
+    if(*p1 > *p2){
+        t = *p1;
+        *p1 = *p2;
+        *p2 = t;
+    }
+    printf("%f,%f\n",*p1,*p2);
+    return 0;
+}
+
+4，用间接引用将三个数按升序排序输出
+
+#include <stdio.h>
+int main(void){
+    float a,b,c,t,*p1,*p2,*p3;
+    p1 = &a;
+    p2 = &b;
+    p3 = &c;
+    scanf("%f%f%f",p1,p2,p3);
+    
+    if(*p1 > *p2){
+        t = *p1;
+        *p1 = *p2;
+        *p2 = t;
+    }
+    if(*p1 > *p3){
+        t = *p1;
+        *p1 = *p3;
+        *p3 = t;
+    }
+    if(*p2 > *p3){
+        t = *p2;
+        *p2 = *p3;
+        *p3 = t;
+    }
+    printf("%f,%f,%f\n",*p1,*p2,*p3);
+    return 0;
+}
+
+5，用键盘输入10个整数存入一维数组中，再按反序输出（要求使用指针访问数组元素）
+
+方法一：
+
+#include <stdio.h>
+int main(void){
+    int a[10],i;
+    for(i = 0;i <= 9;i++)
+        scanf("%d",a+i);
+    for(i = 9;i >= 0;i--)
+        printf("%d ",*(a+i));
+    return 0;
+}
+    
+方法二：
+
+#include <stdio.h>
+int main(void){
+    int a[10],i;
+    *p=a;
+    for(i = 0;i <= 9;i++)
+        scanf("%d",p+i);
+    for(i = 9;i >= 0;i--);
+        printf("%d ",*(p+i));
+    return 0;
+}
+
+方法三：
+
+#include <stdio.h>
+int main(void){
+    int a[10],*p;
+    for(p = a;p <= a+9;p++);
+        scanf("%d",p);
+    for(p = a+9;p >= a;p--)
+        printf("%d",*p);
+    return 0;
+}
+
+方法四：
+
+#include <stdio.h>
+int main(void){
+    int a[10],i,*p;
+    p = a;
+    for(i = 0;i <= 9;i++){
+        scanf("%d",p);
+        p++;
+    }
+    p = a+9;
+    for(i = 9;i >= 0;i++){
+        printf("%d",*p);
+        p--;
+    }
+    return 0;
+}
+
+6，用键盘输入10个整数存入一维数组中，求出其最大数并输出（要求用指针访问数组元素）
+
+#include <stdio.h>
+int main(void){
+
+    int a[10],max,i;
+    for(i = 0;i <= 9;i++)
+        scanf("%d",a+1);
+    max=*(a+i);
+
+    for(i = 1;i <= 9;i++){
+        if(*(a+i)>max)
+           max = *(a+i);
+    }
+    printf("max = %d\n",max);
+
+    return 0;
+}
+
+7,从键盘输入11个整数存入一维数组中，再将该数组的元素前后倒置后输出（要求使用指针访问数组元素）。
+
+#include <stdio.h>
+int main(void){
+    
+    int a[11],i,j,t,*p;
+    p=a;
+
+    for(i=0;i<=10;i++)
+       scanf("%d",p+i);  
+
+    i=0;j=10;
+    while(i<j){
+        t=*(p+i);
+       *(p+i)=*(p+j);
+       *(p+j)=t;
+       i++;
+        j--;
+    }
+    for(i=0;i<=10;i++)
+        printf("%d,",*(p+i));
+
+    return 0;
+}
+   
+8、从键盘输入一个字符串存入数组a中，再将a的内容前后倒置后重新存入数组a中并输出（要求用指针访问数组元素）。
+
+#include <stdio.h>
+#include <string.h>
+
+int main(void){
+    char a[80],t,*p,*q;
+    int n;
+    gets(a);
+    n=strlen(a);
+    p=0;
+    q=a+n-1;
+    while(p<q){
+        t=*p;
+        *p=*q;
+        *q=t;
+        p++;
+        q--;
+    }
+    puts(a);
+    
+    return 0;
+}
+ 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+

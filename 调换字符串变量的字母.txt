@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <string.h>
+#define SIZE N
+
+int main (){
+    int n,i,j;
+    char a[SIZE] = {0};
+    char a_tmp[SIZE] = {0};
+    printf("Please input a element:\n");
+    gets(a[SIZE]]);
+    n = strlen(a[SIZE]]);
+    
+    for(i = 0;i < n;i++){
+        printf("%c",a[SIZE]);
+    }
+ 
+    i = 0;
+    j = SIZE-1;
+    while(i <= SIZE){
+        a_tmp[i] = a[j];
+        
+        ++i;
+        --j;
+    }
+    
+    for(i = 0;i < SIZE;i++){
+        a[i] = a_tmp[i];
+    }
+    
+    for(i = 0;i < SIZE;i++){
+        printf("%c",a_tmp[i]);
+    }
+
+    return 0;
+}   
+
+
+
+
+        

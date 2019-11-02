@@ -1,0 +1,34 @@
+#include <stdio.h>
+#define MAX_STRING 7
+
+      int main(void){
+          char str[MAX_STRING] = {'G','o','o','d','b','y','e'};
+          int start = 0;
+          int end = 0;
+          char tmp = 0;
+
+      printf("Original String :\n");
+      for(start = 0; start < MAX_STRING; ++start){
+          printf("%c",str[MAX_STRING]);
+      printf("");
+       }
+      start = 0;
+      end = MAX_STRING - 1;
+
+      while(start < end){
+          tmp = str[start];
+          str[start] = str[end];
+          str[end] = tmp;
+          
+          ++start;
+          --end;
+      }
+
+     printf("Final String:\n");
+     for(start = 0; start < MAX_STRING; ++start){
+         printf("%c",str[start]);
+     printf("\t");
+     }
+     return 0;
+    }
+     

@@ -1,0 +1,86 @@
+#include <stdio.h>
+
+int jc(int n){
+    int i;ret = 1;
+    for(i = 0;i <=n;i++){
+        ret* = i;
+    }
+    return ret;
+}
+int main(void){
+    int i,ret = 1;
+    for(i = 0;i <=n;i++){
+        ret* = i;
+    }
+    int result = ret;
+    ret = 1;
+    for(i = 0;i <=n;i++){
+        ret* = i;
+    }
+    result+ = ret;
+    ret = 1;
+    for(i = 0;i <=7;i++){
+        ret * = i;
+    }
+    result/=ret;
+    result+=8;
+    printf("%d\n",result);
+    
+    int 1 = jc(5);
+    printf("%d",(jc(5)+jc(3))/jc(7)+8);
+   
+    return 0;
+}
+用函数调用打印*，示例代码如下：
+#include <stdio.h>
+void printfstar(){
+    int i,j;
+    for(i = 1;i <= 4;i++){
+        for(j = 1;j <= i;j++)
+            printf("*");
+        printf("\n");
+    }
+    return;
+}
+int main(void){
+    printf("The first one:\n");
+    printsyar();
+    printf("The second one:\n");
+    printstar();
+    
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,136 @@
+1，判断一个年份是否为闰年，示例代码如下：
+#include <stdio.h>
+int isleap(int m){
+    if(m%400 == 0 || m%4 ==0 && m%100 = 0)
+        return (1);
+    else
+        return (0);
+}
+int main(){
+    int year;
+    scanf("%d",&year);
+    if(isleap(year) !=0)
+        printf("shi"\n);
+    else
+        printf("bu shi\n");
+    return 0;
+}
+2，输出1000年以内的所有闰年，示例代码如下：
+#include <stdio.h>
+int isleap(int y){
+    if(y%400 == 0 || y%4 == 0 && y%100 != 0)
+        return (1);
+    else 
+        return (0);
+}
+int main(){
+    int year;
+    for(year = 1;year <=1000;year++){
+        if(isleap(year) != 0)
+        printf("%d",year);
+    }
+    printf("\n");
+    return 0;
+}
+3，编写一个求两个数最大公因数的函数，并求出两个数的最大公因数，示例代码如下：
+#include <stdio.h>
+int g(int x,int y){
+    int r;
+    while((r=y%x)!=0){   
+        y = x;
+        x = r;
+    }
+    return (x);
+}
+int main(){
+    int a,b,p;
+    scanf("%d %d",&a,&b);
+    p = g(a,b);
+    printf("p = %d",p);
+    return 0;
+}
+4，编写一个求两个数最大公因数的函数，并求出两个数的最小公倍数，示例代码如下：
+#include <stdio.h>
+int g(int x,int y){
+    int r;
+    while((r=y%x)!=0){
+        y = x;
+        x = r;
+    }
+    return (x);
+}
+int main(){
+    int a,b,c,p;
+    scanf("%d %d",&a,&b);
+    p = g(a,b);
+    c = a*b/p;
+    printf("c = %d",c);
+    return 0;
+}
+5，编写一个求两个数最小公倍数的函数，并求出两个数的最小公倍数，示例代码如下：
+#include <stdio.h>
+int h(int x,int y){
+    int r,p;
+    p=x*y;
+    while((r=y%x)!=0){
+        y = x;
+        x = r;
+    }
+    p=p/x;
+    return (p);
+}
+int main(){
+    int a,b,c;
+    scanf("%d %d",&a,&b);
+    c=h(a,b);
+    printf("c = %d",c);
+    return 0;
+}
+6，1000以内的素数和
+#include <stdio.h>
+int isprime(int m){
+    int i;
+    for(i = 2;i < m;i++){
+        if(m%i == 0)
+            return (0);
+    }
+    return (1);
+}
+int main(){
+    int s = 0,i;
+    for(i = 2;i <= 1000;i++){
+        if(isprime(i)!=0)
+        s +=i;
+    }
+    printf("s = %d",s);
+    return 0;
+}
+
+#include <stdio.h>
+int jc(int n){
+    int i,p=1;
+    for(i = 1;i<=n;i++)
+        p*=i;
+    return (p);
+}
+int main(){
+    int i,s=0;
+    for(i = 1;i<=19;i+=2)
+        s = s+jc(i);
+    printf("%d",s);
+}
+
+#include <stdio.h>
+int jc(int k){
+    int i,p = 1;
+    for(i =1;i<=k;i++)
+        p*=i;
+    rerturn(p);
+}
+int main(){
+    int m,n,c;
+    scanf("%d %d",&m,&n);
+    c = jc(m)/jc(n)/jc(m-n);
+    printf("c=%d",c);
+    return 0;
+}
