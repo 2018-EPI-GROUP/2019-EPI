@@ -1,0 +1,12 @@
+#include<stdio.h>
+
+  int main()
+{
+	int a=100;
+	while(a>0){
+		printf("%d\n",a);
+		a--;
+	}
+	printf("发射！咻~\n"); 
+	return 0;
+} 
