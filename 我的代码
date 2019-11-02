@@ -14,4 +14,303 @@ int main()
 	}
 	return 0;
 }
-1
+#include<stdio.h>
+int main()
+{
+	int a,b,c;
+	for(a=2;a<=100;a++)
+	{
+		for(b=2;b<a;b++)
+		{
+			if(a%b==0)
+			break;
+		}
+		if(b==a)
+		printf("%d\n",a);
+	}
+	return 0;
+}
+#include<stdio.h>
+int main()
+{
+    int x=2,y=-1,z=2;
+    if(x<y)
+    { 
+        if(y>0)
+        z=0;
+    }
+    else z+=1;
+    printf("z=%d\n",z) ;
+}
+int a=3,b=5;
+int max(int x,int y) 
+{  
+    int c;
+    c=x>y?x:y;
+    return c;
+}
+main()
+{   
+    int a=8;
+    printf("%d\n",max(a,b));
+}
+#include<stdio.h>
+main()
+{ 
+  int x,y,z,t;
+  printf("\n请输入三个整数（x,y,z): ");
+  scanf("%d,%d,%d",&x,&y,&z);
+  if (x>y)
+  { 
+    t=x;
+    x=y;
+    y=t;
+  }
+  if(x>z)
+  { 
+    t=z;
+    z=x;
+    x=t;
+  }
+  if(y>z)
+  {
+    t=y;
+    y=z;
+    z=t;
+  }
+  printf("%d,%d,%d\n",x,y,z);
+}
+#include "math.h"
+main() 
+{
+	int i,j;
+	char s[36][68];
+	float x=0.0,h=3.14159265/18;
+	for(i=0;i<36;i++)
+	{ 
+		s[i][0]='|' ;
+		s[i][67]='\0';
+		for(j=i;j<67;j++)
+		   s[i] [j]=' ';	
+	}
+    s[22][0]='+';
+    for(j=1;j<66;j++)
+        s[22][j]='-';
+    s[22][66]='>';
+    s[23][66]='x';
+    printf("exp(-x)*cos(x)\n  ^\n");
+    for(j=0;j<64;j++)
+    {
+    	i=(int)(22.5-22*exp(-x/6.0)*cos(x));
+    	s[i][j]='*';
+    	x+=h;
+	}
+	for(i=0;i<36;i++)
+	  printf("    %s\n",s[i]);
+}
+#include<stdio.h>
+main()
+{
+int year,leap=0;
+printf("\n(yyyy):2001");
+scanf("%d",&year);
+/*判断该年是否是闰年*/
+if(year%4==0&&year%100!=0||year%400==0) leap=1;
+if(leap)
+   printf("%d\n",year);
+else
+   printf("%d\n",year);
+}
+#include<stdio.h>
+main()
+{
+	int m;
+	int i;
+	int flag;
+	printf("m");
+	scanf("%d",&m);
+	flag=1;
+	for(i=2;i<m;i++)
+	  if(m%i==0 )
+	  {
+	  	flag=0;
+	  	i=m;
+	  	
+	  }
+	  if(flag==1)
+	  printf("%d\n;m");
+	  else
+	  printf("%d\n;m");
+}
+#include<stdio.h>
+main()
+{ 
+  long x;
+  int ge,shi,qian,wan;
+  printf("\n:3456789");
+  scanf("%ld",&x);
+  if(x>=10000&&x<100000)
+    {   
+        wan=x/10000;
+        qian=x%10000/1000;
+        shi=x%100/10;
+        ge=x%10;
+     if(ge==wan&&shi==qian)
+           printf("\n");
+     else  printf("\n");
+   	}
+   	else
+     	{ 
+	       printf("抱歉 \n");
+   	       exit(l);
+    	}
+}
+#include<stdio.h>
+main()
+{
+  int i=1;
+  double fac=1;
+  while(i<=100)
+  {
+   fac*=i;
+   i++;
+  }
+  printf("1*2*3*...*100=%if",fac);
+}
+#include<stdio.h> 
+main() 
+{ 
+   int i,n,x,sum;
+   i=1;sum=0;
+   printf("Input number n:");
+   scanf("%d",&n);
+   do
+   { 
+     scanf("%d",&x);
+     sum=sum+x;
+     i++;
+   }while(i<=n);
+   printf("sum is: %d\n",sum);
+}
+#include<stdio.h> 
+main()
+{
+ int n=1,sum=0;
+ loop:sum+=n;
+++n;
+if (n<=200)
+ goto loop;
+ printf("sum=%d\n;sum");
+}
+#include<stdio.h> 
+main()
+{ 
+ float x;
+float sum=0;
+scanf("%f",&x);
+while(x>0)
+{ 
+  sum+=x;
+  scanf("%f",&x);
+}
+printf("和%6.2f",sum);
+}
+#define PI 3.14159
+#include<stdio.h>
+main()
+{
+  float r;
+  float s, l;
+  /*3*/
+  printf("请输入圆的半径：");
+  scanf("%f",&r);
+  /*求面积s 周长l*/
+  s=PI*r*r;
+  l=2*PI*r;
+  /*输出面积s 周长l*/
+  printf("面积=%6.3f, 周长=%6.3f \n", s, l) ;
+}
+#include<stdio.h>
+int main()
+{
+	int a,b,c;
+	for(a=2;a<=100;a++)
+	{
+		for(b=2;b<a;b++)
+		{
+			if(a%b==0)
+			break;
+		}
+		if(b==a)
+		printf("%d\n",a);
+	}
+	return 0;
+}
+#include<stdio.h> 
+main()
+{
+	char c,s[81];
+	int i,n=0,k=0;
+	gets(s);
+	for(i=0;c=s[i];c++)
+	  if(c==' ')k=0;
+	  else if(k=0)
+	  {
+	 	n++;
+	 	k=1;
+	  }
+	 printf("There are %d words in the line \n",n);
+ } 
+#include<stdio.h>
+struct st_type
+{
+	char num[7];
+	char name[20];
+	char sex;
+	int age;
+	float score;
+	char address[30];
+};
+void print(struct st_type s)
+{
+	printf("\n");
+	printf("%9s%20s%4c%6d%8.1f\n",s.num,s.name,s.sex,s.age,s.score);
+}
+main()
+{
+	struct st_type s0;
+	printf("_");
+	gets(s0.name);
+	printf("\n");
+	scanf("%s %c %d %f",s0.num,&s0.sex,&s0.age,&s0.score);
+	print(s0);
+}
+#include<stdio.h>
+main()
+{ 
+  char ch;
+  ch=getchar();
+  ch=ch>='a'&&ch<='z'?ch-32:ch;
+  putchar(ch);
+}
+main()
+{
+	int i,j,n,a[101];
+	printf("\ninput number:\n");
+	scanf("%d",&n);
+	if(n<=0) return;
+	else a[1]=n;
+	i=1;
+	scanf("%d",&n);
+	while(n>0)
+	{
+		for(j=i;n>a[j] && j>0;j--)
+		   a[j+1]=a[j];
+	    a[++j]=n;
+	    i++;
+	    scanf("%d",&n);
+	}
+	for(j=i;j<=i;j++)
+    	printf("%d",a[j]);
+	printf("\n");
+}
