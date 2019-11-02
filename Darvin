@@ -248,3 +248,124 @@ int main()
 	printf("%f\t%f\t%f\n",a,b,c);
 	return 0;
 }
+//解一元二次方程 
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	double a,b,c,disc,x1,x2,p,q;
+	scanf("%lf%lf%lf",&a,&b,&c);
+	disc=b*b-4*a*c;
+	if(disc<0)
+	  printf("this aquation has not real roots\n");
+	else
+	{
+		p=-b/(2*a);
+		q=sqrt(disc)/(2*a);
+		x1=p+q;
+		x2=p-q;
+		printf("real roots:\nx1=%7.2f\nx2=%7.2f\n",x1,x2);
+	}
+	return 0;
+ } 
+ //输入成绩等级，输出成绩范围
+#include<stdio.h>
+int main()
+{
+	char grade;
+	scanf("%c",&grade);
+	printf("your score:");
+	switch(grade)
+	{
+		case 'A':printf("85~100\n");break;
+		case 'B':printf("70~84\n");break;
+		case 'C':printf("60~69\n");break;
+		case 'D':printf("<60\n");break;
+		default:printf("enter data error!\n");
+	}
+	return 0;
+}
+//输入一个字母，判断并转化为小写 
+#include<stdio.h>
+int main()
+{
+    char ch;
+    scanf("%c",&ch);
+    ch=(ch>='A'&&ch<='Z')?(ch+32):ch;
+    printf("%c\n",ch);
+	return 0;
+}
+//Âß¼­ÐÍ±äÁ¿µÄÊ¹ÓÃ 
+#include<stdio.h>
+#include<stdbool.h> 
+int main()
+{
+    float score;
+    scanf("%f",&score);
+    bool a,b;
+    a=score>=60;
+	b=score<=69;
+	if(a==true&&b==true)
+	printf("the grade is C\n"); 
+	return 0;
+}
+//判断闰年
+#include<stdio.h>
+int main()
+{
+    int year,leap;
+	printf("enter year:");
+	scanf("%d",&year);
+	if(year%4==0)
+	    {
+	        if(year%100==0)
+	            {
+	            	if(year%400==0)
+	            	    leap=1;
+	            	else 
+	            	    leap=0;
+				}
+			else leap=1;
+	    } 
+	else 
+	    leap=0;
+	if(leap)
+	    printf("%d is a ",year);
+	else
+	    printf("%d is not a ",year);
+	printf("leap year.\n");
+	return 0;
+}
+//解方程终极版
+#include<stdio.h>
+#include<math.h>
+int main ()
+{
+	double a,b,c,disc,x1,x2,realpart,imagpart;
+	scanf("%lf%lf%lf",&a,&b,&c);
+	printf("The equation ");
+	if(fabs(a)<=1e-6)
+	    printf("is not a quadratic\n");
+	else 
+	{
+		disc=b*b-4*a*c;
+		if(fabs(disc)<=1e-6)
+		    printf("has two equal roots:%8.4f\n",-b/(2*a));
+		else
+		    if (disc>=1e-6)
+		    {
+			    x1=(-b+sqrt(disc))/(2*a);
+			    x2=(-b-sqrt(disc))/(2*a);
+		    	printf("has distinct real roots:%8.4f and %8.4f\n");
+	     	}
+	    	else 
+	    	{
+	    		realpart=-b/(2*a);
+		    	imagpart=sqrt(-disc)/(2*a);
+		    	printf("has complex roots:\n");
+		    	printf("%8.4f+%8.4fi\n",realpart,imagpart);
+		    	printf("%8.4f-%8.4fi\n",realpart,imagpart);
+		}
+	}
+	return 0;
+ } 
