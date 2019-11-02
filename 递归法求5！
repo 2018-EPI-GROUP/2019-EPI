@@ -1,0 +1,24 @@
+# include < stdio.h >
+int f (int j );
+int main ( void )
+{
+	int i;
+		int f ( int j );
+
+	for ( i = 0;i < 6; i++)
+	{
+	
+		printf ( " %d!=%d",i,f(i) );
+	}
+	return 0;
+}
+ int f (int j )
+ {
+	int  sum ;
+	if (j ==0 )
+		sum=1;
+	else 
+		sum =j * f (j-1);
+
+	 return sum;
+ }
