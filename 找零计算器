@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main()
+{
+	int price,change;
+	scanf("%d",&price);
+	change=100-price;
+	printf("找您%d元\n",change);
+	return 0;
+}
