@@ -48,3 +48,27 @@ void temp(int *i,int *j)
 	*i = *j;
 	*j = m;	
 }
+
+//倒数
+#include<stdio.h>
+
+void temp(int *i,int *j);
+int main()
+{
+	int i,a[5]={1,2,3,4,5};
+	for(i=0;i<2;i++){
+		temp(&a[i],&a[i+2*(2-i)]);
+	}
+	for(i=0;i<5;i++){
+		printf("%d",a[i]);
+	}
+}
+
+void temp(int *i,int *j)
+{
+	int m;
+	m = *i;
+	*i = *j;
+	*j = m;
+}
+
