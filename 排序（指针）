@@ -19,3 +19,32 @@ int main()
 		printf("%2d",a[b]);
 	}
 }
+
+//加上函数
+#include<stdio.h>
+
+void temp(int *i,int *j);
+int main()
+{
+	int a[3]={1,2,3},b,c;
+	int *i,*j;
+	for(c=0;c<2;c++){
+		for(b=0;b<2;b++){
+			if(a[b]<a[b+1]){
+				i = &a[b];
+				j = &a[b+1];
+				temp(i,j);
+			}
+		}
+	}
+	for(b=0;b<3;b++){
+		printf("%2d",a[b]);
+	}
+}
+
+void temp(int *i,int *j)
+{
+	int m = *i;
+	*i = *j;
+	*j = m;	
+}
