@@ -2,25 +2,23 @@
 int main()
 {
 	unsigned int i,a,n;
-	printf("请输入数字:");
-	scanf("%d",&a);
-	if(a>2&&a%2!=0)
+	printf("1-100之间的素数有:");
+	for(a=3;a<100;a+=2)
 	{
+		int t=0;
 		for(i=3;i<a;i+=2)
 		{
-			int t=0;
 			n=a%i;
 			if(n==0)
 			{
-				printf("该数不是素数");
 				t=1;
 				break;
 			}
 		}
 		if(t==0)
-		printf("该数是素数");
+		{
+			printf("%3d",a);
+		}
 	}
-	else
-	printf("该数不是素数");
 	return 0;
 }
