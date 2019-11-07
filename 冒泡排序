@@ -1,0 +1,25 @@
+# include <stdio.h>
+# define N 100
+int main ( void )
+{
+	int i,j,t,n;
+	int a[N+1];
+	printf ( " 请输入学生个数");
+	scanf ( " %d ",&n);
+	for (i=1;i<=n;i++)
+		scanf ("%d",&a[i]);
+		printf ("\n");
+		for (i=1;i<=n;i++)
+		for (j=1;j<=n-i;j++)
+	      if (a[j]>a[j+1])
+		  {
+			  t=a[j];
+			  a[j]=a[j+1];
+			  a[j+1]=t;
+		  }
+		  printf ("结果为:\n");
+		  for (i=1;i<=n;i++)
+			  printf("%4d",a[i]);
+		     printf ("\n");
+	 return 0;
+}
