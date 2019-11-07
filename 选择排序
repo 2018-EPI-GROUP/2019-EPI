@@ -1,0 +1,26 @@
+# include <stdio.h>
+# define N 10
+int main ( void )
+{
+	int a[N+1];
+	int i,j,t;
+	printf ("请输入十个数=");
+	for (i=1;i<=N;i++)
+	{
+		scanf ("%d",&a[i]);
+	}
+	printf ("\n");
+	for ( i=1;i<=N;i++)
+		for (j=i+1;j<=N;j++)
+			if(a[i]<a[j])
+			{
+				t=a[j];
+				a[j]=a[i];
+				a[i]=t;
+			}
+			printf ("The sorted scores:");
+			for ( i=1;i<=N;i++)
+			  printf ("%4d",a[i]);
+			  printf ("\n");
+	return 0;
+}
