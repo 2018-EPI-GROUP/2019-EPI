@@ -1,0 +1,56 @@
+#include<iostream>
+#include<cstdio>
+#include<cstring>
+#include<algorithm>
+using namespace std;
+const int maxn=6000;
+const int maxm=600000;
+struct nice{
+	int x,y,z;
+}e[maxm];//用来记录边的数据 
+int F[maxn];//记录每个点的父亲 
+bool V[maxn];//记录这个点是否被扫过 
+int tot=0,ans=0;//总边数 ,扫过的点数 
+long long sum=0;//所需输出的答案
+bool comp(nice x,nice y)
+{
+  return x.z<y.z;
+}
+int find(int x)
+{
+  if(F[x]==x)return x;
+  return F[x]=find(F[x]);
+}
+int main()
+{
+  memset(V,true,sizeof(V)); 
+  int n,m;
+  scanf("%d%d",&n,&m);
+  for(int i=1;i<=n;i++)
+    F[i]=i; 
+  for(int i=1;i<=m;i++)
+  {
+  	int x,y,z; 
+    scanf("%d%d%d",&x,&y,&z);
+	e[++tot].x=x,e[tot].y=y,e[tot].z=z;
+	e[++tot].x=y,e[tot].y=x,e[tot].z=z;	
+  } 
+  sort(e+1,e+m+m+1,comp);
+  for(int i=1;i<=2*m;i++)
+  {
+    int x=e[i].x,y=e[i].y;
+    int xf=find(x),yf=find(y);
+    if(xf!=yf)
+    {
+      F[xf]=yf;
+      sum+=e[i].z; 
+      if(V[x])V[x]=false,ans++;
+      if(V[y])V[y]=false,ans++;
+      if(ans==n)break;
+      find(x);find(y);
+	}
+  }
+  if(ans==n)printf("%lld",sum);
+  else printf("orz");
+  return 0;
+} 
