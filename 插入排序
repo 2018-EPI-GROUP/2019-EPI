@@ -1,0 +1,41 @@
+#include<stdio.h> 
+int main()
+{
+	printf("请输入要排序的数的个数\n");     //由小到大 
+	int i;
+	scanf("%d",&i);
+	int a[i];
+	int x;
+	for(x=0;x<i;x++)
+	{
+	printf("请输入第%d个数\n",x+1);
+	scanf("%d",&a[x]);	
+	}
+	int m;
+	int t;
+	float n;
+	
+	for(x=1;x<i;x++)
+	{
+		m=0;
+		while(m<x)
+		{
+			if(a[m]>a[x])
+			{
+				n=a[x];
+				for(t=x-1;t>=m;t--)
+				{
+					a[t+1]=a[t];
+				}
+				a[m]=n;
+			}
+			m+=1;
+		}
+		
+	}
+	for(x=0;x<i;x++)
+	{
+	printf("第%d个数为%d\n",x+1,a[x]);	
+	}
+	return 0;
+}
