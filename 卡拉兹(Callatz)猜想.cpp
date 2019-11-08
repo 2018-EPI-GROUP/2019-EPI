@@ -1,0 +1,21 @@
+#include<stdio.h>
+main()
+{
+	int i=0,j,n;
+	printf("请输入一个正整数\n");
+	scanf("%d",&n);
+	while(n!=1)
+	{
+		if(n%2==0)
+		{
+		n=n/2;
+		i++;
+	 }
+		else
+		{
+		n=(3*n+1)/2;
+		i++;
+	 }
+	}
+	printf("从n到1需要%d步",i);
+}

@@ -1,0 +1,23 @@
+#include<stdio.h>
+main()
+{
+	int i,a[6],*p;
+	p=a;
+	while(p<(a+6))
+	{
+		scanf("%d",p);
+		p++;
+	  }  
+	for(i=0;i<6;i++)
+	  printf("%4d",a[i]);
+	  printf("\n");
+	for(i=0;i<6;i++)
+	  printf("%4d",*(a+i));
+	  printf("\n");
+	p=a;
+	for(i=0;i<6;i++)
+	  printf("%4d",p[i]);
+	  printf("\n");
+	for(i=0;i<6;i++)
+	  printf("%4d",*(p+i));
+ } 
