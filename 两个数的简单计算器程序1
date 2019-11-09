@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main()
+{	
+    int n,m;	
+    char ch;	
+    scanf("%d %c %d",&n,&ch,&m);	
+    switch(ch)
+    {			
+        case '+':			 
+            printf("%d",n+m);break;		
+        case '-':			 
+            printf("%d",n-m);break;			 		
+        case '*':
+            printf("%d",n*m);break;			 		
+        case '/':			
+            printf("%d",n/m);break;		
+        case '%':
+            printf("%d",n%m);break;
+        default:			
+            printf("ERROR");	
+    } 		
+    return 0;		 
+}
