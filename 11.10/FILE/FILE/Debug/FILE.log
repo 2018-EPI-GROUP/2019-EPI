@@ -1,0 +1,47 @@
+﻿生成启动时间为 2019/11/10 20:01:49。
+     1>项目“D:\编程\11.10\FILE\FILE\FILE.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\编程\wuyu\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>d:\编程\11.10\file\file\main.cpp(70): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\编程\wuyu\vc\include\stdio.h(283) : 参见“scanf”的声明
+     1>d:\编程\11.10\file\file\main.cpp(71): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\编程\wuyu\vc\include\stdio.h(211) : 参见“fopen”的声明
+     1>d:\编程\11.10\file\file\main.cpp(76): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\编程\wuyu\vc\include\stdio.h(283) : 参见“scanf”的声明
+     1>d:\编程\11.10\file\file\main.cpp(79): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\编程\wuyu\vc\include\stdio.h(211) : 参见“fopen”的声明
+     1>d:\编程\11.10\file\file\main.cpp(86): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+                 d:\编程\wuyu\vc\include\conio.h(131) : 参见“getch”的声明
+     1>d:\编程\11.10\file\file\main.cpp(93): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+                 d:\编程\wuyu\vc\include\conio.h(131) : 参见“getch”的声明
+     1>d:\编程\11.10\file\file\main.cpp(100): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+                 d:\编程\wuyu\vc\include\conio.h(131) : 参见“getch”的声明
+     1>d:\编程\11.10\file\file\main.cpp(114): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\编程\wuyu\vc\include\stdio.h(230) : 参见“fscanf”的声明
+     1>d:\编程\11.10\file\file\main.cpp(136): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\编程\wuyu\vc\include\stdio.h(283) : 参见“scanf”的声明
+     1>d:\编程\11.10\file\file\main.cpp(146): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\编程\wuyu\vc\include\stdio.h(283) : 参见“scanf”的声明
+     1>d:\编程\11.10\file\file\main.cpp(150): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\编程\wuyu\vc\include\stdio.h(283) : 参见“scanf”的声明
+     1>d:\编程\11.10\file\file\main.cpp(152): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+                 d:\编程\wuyu\vc\include\conio.h(131) : 参见“getch”的声明
+     1>d:\编程\11.10\file\file\main.cpp(157): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+                 d:\编程\wuyu\vc\include\conio.h(131) : 参见“getch”的声明
+     1>d:\编程\11.10\file\file\main.cpp(175): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\编程\wuyu\vc\include\stdio.h(211) : 参见“fopen”的声明
+     1>d:\编程\11.10\file\file\main.cpp(233): warning C4060: switch 语句没有包含“case”或“default”标签
+     1>d:\编程\11.10\file\file\main.cpp(230): warning C4102: “case5”: 未引用的标签
+     1>d:\编程\11.10\file\file\main.cpp(226): warning C4102: “case4”: 未引用的标签
+     1>d:\编程\11.10\file\file\main.cpp(224): warning C4102: “case3”: 未引用的标签
+     1>d:\编程\11.10\file\file\main.cpp(222): warning C4102: “case2”: 未引用的标签
+     1>d:\编程\11.10\file\file\main.cpp(220): warning C4102: “case1”: 未引用的标签
+       Link:
+         D:\编程\wuyu\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\编程\11.10\FILE\Debug\FILE.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\编程\11.10\FILE\Debug\FILE.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\编程\11.10\FILE\Debug\FILE.lib" /MACHINE:X86 Debug\main.obj
+         FILE.vcxproj -> D:\编程\11.10\FILE\Debug\FILE.exe
+     1>已完成生成项目“D:\编程\11.10\FILE\FILE\FILE.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.96
