@@ -9,7 +9,7 @@ struct point{
 	int c ;
 } ;
 
-struct point getstruct(struct point *fp1)
+struct point *getstruct(struct point *fp1)
 {	
 	scanf("%d" , &(*fp1).a ) ;
 	
@@ -19,7 +19,7 @@ struct point getstruct(struct point *fp1)
 	
 	printf("fp1         %d-%d-%d \n" , (*fp1).a , (*fp1).b , (*fp1).c ) ;
 	
-	return  *fp1 ;
+	return  fp1 ;
 }
 
 struct point gotstruct(void)
@@ -49,9 +49,9 @@ int main(void)
 	
 	struct point *fp = &p1 ;
 	
-	getstruct(fp);              //´«Ö¸Õë 
+	getstruct(fp);              //Â´Â«Ã–Â¸Ã•Ã« 
 	
-	p2 = gotstruct() ;          //´«Õû¸ö½á¹¹ 
+	p2 = gotstruct() ;          //Â´Â«Ã•Ã»Â¸Ã¶Â½Ã¡Â¹Â¹ 
 	
 	printf("P1(after)   %d-%d-%d \n" , p1.a , p1.b , p1.c ) ;
 	
