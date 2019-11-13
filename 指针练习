@@ -1,0 +1,100 @@
+#include<stdio.h>
+int main()
+
+//{
+//	char a[]="good noon!",b[20];
+//	int i;
+//	
+//	for(i=0;*(a+i) != '\0';i++){
+//		*(b+i) = *(a+i);
+//	}
+//	
+//	*(b+i) = '\0';
+//	
+//	printf("%s",a);
+//	for(i=0;*(b+i) != '\0';i++){
+//		printf("%c",b[i]);
+//	}	
+//}
+
+
+//{
+//	char a[] = "good noon!",b[20];
+//	char *i,*j;
+//	int m; 
+//	
+//	i = a;
+//	j = b;
+//	
+//	for( ; *i != '\0';i++,j++){
+//		*j = *i;
+//	}
+//	*j = '\0';
+//	printf("%s\n",a);
+//	for(m=0 ; b[m] != '\0' ; m++){
+//		printf("%c",b[m]);
+//	}	
+//}
+
+
+//{
+//	void copy(char from[],char to[]);
+//	
+//	char a[] = "good afternoon!";
+//	char b[] = "good morning!";
+//	printf("%s,%s\n",a,b);	
+//	copy(a,b);
+//	
+//	printf("%s,%s\n",a,b);
+//}
+//
+//void copy(char from[],char to[])
+//{
+//	int i = 0;
+//	
+//	while(from[i] != '\0'){
+//		to[i] = from[i];
+//		i++;
+//	}
+//	to[i] = '\0';
+//}
+
+
+//{
+//	void copy(char *from,char *to);
+//	
+//	char *a = "good afternoon!";
+//	char b[] = "good morning!";
+//	printf("%s,%s\n",a,b);	
+//	copy(a,b);
+//	
+//	printf("%s,%s\n",a,b);
+//}
+//
+//void copy(char *from,char *to)
+//{
+//	for( ; *from != '\0';from ++ ,to ++){
+//		*to = *from;
+//	}
+//	
+//	*to = '\0';
+//}
+
+{
+	void copy(char *from,char *to);
+	
+	char *a = "good afternoon!";
+	char b[] = "good morning!";
+	printf("%s,%s\n",a,b);	
+	copy(a,b);
+	
+	printf("%s,%s\n",a,b);
+}
+
+void copy(char *from,char *to)
+{
+	while((*to++ = *from++) != '\0'){
+		;
+	}
+	*to = '\0';
+}
