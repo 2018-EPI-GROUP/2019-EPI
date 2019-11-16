@@ -98,3 +98,175 @@ void copy(char *from,char *to)
 	}
 	*to = '\0';
 }
+
+//调用同一个函数，实现三种不同的计算 
+
+//#include<stdio.h>
+//	int max(int i,int j);
+//	int min(int i,int j);
+//	int add(int i,int j);
+//	void process(int i,int j,int(*fun)() );
+//
+//void main()
+//{
+//
+//	
+//	int a,b;
+//	scanf("%d %d",&a,&b);
+//	
+//	printf("max = ");
+//	process(a,b,max);
+//	
+//	printf("min = ");
+//	process(a,b,min);
+//	
+//	printf("add = ");
+//	process(a,b,add);
+//}
+//
+//void process(int i,int j,int(*fun)() )
+//{
+//	int result;
+//	result = (*fun)(i,j);
+//	printf("%d\n",result);
+//}
+//int max(int i,int j)
+//{
+//	int c;
+//	if(i>j)
+//		c = i;
+//	else
+//		c = j;
+//	return c;
+//}
+//
+//int min(int i,int j)
+//{
+//	int c;
+//	if(i<j)
+//		c = i;
+//	else
+//		c = j;
+//	return c;
+//}
+//
+//int add(int i,int j)
+//{
+//	int c = i + j;
+//	return c;
+//}
+//#include<stdio.h>                                
+//int max(int x,int y);                                //函数声明
+//int min(int x,int y);                                //函数声明
+//int add(int w,int z);                                //函数声明
+//void process(int x,int y,int(*fun)(int,int ) );       //函数声明 
+///*（当把这句语句改成void process(int x,int y,int(*fun)( ) );后面函数定义时作相应修改）编译时程序错误，为什么？*/
+//
+//void main()
+//{
+//    int a,b;
+//    printf("请输入两个数字：");
+//    scanf("%d %d",&a,&b);
+//    
+//    
+//    process(a,b, max);
+//    process(a,b, min);
+//    process(a,b, add);
+//}
+//
+//int max(int x,int y)
+//{    
+//    int  w;
+//    
+//    w=x>y?x:y;
+//    return w;
+//} 
+//int min(int x,int y)
+//{    
+//    int  w;
+//    
+//    w=x<y?x:y;
+//    return w;
+//} 
+//int add(int w,int z)
+//{
+//          int x;
+//          x=w+z;
+//          return x;
+//}
+//void process(int x,int y,int (*fun)(int,int))
+//{
+//          int result;
+//          result=(*fun)(x,y);
+//          printf("%d\n", result);
+//          
+//          
+//}
+//
+
+//输入序号，查询学生成绩
+
+//#include<stdio.h>
+//
+//int qualified(int *results);
+//int *search(int (*pointer)[4] ,int n);
+//
+//int main()
+//
+//{
+//	int score[3][4]={{60,49,80,98},{88,98,59,79},{95,84,69,73}};
+////	int *search(int (*pointer)[4] ,int n);
+//	int *p;
+//	int i,m;
+//
+//	printf("输入你想查询的学生的序号："); 
+//	scanf("%d",&m);
+//	
+//	p = search(score,m);
+//	m = qualified(p);
+//	
+//	for(i = 0;i < 4;i ++){
+//		printf("%d\t",*(p + i));
+//	}
+//	printf("\n");
+//	if(m == 0){
+//		printf("该生不合格");
+//	} else {
+//		printf("该生合格"); 
+//	}
+//}
+//
+//int *search(int (*pointer)[4] ,int n)
+//{
+//	int *pt;
+//	
+//	pt = *(pointer + n);
+//	
+//	qualified(pt);
+//	
+//	return pt;
+//}
+//
+//int qualified(int *results)
+//{
+//	int i;
+//	int m = 1;
+//	for(i = 0;i < 4;i++){
+//		if(*(results + i) < 60){
+//			m = 0;
+//		}
+//	}
+//	return m;
+//}
+
+//指向同一个数组的指针变量相减能得到什么 
+#include<stdio.h>
+int main()
+{
+	int a[8];
+	int *i,*j;
+	i=&a[2];
+	j=&a[6];
+	
+	printf("%d",(j-i));
+}
