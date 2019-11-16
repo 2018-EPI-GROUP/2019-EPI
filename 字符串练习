@@ -1,0 +1,135 @@
+//字符串出现次数 
+//#include<stdio.h>
+//
+//char *find(char *src, char *dest);
+//int main()
+//{
+//	char src[]="abc ldu hf11abcjd   iabc11";
+//	char dest[]=" ";
+//	
+//	char *p = find(src,dest);
+//	printf("%s\n",p);
+//	int count = 0;
+//	
+//	while(p != NULL){
+//		count ++;
+//		p = p + 1;
+//		p = find(p,dest);
+//		printf("%s\n",p);
+//	}
+//	
+//	printf("%d",count);
+//
+//	return 0;
+//}
+//
+//char *find(char *src, char *dest)
+//{
+//	char *a = src;
+//	char *b = src;
+//	
+//	char *tdest = dest;
+//	while (*a){
+//		b = a;
+//		while(*a == *tdest && *a != '\0'){
+//			a ++;
+//			tdest ++;
+//		}
+//		if(*tdest == '\0'){
+//			return b;
+//		}
+//		a = b;
+//		tdest = dest;
+//		a ++;
+//	}
+//	return NULL;
+//} 
+
+//计算字符串中非空格的字符个数
+//#include<stdio.h>
+//
+//char get_num(char *ch)
+//{
+//	int count = 0;
+//	while(*ch){
+//		if(*ch !=  ' '){
+//			count ++;
+//		}
+//		ch ++;
+//	}
+//	return count;
+//}
+//
+//int main()
+//{
+//	char ch[]="good  morning!";
+//	int length = get_num(ch);
+//	printf("%d",length);
+//}
+
+//统计字符串中每个字符各出现多少次
+//#include<stdio.h>
+//int main()
+//{
+//	char a[]="ruguonizaipinzheduanhuanijiushizhu";
+//	int b[26] = {0};
+//	int i;
+//	
+//	for(i=0; i < strlen(a); i++){
+//		b[a[i] - 'a'] ++;
+//	}
+//	
+//	for(i=0; i < 26; i++){
+//		if(b[i])
+//		printf("%c出现的次数为%d\n",i + 'a', b[i]);
+//	}	
+//}
+
+//字符串反过来输出(数组) 
+//#include<stdio.h>
+//#include<string.h>
+//void reverse (char *ch)
+//{
+//	int i,j=strlen(ch) - 1;
+//	while(i<j){
+//		char p = ch[i];
+//		ch[i] = ch[j];
+//		ch[j] = p;
+//		i ++;
+//		j --;		
+//	}
+//} 
+//
+//int main()
+//{
+//	char a[]="good afternoon";
+//	reverse(a);
+//	
+//	printf("%s",a);
+//}
+
+//(指针)
+#include<stdio.h>
+#include<string.h>
+
+void reverse (char *ch)
+{
+	char *ftemp = ch;
+	char *btemp = ch + strlen(ch) - 1;
+	while(ftemp < btemp){
+		char temp = *ftemp;
+		*ftemp = *btemp;
+		*btemp = temp;
+		ftemp ++;
+		btemp --;
+	}
+	return ;
+} 
+
+int main()
+{
+	char a[]="good afternoon";
+	reverse(a);
+	
+	printf("%s",a);
+}
