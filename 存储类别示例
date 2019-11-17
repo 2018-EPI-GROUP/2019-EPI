@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+int a ;               //文件作用域 ， 静态外部链接 ， 其他文件可以使用 
+
+static int b ;        //文件作用域 ， 静态内部链接 ， 该文件私有 
+
+extern char str ;     //标识符str是在其他文件中定义的全局变量
+
+int main(void)
+{ 
+	int n = 5 ;       //块作用域 ， 无链接 ， 自动auto变量，main函数结束后消失
+	
+	static int m ;    //静态块作用域 ， 无链接
+
+	register int j ;  //寄存器变量,
+
+	printf("%d" , n ) ;
+	
+	return 0 ;
+} 
