@@ -1,0 +1,39 @@
+#include<stdio.h>
+main()
+{
+	int arr[5][3];
+	int i, j, sum1=0, sum2=0;
+
+
+	//获取学生成绩
+	for (i = 0; i < 5; i++)
+	{
+		for (j = 0; j < 3; j++)
+		{
+			scanf_s("%d", &arr[i][j]);
+		}
+	}
+
+	//打印学生成绩
+	for ( i = 0; i < 5; i++)
+	{
+		for (j = 0; j < 3; j++)
+		{
+			sum1 += arr[i][j];
+		}
+		printf("第%d名学生的总成绩为%d,平均成绩为%d\n", i + 1, sum1, sum1 / 3);
+	}
+
+	printf("\n\n");
+
+	//打印学生成绩
+	for (int i = 0; i < 3; i++)
+	{
+		for ( j = 0; j < 5; j++)
+		{
+			sum2 += arr[j][i];
+		}
+		printf("第%d门功课的总成绩为%d,平均成绩为%d\n", i + 1, sum2, sum2 / 5);
+	}
+
+}
