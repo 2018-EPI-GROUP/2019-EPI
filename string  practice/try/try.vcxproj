@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{35915351-2A50-49C0-8922-9AF4A6F987F0}</ProjectGuid>
+    <ProjectGuid>{7620BB18-D96F-4098-B688-849AE2318AC9}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>try</RootNamespace>
   </PropertyGroup>
