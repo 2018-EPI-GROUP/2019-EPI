@@ -1298,3 +1298,65 @@ loop:;
 loop2:return 0;
 loop3:return 0;
 }//连续运算计算器
+#include<stdio.h>
+#include<stdlib.h>
+#define PT "%ld %s %.0f\n",p->num,p->name,p->score
+#define N sizeof(struct stu )
+struct stu
+{
+	long num;
+	char name[11];
+	float score;
+	struct stu* next;
+};
+void print(struct stu* p)//打印 
+{
+	p = p->next;
+	while (p != NULL)
+	{
+		printf(PT);
+		p = p->next;
+	}
+}
+struct stu* creat()//建 
+{
+	struct stu* p1, * p2, * head;
+	head = p2 = (struct stu*)malloc(N);
+	printf("请输入学号  名字  成绩(想要退出输入三个0即可)\n");
+	p1 = (struct stu*)malloc(N);
+	scanf("%ld %s %f", &p1->num, p1->name, &p1->score);
+	while (p1->num != 0)
+	{
+		p2->next = p1;
+		p2 = p1;
+		p1 = (struct stu*)malloc(N);
+		scanf("%ld %s %f", &p1->num, p1->name, &p1->score);
+
+	}
+	p2->next = NULL;
+	free(p1);
+	return head;
+}
+
+struct stu* find(struct stu* p)//找 
+{
+	long num;
+	printf("要查的\n");
+	scanf("%ld", &num);
+	while (p->next != NULL)
+	{
+		p = p->next;
+		if (p->num = num) return p;
+	}
+	return NULL;
+}
+
+int main()
+{
+	struct stu* head, * p;
+	head = creat();
+	print(head);
+	p = find(head);
+	if (p)printf("学号：%ld 名字：%s 成绩：%.0f\n", p->num, p->name, p->score);
+	else printf("没找到");
+}//链表
