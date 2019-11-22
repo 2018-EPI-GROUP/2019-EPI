@@ -133,3 +133,234 @@ int main()
 	
 	printf("%s",a);
 }
+
+//拷贝函数strcpy函数的应用 
+//#include<stdio.h>
+//#include<string.h>
+//
+//int main()
+//{
+//	char a[] = "good morning!";
+//	char b[20];
+//	
+//	strcpy(b, a);
+//	printf("%s",b);
+//}
+
+
+//手动拷贝
+
+//#include<stdio.h>
+//#include<string.h>
+//
+//char copy(char *i, char *j);
+//int main()
+//{
+//	char a[] = "good afternoon!";
+//	char b[20];
+//	
+//	copy(b, a);
+//	
+//	printf("%s",b);	
+//} 
+//
+//char copy(char *i, char *j)
+//{
+//	int num = strlen(j);	
+//	for(int m = 0; m < num; m ++){
+//		*i = *j;
+//		i++;
+//		j++;
+//	}
+//	while(*i++ = *j++);       //简单点 
+//}
+
+//部分拷贝函数strncpy函数的应用 
+//#include<stdio.h>
+//#include<string.h>
+//
+//int main()
+//{
+//	char a[] = "good morning!";
+//	char b[20];
+//	
+//	strncpy(b, a, 5);
+//	printf("%s",b);
+//}
+
+//手动部分拷贝
+
+//#include<stdio.h>
+//char copy(char *i, char *j, int n);
+//
+//int main()
+//{
+//	char a[] = "good afternoon!";
+//	char b[5];
+//	int num = 5;
+//	copy(b, a, num);
+//	
+//	printf("%s",b);	
+//} 
+//
+//char copy(char *i, char *j, int n)
+//{
+//
+//	while((*i++ = *j++) && --n);
+//}
+
+
+//#include<stdio.h>
+//#include<string.h>
+//
+//int main()
+//{
+//	char a[] = "good ";
+//	char b[] = "afternoon";
+//	
+//	strcat(a, b);        //将字符串b加到a的后面 ,并返回a的值 
+//	strncat(a, b, 5);    //将字符串b的前n项加到a的后面
+//	
+//	printf("%s",a);
+//	return 0;
+//} 
+
+
+//比较字符串的大小, 
+//#include<stdio.h>
+//#include<string.h>
+//
+//int main()
+//{
+//	char a[] = "good";
+//	char b[] = "good";
+//	
+//	int num = strcmp(a, b); //比较a，b大小 ，a>b输出1，a=b输出0，a<b输出-1 
+//	int num = strncmp(a, b, 3); //比较a，b前三个字符的大小 
+//	printf("%d\n",num);
+//	
+//	system("pause");
+//	return 0;
+//} 
+
+//手动比较 
+//#include<stdio.h>
+//
+//char my_strcmp(char *i, char *j,int n);
+//int main()
+//{
+//	char a[] = "aba";
+//	char b[] = "abcd";
+//	int m = 3;
+//	
+//	int num = my_strcmp(a, b, m); //比较a，b大小 ，a>b输出1，a=b输出0，a<b输出-1 
+//	printf("%d\n",num);
+//	
+//} 
+//
+//char my_strcmp(char *i, char *j, int n)
+//{
+//	for(n; n > -1; n --){
+//		if(*i == *j && n == 0){
+//			return 0;
+//		}
+//		if(*i != *j){
+//			return *i > *j ? 1 : -1;
+//		}
+//		i ++;
+//		j ++;
+//	}
+//}
+
+
+//字符串格式化 
+//#include<stdio.h>
+//
+//int main()
+//{
+//	char ch[100]="aabbcc";
+////	sprintf(ch,"%d+%d=%d",1,2,3);
+////	sprintf(ch,"%04d+%03d=%02d",1,2,3);
+//	printf("%s",ch);
+//}
+
+//#include<stdio.h>
+//
+//int main()
+//{
+//	char ch[]="hello world";
+//	int a,b,c;
+//	char str[100];
+////	sscanf(ch,"%d+%d=%d",&a,&b,&c);
+//	sscanf(ch,"%[^\n]",str);     //%[^\n]，意思是接收字符串但不接收\n
+//	printf("%s",str);
+//}
+
+//字符串查找
+//#include<stdio.h>
+//#include<stdlib.h>
+//
+//int main()
+//{
+//	char a[] = "good evening!";
+//	char b = 'e';
+//	char *p = strchr(a,b);
+//	printf("%s", p);
+//}
+
+//用自己的方法实现字符串查找
+//#include<stdio.h>
+//
+//char *my_strchr(char *str,int m);
+//int main()
+//{
+//	char a[] = "good evening!";
+//	char b = 'even';
+//	char *p = my_strchr(a,b);
+//	printf("%s",p);
+//} 
+// 
+//char *my_strchr(char *str,int m)
+//{
+//	while(*str){
+//		if(*str == m)
+//			return str;
+//		str ++;
+//	}
+//	return NULL;
+//}
+
+//字符串截取
+//#include<stdio.h>
+//#include<stdlib.h>
+
+//int main00()
+//{
+//	char a[] = "www.nicai.com";
+//	
+//	char *p = strtok(a,".");
+//	printf("%s\n",p);
+//	printf("%s\n",a);    //strtok会破坏原字符串，用\0替换分割的标志位 
+//	printf("%p\n",p);
+//	printf("%p\n",a);
+//	p = strtok(NULL,".");
+//	printf("%s\n",p);
+//	
+//	p = strtok(NULL,".");
+//	printf("%s",p);
+//}
+
+
+#include<stdio.h>
+#include<stdlib.h>
+char main()
+{
+	char a[] = "nichousha\nchounizadi\nbufulaizhan\ndagewocuole\nguawazi";
+	
+	char *p = strtok(a,"\n");
+	
+	while(*p){
+		printf("%s\n",p);
+		p = strtok(NULL,"\n");
+	}
+}
