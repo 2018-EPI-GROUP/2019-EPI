@@ -1143,6 +1143,26 @@ int main()
 		printf("%c->%c->%d\n", a[i], a[i] - 32, (a[i] - 32) % 10);
 }//单词解析加密
 #include<stdio.h>
+main()
+{
+	int a, b, i, j, h;
+	scanf("%d %d", &a, &b);
+	for (i = 1; i <= a; i++)
+	{
+		for (j = 1; j <= (a - i); j++)printf(" ");
+		for (j = 1; j <= 2 * i - 1; j++)printf("*");
+		printf("\n");
+	}
+	for (h = 1; h <= b; h++)
+	{
+		for (j = 1; j < i - 1; j++)printf(" ");
+		printf("*");
+		printf("\n");
+	}
+
+}
+//打印大树
+#include<stdio.h>
 void main()
 {
 	int n, a[100], i, j, t;
@@ -1242,16 +1262,20 @@ int main()
 	a[max + 1] = 0;
 	a1 = strlen(a);
 	b1 = strlen(b);
-	for (i = 0; i < max; i++)
-		a[max - i] = a[a1 - i];
-	for (i = 0; i < max - a1; i++)
+	for (i = 0; i <= max + 1; i++)
+		a[max - i + 1] = a[a1 - i];
+	for (i = 0; i < max - a1 + 1; i++)
 		a[i] = '0';
+	for (i = 0; i <= max + 1; i++)
+		b[max - i + 1] = b[b1 - i];
+	b[0] = '0';
 	j = 0;
-	for (i = 0; i < max; i++)
+	for (i = 0; i < max + 1; i++)
 	{
-		j = (a[max - i - 1] + b[max - i - 1] + j - 96);
-		a[max - i - 1] = j % 10 + 48;
+		j = (a[max - i] + b[max - i] + j - 96);
+		a[max - i] = j % 10 + 48;
 		j = j / 10;
+
 	}
 	if (a[0] == '0')
 		printf("%s\n", a + 1);
