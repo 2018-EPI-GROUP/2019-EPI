@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+	int a[3][3];int* i;
+	for (i = *a;i < *a + 9;scanf("%d", i++));  //输入矩阵
+	void trans(int(*p)[3]);  //声明转换函数
+	trans(a);
+}
+
+void trans(int(*p)[3])
+{
+	int i, j, t, * k;
+	for(i=0;i<3;i++)
+		for(j=0;j<i;j++)
+		{
+			t = *(*(p + i) + j);*(*(p + j) + i) = *(*(p + i) + j);*(*(p + j) + i) = t;   //行列交换
+
+		}
+	for (i = 0;i < 3;i++, printf("\n"))
+		for (k = *(p + i);k < *(p + i) + 3;printf("%2d", *k++));  //输出转置矩阵
+}
