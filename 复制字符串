@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+	void copy_string(char* from, char* to);
+	char* a = "Wang zhibin is my loyal official.";
+	char b[] = "I am his queen.";
+	char* p = b;
+	printf("string a=%s\nstring b=%s\n", a, b);
+	printf("\ncopy string a to string b:\n");
+	copy_string(a, b);
+	printf("string a=%s\nstring b=%s\n",a,b);
+	return 0;
+}
+
+void copy_string(char* from, char* to)
+{
+	for (; *from != '\0';from++, to++)
+	{
+		*to = *from;
+	}
+	*to = '\0';
+}
