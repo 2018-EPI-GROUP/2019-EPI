@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<time.h>
+#include<stdlib.h>
+main()
+{
+	//双色球 6个红球 1-32 1个蓝球 1-16
+	srand((unsigned int)time(NULL));
+	int arr[6] = { 0 };
+	int value = 0;
+	int flag = 0;
+	int j = 0;
+
+
+	for (int i = 0; i < 6; i++)
+	{
+		value = rand() % 32 + 1;
+		
+		for (j = 0; j < flag; j++)  //依次比对之前存进去的所有数 保证其中没有重复 
+		{
+			if (value == arr[j])
+			{
+				i--; //保证程序有效执行6次
+				break;
+			}
+		}
+
+		if (j == flag)  //如果  j=flag  则表示和之前的数都没有重复的 
+		{
+			arr[flag] = value;
+			flag++;
+		}
+	}
+
+	for (int i = 0; i < 6; i++)
+	{
+		printf("%d\n", arr[i]);
+	}
+
+	printf("+ %d\n", rand % 16 + 1);
+	//输出的就是六个随机的红球数 和 一个随机的蓝球数；
+
+	return 0;
+
+}
