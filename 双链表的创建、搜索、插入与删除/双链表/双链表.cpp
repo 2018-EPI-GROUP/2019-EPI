@@ -146,8 +146,10 @@ void delete_dNode(List * pList, int value)
 		//初始化q为NULL，p为head，不符合条件（p不为空）时，q先移动，p再移动
 		if (p->data.a == value) {
 
-			if (q)							//注意，当想要删除第一个节点时，要对q进行保护
+			if (q) {					//注意，当想要删除第一个节点时，要对q进行保护
 				q->next = p->next;			//将NULL赋值给其他指针是很危险的
+				p->next->prev = q;
+			}
 			else
 				pList->head = p->next;
 
