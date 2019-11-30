@@ -1,0 +1,54 @@
+#include<stdio.h>
+#include<string.h>
+void input(char na[][20], int nu[], int n);
+void sort(char na[][20], int nu[], int n);
+void search(int numb ,char na[][20], int nu[], int n);
+int main()
+{
+	char name[10][20];
+	int num[10], number;
+	input(name, num, 10);
+	printf("Please enter number:");
+	scanf("%d", &number);
+	search(number, name, num, 10);
+	return 0;
+}
+
+void input(char na[][20], int nu[], int n)
+{
+	int i;
+	for (i = 0;i < n;i++)
+	{
+		printf("Please enter No.%s name:", i + 1);
+		gets(na[i]);
+		printf("please enter No.%d number:", i + 1);
+		scanf("%d", &nu[i]);
+		getchar();
+	}
+}
+
+void sort(char na[][20], int nu[], int n)
+{
+	int i, j, t;
+	char temp[20];
+	for (i = 0;i < n;i++)
+		for (j = i + 1;j < n;nu[i] > nu[j] ? t = nu[j], nu[j] = nu[i], nu[i] = t, strcpy(temp, na[j]), strcpy(na[j], na[i]), strcpy(na[i], temp), j++ : j++);
+	for (i = 0;i < n;printf("%d %s\n", nu[i], na[i]), i++);
+}
+
+void search(int numb, char na[][20], int nu[], int n)
+{
+	int mid, low = 0, high = n - 1;
+	mid = (low + high) / 2;
+	for (low = 0, high = n - 1, mid = (low + high) / 2;low <= high;mid = (low + high) / 2)
+	{
+		if (numb < nu[mid])high = mid - 1;
+		if (numb > nu[mid])low = mid + 1;
+		if (numb == nu[mid])
+		{
+			printf("Name:%s\n", na[mid]);
+			break;
+		}
+	}
+	if (numb != nu[mid])printf("No Match!\n");
+}
