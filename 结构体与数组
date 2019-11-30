@@ -1,0 +1,20 @@
+#include<stdio.h>
+#define MAX 300
+ 
+struct data{
+    float amount ;
+    char fname[MAX];
+    char  lname[MAX];
+}rec;
+
+int main (void)
+{
+    scanf("%s %s",&rec.fname,&rec.lname);
+
+    scanf("%f",&rec.amount);
+
+    printf("\n Doctor is %s %s,and the price is $%.2f ",
+	 rec.fname,rec.lname,rec.amount);
+    return 0;
+}
+
