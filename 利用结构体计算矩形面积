@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int length,width;
+long area;
+
+struct coord {
+    int x;
+    int y;
+};
+
+struct rectangle{
+    struct coord topleft;
+    struct coord bottomrt;
+}mybox;
+
+int main(void)
+{
+    scanf("%d",&mybox.topleft.x);
+    scanf("%d %d %d",&mybox.topleft.y,&mybox.bottomrt.x,&mybox.bottomrt.y);
+
+    width =  mybox.bottomrt.x - mybox.topleft.x ;
+    length = mybox.topleft.y - mybox.bottomrt.y;
+
+    area = width * length;
+    printf("area = %ld\n",area);
+}
+
