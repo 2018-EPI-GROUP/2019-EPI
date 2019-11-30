@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int length;
+long area;
+
+struct coord
+{
+    int x;
+    int y;
+}myPoint;
+
+int main(void)
+{
+    myPoint.x = 12;
+    myPoint.y = 14;
+
+    printf("n The coordinates are: (%d,%d).",myPoint.x,myPoint.y);
+
+    return 0;
+}
