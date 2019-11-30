@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+char count,*ptr,*p;
+
+int main (void)
+{
+    ptr = (char * ) malloc(35 * sizeof(char));
+
+    if(ptr == NULL)
+    {
+	 puts("Memory allocation error.");
+	 exit(1);
+    }
+
+    p = ptr;
+
+    for(count = 65; count < 91; count++)
+	 *p++ = count;
+        *p = '\0';
+
+	 puts(ptr);
+
+	 free(ptr);/* 因为在程序动态的分布内存，此函数作用是将其释放或归还*/
+
+	 return 0;
+}
+
+
+
