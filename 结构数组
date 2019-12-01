@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+struct  entry {
+    char fname [20];
+    char lname [20];
+    float phone [13];
+    };
+
+struct entry list[4];
+
+int i;
+
+int main (void)
+{
+    for(i=0;i<4;i++)
+    {
+	 scanf("%s",list[i].fname);
+	 scanf("%s",list[i].lname);
+	 scanf("%f",list[i].phone);
+    }
+    printf("\n\n");
+
+    for(i = 0;i<4;i++)
+    {
+	 printf("%s %s",list[i].fname,list[i].lname);
+	 printf("%d",list[i].phone);
+    }
+    return 0;
+}
