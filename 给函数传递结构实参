@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+struct data{
+    float amount;
+    char fname[30];
+    char lname[30];
+}rec;
+
+void printf_rec(struct data displayRec);
+
+int main(void)
+{
+    printf("Enter the doctor's first and last name,\n");
+    scanf("%s %s",&rec.fname,&rec.lname);
+
+    scanf("&f",&rec.amount);
+    printf_rec;
+    return 0;
+}
+
+void printf_rec(struct data displayRec)
+{
+    printf("\n doctor is %s %s gave %.2f",displayRec.fname,displayRec.lname,displayRec.amount);
+}
+
