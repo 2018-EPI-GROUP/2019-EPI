@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<time.h>
+#include<stdlib.h>
+int fun01()
+{
+	return rand()%10;
+ } 
+ 
+ int main()
+ {
+ 	srand((unsigned int)time(NULL));
+ 	printf("%d",fun01());
+ }
