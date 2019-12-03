@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main(void)
+{
+	int a = 10;
+	int* p;
+	p = &a;
+	*p=100; 
+	printf("%p\n", &a);
+	printf("%p\n", p);
+	printf("%d\n",sizeof(p));
+	printf("%d\n",sizeof(int*));
+	
+	printf("%d\n", *p);
+	printf("%d\n",a);
+	
+	char ch='a';
+	char* t = &ch;
+	
+	printf("%p\n", &ch);
+	printf("%p\n", t);
+	printf("%d\n",sizeof(t));
+	printf("%d\n",sizeof(char*));
+}
