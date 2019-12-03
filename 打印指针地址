@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main(void)
+{
+	int a = 10;
+	int* p;
+	p = &a;
+	printf("%p\n", &a);
+	printf("%p\n", p);
+	return 0;
+}
