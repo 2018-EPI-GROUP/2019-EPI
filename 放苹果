@@ -1,0 +1,44 @@
+#include"head.h"
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<iostream>
+using namespace std;
+
+int f(int i, int k);
+
+int main()
+{
+	int t, m, n;
+
+	cout << "请输入需计算的次数" << endl;
+
+	cin >> t;
+
+	while (t--) {
+
+		cout << "请依次输入有多少个苹果和盘子" << endl;
+
+		cin >> m >> n;
+
+		cout << f(m, n) << endl;
+	}
+
+	system("pause");
+
+	return 0;
+}
+
+int f(int i, int k)
+{
+	if (k > i)
+		return f(i, i);
+
+	if (i == 0)
+		return 1;
+
+	if (k == 0)
+		return 0;
+
+	return f(i, k-1) + f(i-k, k);
+}
