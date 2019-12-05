@@ -1,0 +1,14 @@
+﻿  源.cpp
+d:\编程\c语言程序练习\vs2017练习库\栈的链式存储\栈的链式存储\源.cpp(113): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\编程\c语言程序练习\vs2017练习库\栈的链式存储\栈的链式存储\源.cpp(139): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\编程\c语言程序练习\vs2017练习库\栈的链式存储\栈的链式存储\源.cpp(145): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\编程\c语言程序练习\vs2017练习库\栈的链式存储\栈的链式存储\源.cpp(167): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\编程\c语言程序练习\vs2017练习库\栈的链式存储\栈的链式存储\源.cpp(183): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\编程\c语言程序练习\vs2017练习库\栈的链式存储\栈的链式存储\源.cpp(105): warning C4101: “_value”: 未引用的局部变量
+d:\编程\c语言程序练习\vs2017练习库\栈的链式存储\栈的链式存储\源.cpp(105): warning C4101: “numtofind”: 未引用的局部变量
+  栈的链式存储.vcxproj -> D:\编程\C语言程序练习\VS2017练习库\栈的链式存储\Debug\栈的链式存储.exe
