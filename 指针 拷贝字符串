@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+my_strcpy(char* dest,char* ch)
+{
+	int i=0;
+	while(ch[i]!=0)
+	{
+		dest[i]=ch[i];
+		i++;
+	}
+	dest[i]=0;
+}
+
+int main()
+{
+	char ch[]="hello world" ;
+	char dest[100];
+	
+	my_strcpy(dest,ch);
+	printf("%s\n",dest);
+}
