@@ -1,0 +1,52 @@
+#include<stdio.h>
+main()
+{
+	int arr[5]={1,2,3,4,5};
+	int* p;
+	p=arr;
+	for(int i=0;i<5;i++)
+	{
+		printf("%d   ",*arr);//1   1   1   1   1
+	}
+	
+	printf("\n");
+	
+	for(int i=0;i<5;i++)
+	{
+		printf("%d   ",*(arr+i)); //1   2   3   4   5 
+	}
+	
+	printf("\n");
+	
+	for(int i=0;i<5;i++)
+	{
+		printf("%d   ",p[i]);//1   2   3   4   5 
+	}
+	
+	printf("\n");
+	
+	for(int i=0;i<5;i++)
+	{
+		printf("%d   ",*(p+i));//1   2   3   4   5
+	}
+	
+	printf("\n");
+	
+	printf("%p\n",arr);
+	printf("%p",p);  //相同 
+	
+	printf("\n");
+	
+	p++;//加上1，地址就加上一个int的大小。。 
+	printf("%p\n",arr);
+	printf("%p",p);   //比上一个大4 
+	
+	printf("\n");
+	
+	int step=p-arr; //两个指针相减，得到的结果是两个指针的偏移量(步长)
+	//所有指针类型 相减结果都是int类型 
+	//相差了几个int大小 
+	
+	printf("%d\n",step); //1 
+	
+}
