@@ -1,0 +1,49 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char a[65];
+	void fun(char* a, int(*p)(char* s));
+	int big(char* s);
+	int small(char* s);
+	int space(char* s);
+	fun(a, big);
+	fun(a, small);
+	fun(a, space);
+}
+void fun(char* a, int(*p)(char* s))
+{
+	printf("(*p)(a)");
+}
+int big(char* s)
+{
+	int i;
+	for (i = 0;*s != '\0';s++)
+	{
+		if (*s >= 'A' && *s <= 'Z')
+			i++;
+		printf("Big=");
+	}
+	return i;
+}
+int small(char* s)
+{
+	int i;
+	for (i = 0;*s != '\0';s++)
+	{
+		if (*s >= 'a' && *s <= 'z')
+			i++;
+		printf("Small=");
+	}
+	return i;
+}
+int space(char* s)
+{
+	int i;
+	for (i = 0;*s != '\0';s++)
+	{
+		if (*s == ' ')
+			i++;
+	}
+	return i;
+}
