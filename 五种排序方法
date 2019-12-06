@@ -1,0 +1,168 @@
+#include<stdio.h>
+#include<stdlib.h>
+//void *Swap(int *x, int *y)
+//{
+//	int temp = *x;
+//	*x = *y;
+//	*y = temp;
+//}
+//int main(void)
+
+//希尔排序 
+//{
+//	int a[] = {5,8,9,3,1,6,7,11,2};
+//	int *p = a;
+//	int num = 0, t = 0;
+//	while( *p != '\0'){
+//		num ++;
+//		p ++;
+//	}
+//	for(int i = num/2; i > 0; i /= 2){
+//		for(t = 0; t + i < num; t ++){ 
+//		if(a[t] < a[t+i]){
+//			int temp = a[t];
+//			a[t] = a[t+i];
+//			a[t+i] = temp;
+//			}
+//		}
+//	}
+//	for(int i = 0; i < num; i++){
+//		printf("%d ",a[i]);
+//	}
+//}
+
+//快速插入排序
+//{
+//	int a[] = {5,8,9,3,1,6,7,11,2};
+//	int *p = a;
+//	int num = 0, t = 0;
+//	while( *p != '\0'){
+//		num ++;
+//		p ++;
+//	}
+//	for(int i = 1; i < num; i ++){
+//		int t = i;
+//		for(int j = t-1; j >= 0; j --){
+//			if(a[t] > a[j]){
+//				int temp = a[t];
+//				a[t] = a[j];
+//				a[j] = temp;
+//				t = j;
+//			}
+//		}
+//	}
+//		for(int i = 0; i < num; i++){
+//		printf("%d ",a[i]);
+//	}
+//} 
+
+//冒泡排序 
+//int main()
+//{
+//	int a[] = {5,8,9,3,1,6,7,11,2};
+//	int *p = a;
+//	int t = 0;             
+//	int num = 0; 
+//	while( *p != '\0'){
+//		num ++;
+//		p ++;
+//	}
+//	for(int i = 0; i < num; i ++){
+//		for(int j = 0; j < num-1; j++){
+//			if(a[j] > a[j + 1]){
+//				int temp = a[j];
+//				a[j] = a[j + 1];
+//				a[j + 1] = temp;
+//			}
+//		}
+//	} 
+//	for(int i = 0; i < num; i++){
+//		printf("%d ",a[i]);
+//	}	
+//} 
+
+//鸡尾酒排序 
+//{
+//	int a[] = {5,8,9,11,1,6,7,3,2};
+//	int *p = a;
+//	int num = 0;
+//	while( *p != '\0'){
+//		num ++;
+//		p ++;
+//	}
+//	int right = num, left = 0;
+//	printf("%d\n",right);
+//	while(right > left){
+//		for(int i = 0; i < right-1; i++){
+//			if(a[i] > a[i + 1]){
+//				Swap(&a[i], &a[i + 1]);
+//			}
+//			right --;
+//			for(int j = num - 1; j > left; j--){
+//				if(a[j] < a[j - 1]){
+//					Swap(&a[j], &a[j - 1]);
+//					}
+//				}
+//				left ++;
+//			} 
+//		}
+//	for(int i = 0; i < num; i++){
+//		printf("%d ",a[i]);
+//	}	 
+//}
+
+
+//选择排序
+//{
+//	int a[9] = {5,8,9,11,1,6,7,3,2};
+//	int min;
+//	for(int i = 0; i < 8; i ++){
+//		min = i;
+//		for(int j = i + 1; j < 9; j ++){
+//			if(a[j] < a[min]){
+//				min = j;
+//			}
+//		}
+//		if(min != i){
+//			Swap(&a[min], &a[i]);
+//		}
+//	}
+//	for(int i = 0; i < 9; i++){
+//		printf("%d ",a[i]);
+//	}
+//} 
+
+
+//快速排序
+void *swap(int *x, int *y);
+int qusort(int p[], int start, int end);
+int main()
+{
+	int a[11]={55,48,23,96,59,12,02,44,69,36,37};
+	qusort(a,0,10);	
+	for(int i = 0; i < 11; i ++) 
+		printf("%d ",a[i]);
+}
+
+int qusort(int p[], int start, int end)
+{
+	int x = p[start];
+	int i = start, j = end;
+	while(j > i){
+		while(x < p[j]) j--;
+		swap(&p[i], &p[j]);
+		while(x > p[i])	i++;
+		swap(&p[i], &p[j]);	
+	}
+	if(start < i)
+		qusort(p, start, i-1);
+	if(i < end)
+		qusort(p, j+1, end);
+}
+
+void *swap(int *x, int *y)
+{
+	int temp = *x;
+	*x = *y;
+	*y = temp;
+}
