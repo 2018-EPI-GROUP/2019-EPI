@@ -1,0 +1,36 @@
+#include<stdio.h>
+#define n 13
+typedef struct
+{
+	int numb,  nextp;
+}person;
+int main()
+{
+	person link[n];
+	int i, count, h;
+	for (i = 1;i <= n;i++)
+	{
+		if (i == n)
+			link[i].nextp = 1;
+		else link[i].nextp = i + 1;
+		link[i].numb = i;
+	}count = 0, h = n;
+	printf("sequence that person leave the circle:\n");
+	while (count < n - 1)
+	{
+		i = 0;
+		while (i != 3) {
+			h = link[h].nextp;if (link[h].numb)i++;
+		}
+		printf("%d", link[h].numb);
+		link[h].numb = 0;
+		count++;
+	}
+	printf("\nThe last one is:");
+	for (i = 1;i <= n;i++)
+	{
+		if (link[i].numb)
+			printf("%d", link[i].numb);
+	}
+	return 0;
+}
