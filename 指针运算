@@ -1,0 +1,57 @@
+#include<stdio.h>
+
+my_strcpy0101(char* dest,char* ch)//数组 
+{
+	int i=0;
+	while(ch[i]!=0)
+	{
+		dest[i]=ch[i];
+		i++;
+	}
+	dest[i]=0;
+}
+
+my_strcpy0102(char* dest,char* ch)// 纯指针++运算 
+{
+	while(*ch)
+	{
+		*dest=*ch;
+		dest++;//指针加一，相当于指向数组下一个元素，内存地址变化了sizeof(char) 
+		ch++;
+	}
+	
+	*dest=0;
+}
+
+my_strcpy0103(char* dest,char* ch)//指针+偏移量 
+{
+	int i=0;
+	while(*(ch+i))
+	{
+		*(dest+i)=*(ch+i);
+		i++;
+	}
+	*(dest+i)=0;
+}
+
+my_strcpy(char* dest,char* ch)//最简洁 
+{
+	int i=0;
+	while(*dest++=*ch++);
+	//*ch取值 ;
+	//*dest取值;
+	//*dest=*ch把*ch的值赋给*dest ;
+	// 判断*dest是否等于零 ;
+	//ch++;
+	//dest++; 
+}
+
+int main()
+{
+	char ch[]="hello world" ;
+	char dest[100];
+	
+	my_strcpy(dest,ch);
+
+	printf("%s\n",dest);
+}
