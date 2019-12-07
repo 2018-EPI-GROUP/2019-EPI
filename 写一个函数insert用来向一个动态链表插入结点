@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct node
+{
+	int data;
+	struct node* next;
+};
+int n;
+struct node* insert(void)
+{
+	
+	struct node* head;
+	struct node* p;
+	struct node* p1, * p2;
+	n = 0;
+	p1 = p2 = (struct node*)malloc( LEN);
+	scanf("%d", &p1->data);
+	head = NULL;
+	while (p1->data != 0)
+	{
+		n = n + 1;
+		if (n == 1)head = p1;
+		else p2->next = p1;
+		p1 = p2;
+		p1 = (struct node*)malloc(LEN);
+		scanf("%d", &p1->data);
+		p2->next = NULL;
+		return(head);
+	}
+}
