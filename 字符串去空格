@@ -1,0 +1,24 @@
+#include<stdio.h>
+
+remove_space(char* ch)
+{
+	char* ftemp=ch;//用于遍历字符串 
+	char* rtemp=ch;//用于记录非空格字符串
+	while(*ftemp)
+	{
+		if(*ftemp!=' ')
+		{
+			*rtemp=*ftemp;
+			rtemp++;
+		}
+		ftemp++;
+	 } 
+	 *rtemp=0;
+}
+
+main()
+{
+	char ch[]="  h  e l lo  w o r  l d";
+	remove_space(ch);
+	printf("%s",ch); 
+ } 
