@@ -1,0 +1,43 @@
+#include<stdio.h>
+
+char* my_strchr01(char* str,char ch)
+{
+	int i=0;
+	while(str[i])
+	{
+		if(str[i]==ch)
+		{
+			return &str[i];
+		}
+		i++;
+	}
+	
+	return NULL;
+}
+
+char* my_strchr(char* str,char ch)
+{
+	while(*str)
+	{
+		if(*str==ch)
+		{
+			return str;
+		}
+		str++;
+	}
+		return NULL;
+}
+
+main()
+{
+	char str[]="hello world";
+	char* p=my_strchr(str,'o');
+	if(p==NULL)
+	{
+		printf("未找到\n");
+	}
+	else
+	{
+		printf("%s\n",p);
+	 } 
+}
