@@ -1,0 +1,35 @@
+#include<stdio.h>
+
+char* my_strstr(char* src,char* dest)
+{
+	char* fsrc=src;//遍历源字符串指针
+	char* rsrc=src;//记录相同字符串首地址 
+	char* tdest=dest; 
+	while(*fsrc)
+	{
+		rsrc=fsrc;
+		while(*fsrc==*tdest&&*fsrc!='\0') 
+		{
+			fsrc++;
+			tdest++;
+		}
+		if(*tdest=='\0')//判断目标字符是否配对完毕 
+		{
+			return rsrc;
+		}
+		//回滚
+	 tdest=dest; //目标字符串更新到起始位置
+	 fsrc=rsrc;//配对中途不成功，2指针再次返回到 1指针相同位置 
+	 fsrc++;
+	 } 
+	 return NULL;
+ } 
+ 
+ main()
+ {
+ 	char src[]="hell worllo";
+ 	char dest[]="llo";
+ 	
+ 	char* p=my_strstr(src,dest);
+ 	printf("%s\n",p);
+ }
