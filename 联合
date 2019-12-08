@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+#define character  'c'
+#define integer  'i'
+#define FLOAT   'f'
+
+struct generic_tag{
+    char type;
+    union shared_tag{
+	 char c;
+	 int i;
+	 float f;
+    } shared;
+};
+
+void print_function(struct generic_tag generic);
+
+int main(void)
+{
+    struct generic_tag var;
+    var.type = character;
+    var.shared.c = '$';
+    print_function(var);
+
+}
+void print_funtion(struct generic_tag generic)
+{   switch(generic.type)
+{
+case character:
+    printf("%c",generic.shared.c);
+}
+}
+
+
+   
+
