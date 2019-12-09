@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+
+char message1[60] = "four score and seven years ago ...";
+char message2[60] = "abcdefghijklmnopqrstuwxyz";
+char temp[60];
+
+int main (void)
+{
+    printf("%s",message1);
+    memset(message1 + 5,'@',10);/*从第五个开始替换10个*/
+    printf("%s",message1);
+
+    strcpy(temp, message2);
+    printf("%s",message2);
+    memcpy(temp + 4 ,temp + 16,10);/*将第16位开始共十个复制给从第4个开始的10个*/
+    printf("%s",temp);
+
+    strcpy(temp,message2);
+    memcpy(temp+6,temp + 4,10);
+    printf("%s",temp);
+
+    strcpy(temp,message2);
+    memmove(temp + 4,temp + 16, 10);/*当第16位开始的10个移动到第4位*/
+    printf("%s",temp);
+}
