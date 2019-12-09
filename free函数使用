@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX 1000
+
+int main (void)
+{
+    void *ptr1,*ptr2;
+    ptr1 = malloc(MAX);
+    if(ptr1 != NULL)
+	 printf("\nfirst ");
+    else 
+    {
+	 printf("%d",MAX);
+	 exit(1);
+    }
+
+    /*尝试分配另一个内存*/
+    ptr2 = malloc(MAX);
+    if(ptr2 !=NULL)
+    {	 printf("second is successful");
+    exit (0);
+    }
+    else 
+	 printf("failed'");
+	 free(ptr1);
+    ptr2 = malloc(MAX);
+    if(ptr2 !=NULL)
+	 printf("three failed");
+    return 0;
+}
+
+
+
+
