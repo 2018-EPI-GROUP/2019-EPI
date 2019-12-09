@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include<stdlib.h>
+#include <string.h>
+
+#define MAX 25
+
+int get_line(char*lines[]);
+void sort(char*p[],int n);
+void print_strings(char *p[],int n);
+
+int main (void)
+{
+    int number_of_lines = get_line(lines);
+    if( number_of_lines < 0)
+    {
+	 puts("fails");
+	 exit(-1);
+    }
+    sort (lines,number_of_lines);
+    print_strings(lines,number_of_lines);
+    return 0;
+}
+
+int get_line(char*lines[])
+{
+    int n = 0;
+    char buffer[80];
+
+    while(n < MAX && (gets(buffer) !=0) && buffer[0] != 0)
+    {
+	 if(lines[n] = malloc(strlen(buffer+1) == NULL )
+	     return -1;
+	 strcpy(lines[n++],buffer);
+    }
+}
+
+void sort(char*p[],int n)
+{
+    int a,b;
+    char *temp;
+
+    for(a = 1;a<n;a++)
+    {
+	 for(b = 0;b<n-1;b++)
+	 {
+	     if(strcmp(p[b],p[b+1]) > 0)
+	     {
+		  temp = p[b];
+		  p[b]= p[b+1];
+		  p[b+1] = temp;
+	     }
+	 }
+    }
+}
+void print_string(char*p[],int n)
+{
+    int count;
+    for(count = 0;count <n;count++)
+    {
+	 printf("%s",p[count]);
+    }
+}
+
+
