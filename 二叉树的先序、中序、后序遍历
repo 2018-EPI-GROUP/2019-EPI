@@ -1,0 +1,100 @@
+//先序：DLR  （先根结点再左子树再右子树）
+//中序：LDR  （先左子树再根结点再右子树）
+//后序：LRD  （先左子树再右子树再根结点）
+
+#include"head.h"
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<iostream>
+using namespace std;
+
+typedef struct binode {
+	char a;
+	struct binode* Leftson;
+	struct binode* Rightson;
+}Binode;
+
+void recursion1(Binode* root)		//先序遍历
+{
+	if (root == NULL)
+		return;
+
+	//访问根节点
+	cout << root->a;
+	//访问左子树
+	recursion1(root->Leftson);
+	//访问右子树
+	recursion1(root->Rightson);
+}
+
+void recursion2(Binode* root)		//中序遍历
+{
+	if (root == NULL)
+		return;
+
+	//访问左子树
+	recursion2(root->Leftson);
+	//访问根节点
+	cout << root->a;
+	//访问右子树
+	recursion2(root->Rightson);
+}
+
+void recursion3(Binode* root)		//后序遍历
+{
+	if (root == NULL)
+		return;
+
+	//访问左子树
+	recursion3(root->Leftson);
+	//访问右子树
+	recursion3(root->Rightson);
+	//访问根节点
+	cout << root->a;
+}
+
+void create_binode()
+{
+	//创建结点
+	Binode A = { 'A', NULL, NULL };
+	Binode B = { 'B', NULL, NULL };
+	Binode C = { 'C', NULL, NULL };
+	Binode D = { 'D', NULL, NULL };
+	Binode E = { 'E', NULL, NULL };
+	Binode F = { 'F', NULL, NULL };
+	Binode G = { 'G', NULL, NULL };
+	Binode H = { 'H', NULL, NULL };
+
+	//连接结点
+	A.Leftson = &B;
+	B.Rightson = &C;
+	C.Leftson = &D;
+	C.Rightson = &E;
+	A.Rightson = &F;
+	F.Rightson = &G;
+	G.Leftson = &H;
+
+
+	//先序遍历
+	recursion1(&A);
+	cout << endl;
+
+	//中序遍历
+	recursion2(&A);
+	cout << endl;
+
+	//后序遍历
+	recursion3(&A);
+	cout << endl;
+
+}
+
+
+int main()
+{
+	int i;
+	create_binode();
+	system("pause");
+	return 0;
+}
