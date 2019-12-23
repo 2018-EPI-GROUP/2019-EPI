@@ -1,0 +1,48 @@
+#include <stdio.h>
+//日期合法性的判断
+int year_(int y);
+int month_(int m);
+int day_(int d,int k,int m);
+int main()
+{
+	int n,year,month,mandd,day;
+	scanf("%d",&n);
+	year=n/10000;
+	mandd=n%10000;
+	month=mandd/100;
+	day=mandd%100;
+	int key=year_(year);
+	printf("%d ,%d,%d ",key,month_(month),day_(day,key,month));
+	if(month_(month)&&day_(day,key,month))
+	printf("%d年%d月%d日是合法日期",year,month,day);
+	else
+	printf("%d年%d月%d日是非法日期",year,month,day);
+	return 0;
+ } 
+ int year_(int y)
+ {
+ 	if((y%4==0&&y%100!=0)||y%400==0)
+ 	return 1;
+ 	else
+ 	return 0;
+ }
+ int month_(int m)
+ {
+ 	if(m>0&&m<13)
+ 	return 1;
+ 	else 
+	return 0;
+ }
+ int day_(int d,int k,int m)
+ {
+ 	if(m==2&&k==1&&d<30)
+ 	return 1;
+ 	else if(m==2&&d<29)
+ 	return 1;
+ 	else if((m==1||m==3||m==5||m==7||m==8||m==10||m==12)&&d<32)
+ 	return 1;
+ 	else if((m==4||m==6||m==9||m==11)&&d<31)
+ 	return 1;
+ 	else 
+ 	return 0;
+ }
