@@ -1,0 +1,30 @@
+#include<stdio.h>
+//完数 
+int judge(int n);
+int main()
+{
+	int stopnum,i;
+	scanf("%d",&stopnum); 
+	for(i=1;i<=stopnum;i++)
+	judge(i);
+}
+int judge(int n)
+{
+	int i,j,k;
+	int a[1000];
+	i=0;
+	for(j=1;j<n;j++)
+	{
+    	if(n%j==0)
+		{
+			a[i]=j;
+			i++;
+		}
+	}
+	for(k=0;k<i;k++)
+	{
+		n=n-a[k];
+	}
+	if(n==0)
+	printf("%d  ",j);
+}
