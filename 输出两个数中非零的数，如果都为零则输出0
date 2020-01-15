@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{ int a=0;
+  int b=1;
+  int c;
+  if(a&&b)
+  {printf("%d,%d",a,b);}
+  else
+  { if(a||b)
+    { if(a>b)
+      {printf("%d",a);}
+      else
+      {c=a;a=b;b=c;
+      printf("%d",a);}
+     }
+    else 
+    {printf("0");}
+  }
+}
