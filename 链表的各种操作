@@ -1,0 +1,156 @@
+#include<stdio.h>
+#include<stdlib.h>
+typedef struct node {
+	int num;
+	struct node* next;
+}node;
+typedef struct {
+	node* head;
+	node* tail;
+}lists;
+void add(lists *list,int num);
+void print(lists* list);
+void frees(lists* list);
+void insert(lists* list);
+void deletes(lists* list);
+int main() {
+	int num;
+	lists list;
+	list.head = nullptr;
+	list.tail = nullptr;
+	printf("创建链表(输入-1结束创建):\n");
+	scanf_s("%d", &num);
+	while (num==-1)
+	{
+		printf("请重新输入：");
+		scanf_s("%d", &num);
+	}
+	do
+	{
+		add(&list, num);
+		scanf_s("%d", &num);
+	} while (num != -1);
+	print(&list);
+	int a,b=0;
+	printf("0为结束程序\n1为创建新链表\n2为显示链表\n3为插入数据\n4为删除数据\n");
+	while (1) {
+		printf("请输入操作序号：");
+		scanf_s("%d", &a);
+		switch (a)
+		{
+		case 0:b = 1; break;
+		case 1:frees(&list);
+			list.head = nullptr;
+			list.tail = nullptr;
+			printf("创建新链表(输入-1结束创建):\n");
+			scanf_s("%d", &num);
+			do
+			{
+				add(&list, num);
+				scanf_s("%d", &num);
+			} while (num != -1);
+			print(&list);
+			break;
+		case 2:print(&list); break;
+		case 3:insert(&list); break;
+		case 4:deletes(&list); break;
+		default:printf("错误，请重新输入：");break;
+		}
+		if (b)
+			break;
+	}
+	frees(&list);
+	printf("已退出");
+	return 0;
+}
+void add(lists* list, int num)
+{
+	node* p;
+	p = (node*)malloc(sizeof(node));
+	p->next = nullptr;
+	p->num = num;
+	if (list->head) {
+		list->tail->next = p;
+	}
+	else {
+		list->head = p;
+	}
+	list->tail = p;
+}
+
+void print(lists* list)
+{
+	node* p;
+	printf("当前链表为:\n");
+	for (p = list->head; p; p = p->next) {
+		printf("%d ", p->num);
+	}
+	printf("\n");
+}
+
+void frees(lists* list)
+{
+	node* p, * q;
+	for (p = list->head, q = p->next; q; q = p->next) {
+		free(p);
+		p = q;
+	}
+}
+
+void insert(lists* list) {
+	node* p, * q;
+	int a, c;
+	printf("请输入插入的位置和数字：\n");
+	scanf_s("%d %d", &a, &c);
+	int b = 0;
+	p = (node*)malloc(sizeof(node));
+	p->num = c;
+	switch (a) {
+	case 0:printf("错误\n"); return;
+	case 1:p->next = list->head;
+		list->head = p; print(list);  return;
+	default:
+		for (q = list->head; q && b < a - 2; q = q->next, b++);
+		if (q) {
+			p->next = q->next;
+			q->next = p;
+			print(list);
+			break;
+		}
+		else {
+			printf("链表没有那么长\n"); return;
+		}
+	}
+}
+
+void deletes(lists* list) {
+	node* p, * q;
+	printf("请输入要删除的位置：\n");
+	int a;
+	scanf_s("%d", &a);
+	if (a==1) {
+		p = list->head;
+		list->head = p->next;
+		free(p);
+		print(list);
+	}
+	else if (a<=0) {
+		printf("错误");
+	}
+	else {
+		a--;
+		for (q = list->head,p=q->next; a > 1 && p; a--, p = p->next,q=q->next);
+		if (p && p->next) {
+			q->next = p->next;
+			free(p);
+			print(list);
+		}else if (p) {
+			q->next = nullptr;
+			free(p);
+			print(list);
+		}else {
+			printf("错误");
+		}
+	}
+	
+}

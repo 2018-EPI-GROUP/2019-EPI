@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<string>
+typedef struct {
+	char a[20];
+	int b;
+}word;
+int main() {
+	word a[100];
+	printf("输入句号之前请输入一个空格\n");
+	int c = -1;
+	do
+	{
+		c++;
+		scanf_s("%s", a[c].a,20);
+		getchar();
+	} while (a[c].a[0]!='.');
+	for (; c != -1; c--) {
+		printf("%s:%d", a[c],strlen(a[c].a));
+	}
+	return 0;

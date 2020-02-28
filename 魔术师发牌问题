@@ -1,0 +1,100 @@
+#include<stdio.h>
+#include<stdlib.h>
+typedef struct node{
+	int paimian;
+	node* next;
+}node;
+typedef struct  {
+	node* head;
+	node* tail;
+}lists;
+void add(lists *list);
+void frees(lists* list);
+void paimian(lists* list);
+int jiance(lists* list);
+void print(lists* list);
+int main() {
+	lists list;
+	list.head = nullptr;
+	list.tail = nullptr;
+	int a = 1;
+	do
+	{
+		add(&list);
+		a++;
+	} while (a!=14);
+	paimian(&list);
+	print(&list);
+	return 0;
+}
+
+void add(lists* list){
+	node* p;
+	p = (node*)malloc(sizeof(node));
+	p->paimian = 0;
+	if (list->head == nullptr) {
+		list->head = p;
+	}else{
+		list->tail->next = p;
+	}
+	list->tail = p;
+	list->tail->next = list->head;
+}
+
+void frees(lists* list){
+	node* p, * q;
+	p = list->head->next;
+	q = list->head;
+	do
+	{
+		free(q);
+		q = p;
+		p = q->next;
+	} while (p!=list->head);
+}
+
+void paimian(lists* list){
+	int a=1,b=1,c=1;
+	node* p;
+	for (p = list->head;a!=0;p=p->next) {
+		if (p->paimian==0)
+		{
+			if (c==b) {
+				p->paimian = b;
+				c = 0;
+				b++;
+			}
+			c++;
+		}
+		a = jiance(list);
+	}
+}
+
+int jiance(lists* list){
+	node* p;
+	int a=0;
+	p = list->head;
+	do
+	{
+		if (p->paimian == 0) {
+			a = 1;
+			break;
+		}
+		p = p->next;
+	} while (p!=list->head);
+	return a;
+}
+
+void print(lists* list){
+	node* p;
+	p = list->head;
+	do
+	{
+		printf("%d",p->paimian);
+		if (p->next!=list->head)
+		{
+			printf("->");
+		}
+		p = p->next;
+	} while (p!=list->head);
+}
