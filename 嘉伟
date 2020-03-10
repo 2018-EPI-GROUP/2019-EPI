@@ -1,0 +1,515 @@
+//输入参数《-10000000---10000000》计算特定范围内的所有整数的平方和；
+//验证输入是否合理并给出提示；
+#include<stdio.h>
+
+#include<stbool.h>
+//验证输入是一个整数
+long get_long();
+//上下限是否有效
+bool bad_limits(long begin,long end,
+                  long low,long high);
+//计算整数所有平方和
+double sum_squares(long a,long b);
+int main()
+{
+  const long MIN =-10000000L;   //下界
+  const long MAX =-10000000L;   //上界
+  long start;    
+ //交互指定的最小值
+  long stop;     
+//交互指定的最大值
+  double answer;
+  printf("这个程序用于求您所给的两个参数之间《须在-10000000至10000000之间》的所有整数的平方和，您可以输入0来退出")；
+  start = get_long();
+  printf("upper limit!:");
+  stop = get_long();
+  while（start !=o|| stop!=0）
+  {
+    if(bad_limits(start,stop.MIN,MAX))
+      printf("再试一次嘛!");
+    else 
+    {
+      answer = sum_squares(start,end);
+      printf("你输入的下界是%ld,上界是%ld,总和是%g\n",
+                          start,stop,answer);
+    }
+    printf("输入界（同时输入0退出）：\n");
+    start = get_long();
+    printf("下界");
+    stop = get_long();
+  }
+    printf("完成！")；
+    
+    return 0;
+}
+long get_long(void)
+{
+  long input;
+  char ch;
+  while (scanf("%ld",&input) != 1
+  {
+    putchar(ch);//错误输入处理
+    printf("这可不是一个有效值\n")；
+    printf("再输入一次吧！\n");
+    printf("像23，25，45，77就是有效值哦！再来输入吧：\n");
+  }
+  return input;
+}   
+double sum_squares(long a,long b)
+{
+  double total = 0;
+    long i;
+    
+    for (i==a; i<=b;i++)
+      total += (double) i * (double) i;
+      
+    return total;
+}
+
+bool bad_limits(long begin,long end,long low,long high)
+{
+  bool not_good = false;
+  
+  if(begin < end)
+  {
+    printf ("%ld 可比%ld大\n",begin,end);
+    not_good = true;
+  }
+  if (begin < low || end < low);
+  {
+    printf("输入必须是%ld或者一个更大的数！\n"，low);
+    not_good = true;
+  }
+  if("begin > high || end > high")
+  {
+    printf("输入必须是%ld或者一个更大的数！\n",high);
+    not_good = true;
+  }
+  
+  return not_good;
+}//完
+
+
+//基础练习，打印九九口诀
+#include<stdio.h>
+int main()
+{
+  char a[9][9]
+  int x,y;
+  for(x=0;x<=8,x++)
+    {
+      printf("\n");
+    for(y=0;y<=8,y++)
+      {
+        if(x>Y);
+        break;
+        else
+          printf("%d",(x+1)*(y+1));
+       }
+    }
+    return 0;
+  }
+
+//试指针
+#include<stdio.h>
+int main()
+{
+  int a[9]={2,3,4,21,5,3,7,8,45,34};
+  int *po_1;
+  const int *po_2 =a[1]
+  po_1 = &a[0];
+ 
+  po_1 =  4;
+  po_1 =&a[2];
+  po_2 = 23;//error
+  po_2 =&a[3];//error
+  int y;
+  y =po_1*po_2;
+  printf("%d",y);
+  return 0;
+}
+//带有菜单的程序，switch练习
+#include<stdio.h>
+char get_choice();
+char get_first();
+int get_int();
+int main()
+{
+  int choice;
+  vooid count();
+  
+  while((choice = get_choice()) !=;'q')
+  {
+    switch(choice)
+    {
+      case 'a':printf("buy low,sell high\n");
+              bresk;
+      case 'b':putchar('\a');
+              bresk;
+      case 'c':count();
+                break;
+      default:printf("有错误\n");
+              break;
+     }
+   }
+   printf("再见\n");
+   return 0;
+ }
+ 
+ void count()
+ {
+  int n,i;
+  printf("count how far?enter an integer:\n");
+  n = get_int();
+  for(i=1;i<=n;i++)
+    printf("%d\n",i);
+  while (getchar()!='\n')
+    continue;
+ }
+ 
+ char get_choice()
+ {
+  int ch;
+  printf("enter the letter of your choice:\n");
+  printf("a.advice    b.bell\n");
+  printf("c.count     q.quit\n");
+  ch = get_first();
+  while((ch <'a'||ch > 'c')&&ch !='q')
+  {
+    printf("please respond with a,b,  c,or q.\n");
+    ch = get_first();
+  }
+  return ch;
+}
+char get_first()
+{
+  int ch;
+  
+  ch = getchar();
+  while(getchar() !='\n')
+    continue;
+  return ch;
+}
+int gei_int()
+{
+  int input;
+  char ch;
+  
+  while(scanf("%d",&inout) !=1 )
+  {
+    while((ch = getchar()) !='n'
+        putcahr(ch);  //处理错误的输出
+    printf("is not an integer.\nplease enter an");
+    printf("integer value,suan as 25,-154:");
+  }
+  
+  return input;
+}
+
+//这是一个交互文字游戏
+
+#include<stdio.h>
+int mian ()
+{
+ char answer[30];
+  int x,y,z;
+  int h=0;
+  char name[];
+ 
+ printf("你好我的朋友：");
+  
+scanf("%s",name);
+  
+printf("ok我的%s,让我们愉快的进行接下来的游戏吧\n",names);
+  printf("先让我来 了解了解你，你是男生还是小女孩（嘿嘿嘿）呢？\n");
+  printf("就说说是：男\n女\n都不是\n");
+  scanf("%s"answer[0]);
+  if(answer[0] != 男&&answer[0] != 女)
+    printf("那你到底是啥啊？\n");
+  else if(answer[0] ==男)
+    printf("哦，多喝热水呢兄弟\n");
+  else
+    printf("小姐姐单身吗，可以来试着交流交流呢嘻嘻嘻");
+  printf("开玩笑的哈哈哈，我是不可能就这么了解你的"\n);
+  printf("我可是一个非常厉害的学霸小学生，不信问我1+1等于几？"\n);
+  scanf("%d",&x);
+  printf("+");
+  scanf("%d",y);
+  if(x != 1&&y !=1)
+    printf("哈哈哈我怎么可能不知道 1+1=%d呢？\n",x+y);
+  els
+  {
+    printf("当然是2，你是为数不多的老实问我这个问题的人啊，我将尊称你为（天命之子）！\n");
+    h = h+1;
+  }
+
+  printf("好的狗蛋，现在让我们继续游戏吧");
+  printf("现在我们已经是朋友了对吧，我来给你说一个烦恼事。前几天，我的朋友给我发了这样一个信息\n");
+  printf("他居然让我给她发万圣节糖果，否则会让我“后悔”，说会有很恐怖的事发生。接着又来一句穷人专供补救措施，只要回复“vbndkabfvjkfdbjkdfjnjklfdnsbjfdnsjbndjkmbglmdfbkgnfkbgfnkmk”的逆序就可以搞定");
+  printf("我笑了，不就是几个糖果吗？简单！所以聪明的你，一定有办法将那一串乱码逆序的对吧？让我们一起来想办法！");
+  printf("麻烦你给我数数有多少个字母吗？\n");
+  x = 0;
+ 
+  scanf("%d",x);
+  
+  if(x != 60);
+    printf("你就不能认真点吗？还是说你真的数不到一块去？\n");
+  else
+  {
+    printf("谢谢，我们开始吧！\n");
+    h =h+1;
+  }
+  printf("先这样，在那样，最后做一点小修饰，完成！\n");
+  int j,i;
+  char a[60];
+  printf("麻烦帮我输入这些字母好吗");
+  
+  for(i=0;i<=59;i++)
+    scanf("%s",a[i]);
+  
+  for(j=59;j>=0;j++)
+    printf("%c",a[j]);
+  printf("勇士，你真的很聪敏呢，要知道这个问题可是困扰了我一下午！\n");
+  printf("为了奖励你，你的名字被我找回来了，激动吗狗蛋，不,%s\n"answer[0]);
+  printf("现在你可以和我登上路途了，首先我们去哪里呢？\n");
+  printf("a荒郊野外      b大漠黄沙\n");  
+  printf("c贫民窟        d富豪的办公室\n");
+  scanf("%s",answer[1]);
+  switch(answer[0])
+  {
+    case'A'
+    case'a':
+      printf("你来到了荒郊野外，路途上遇到了很多猛兽，不出意外的，你成为了“food”\n");
+      break;
+    case'B'
+    case'b':
+      printf("你甚至没有达到哪里，就已经饥餐露宿而死\n");
+      break;
+     case'C'
+    case'c':
+      printf("你来到了这里，简单，快乐，幸福夫人生活了一辈子，果然男人的快乐就是这么简单（ps：我就不信你会无聊到是个女的）\n");
+      break;
+    case'd':
+    case'D'
+      printf("啊！？你是。。。%s吗？你怎么这个样子？\n");
+      printf("怎么回事！这竟然是你以前的同学，还是超级低调又朴素的路人甲同学！他尽然是一位名不见经传老板！\n");
+      printf("你尴尬羞愧而死\n");
+      break;
+   }
+   printf("嘿，朋友，别生气，毕竟这样显得真实一点。你知道的，这就是**的生活与现实啊****\n");
+   printf("你不开心的话，游戏到这里就结束了吧，毕竟只是某个人拿来练手的无赖代码，这个小游戏，说现实的，可能那个人自己敲完之后都不会瞅一眼的。\n");
+   printf("再见，如果我有幸能看见人的交互的话\n");
+   return 0；
+   }
+   
+    
+  //读入字符串，排序字符串
+  //一直都听说指针是个分水岭，我就来预习预习。
+  #include<stdio.h>
+  #include<string.h>
+  #define SIZE 81   /*限制字符串长度，包括\0*/
+  #define LIM 20 /*可读入最多行数*/
+  #define HALT ""  /*空字符停止输入*/
+  void stsrt(char *srings [],int num); /*字符串排序*/
+  char * s_gets(char * st,int n);
+  
+  int mian(void)
+  {
+    char input[LIM][SIZE];   /*储存输入的数组 */
+    char *ptstr[LIM];     /*内含指针变量的数组 */
+    int ct =0;  /*输入计数*/
+    int k;  /*输出计数*/
+    
+    printf("input up to %d lines,and i will sort them.\n",LIM);//切换中英实在是难受
+    printf("to stop ,press the enter key at a lines's start.\n");
+    while(ct< LIM&& s_gets(input[ct],SIZE)!=NULL&& input[ct][0]!= '\0')
+    {
+      ptstr[ct] = input[ct]; /*设置指针指向字符串*/
+      ct++;
+    }
+  start(prstr,ct); /*字符串排序函数*/
+  puts("\nHere's the sorted list:\n");
+  for (k = 0;k< ct;k++)
+    puts(ptstr[k]);  /*排序后的指针*/
+    
+    return 0;
+  }
+  
+  /*字符串-指针-排序函数*/
+  void stsrt(char *strings [],int num)
+  {
+    char *temp;
+    int top,seek;
+    
+    for(top = 0;top<num-1;top++)
+      for(seek = top +1;seek<num;seek++)
+        if(strcmp(strings[tops],strings[seek])>0)
+        {
+          temp = strings[top];
+          strings[top]=strings[seek];
+          strings[seek] = temp;
+        }
+  }
+  char * s_gets(char * st,int n)
+  {
+    char * ret_val;
+    int i =0;
+    
+    ret_val = fgets(sst,n,stdin);
+    if (ret_val)
+    {
+      while(st[i] != '\n'&&st[i] !='0')
+        i++;
+      if(st[i]=='\n')
+        st[i] = '\0';
+      else
+        while (gether() !='\n')
+            conitnue;
+    }
+    return ret_val;
+  }
+    
+
+//数组小练习
+#include<stdio.h>
+int main()
+{
+  int x,y;
+  char a[9][4];
+  for(x = 9;x>=0;x--)
+  {
+    a[x][0] == x*x;
+    printf("%d",a[x][5]);
+  }
+
+  for(y=0;y<=9;y++)
+  {
+    a[y][1]  == 10-x;
+    printf("%d",a[y][1]);
+  }
+ 
+  for(x=0;x<=9;x++)
+  {
+    scanf("%s",a[x][2]);//输入小写英文字母
+    printf("%s",a[x][2]+32);  
+  }
+  
+  char yu[9];
+  a[9][3] = {23,34,35,54,56,76,17,87,67,70}
+  for(y=0;y<=9;y++)
+  {
+    printf("%d",a[9][y] % 7);
+    yu[y] = a[y][4]%7;
+  }
+  if(a[9][3] <=10-yu[4])
+    a[9][4] = {1,2,3,4,5,6,7,8,9,10};
+  else
+    a[9][4] = {10,9,8,7,6,5,4,3,2,1};
+  for(y=0;y<=9;y++)
+  printf("%d",a[y][4]);
+
+  return 0;
+}
+
+//实用，房费问题
+#include<stdio.h>
+#include"hotel.h"//接下来的一段
+
+int main()
+{
+  int ns;
+  double hotel_rate;
+  int code;
+  
+  while((code = menu())!= QUIT)
+  {
+    switch(code)
+    {
+      case 1: hotel_rate = HOTEL1;
+        break;
+      case 2: horel_rate = HOTEL2;
+        break;
+      case 3: hotel_rate = HOTEL3;
+        break;
+      case 4: hotel_rate = HOTEL4;
+        break;
+      default: hotel_rate = 0.0;
+                printf("错误\n");
+                break;
+    }
+    ns = getnights();
+    showprice(hotel_rate,ns);
+  }
+  printf("谢谢，再见\n");
+  
+  return 0;
+}
+
+
+//酒店管理函数
+#include<stdio.h>
+#include<hotel.h>
+int menu()
+{
+  int code, status;
+  
+  printf("\n%s%s\n",STARS,STARS);
+  printf("酒店类型\n");
+  printf("1 fairfiled      2 olympic\n");
+  printf("3 chert plaza     4 stockton\n");
+  printf("5 quit\n");
+  printf("%s%s\n",STARS,STARS);
+  while((status = scanf("%d",&code))!=1||(code<1||code>5))
+  {
+    if(status != 1)
+      scanf("%*s");
+    printf("请正确输入\n");
+  }
+  
+  return code;
+}
+
+int getnights()
+{
+  int ns;
+  
+  printf("住几夜？\n");
+  while(scanf("%d",&ns != 1))
+  {
+  scanf("%*s");
+  printf("请正确输入\n");
+  }
+  return ns;
+}
+    
+  void showprice(double rate,int ns)
+  {
+    int n;
+    double total =0.0;
+    double factor = 1.0;
+    
+    dor(n =1; n<= ns;n++,factor *= DISCOUNT)
+      total += rate * factor;
+    printf("总计$%0.2f.\n",total);
+  }
+            
+ #include<stdio.h>
+ int mian
+ {
+ int c;
+  int *p1 = c;
+  c = 3;
+  *p1 = 3+3;
+  printf("%d",c);
+  
+  return 0;
+ }
+      
+      
+      
+      
+      
+      
+      
+      
+      
