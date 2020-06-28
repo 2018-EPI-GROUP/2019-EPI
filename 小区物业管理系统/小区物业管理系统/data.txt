@@ -1,0 +1,36 @@
+Total number:5
+Order Number:1
+Name:a
+Tel:13997849488
+Address:xi'an
+Charge for Electricity:400
+Charge for Water:192
+Charge for Gas:255
+Order Number:2
+Name:b
+Tel:18197849488
+Address:xian
+Charge for Electricity:20
+Charge for Water:60
+Charge for Gas:-8
+Order Number:3
+Name:c
+Tel:12435
+Address:xian
+Charge for Electricity:78
+Charge for Water:7485
+Charge for Gas:485
+Order Number:4
+Name:john
+Tel:1243563
+Address:xian
+Charge for Electricity:56
+Charge for Water:23
+Charge for Gas:-5
+Order Number:5
+Name:wys
+Tel:2354365
+Address:beijing
+Charge for Electricity:23
+Charge for Water:432
+Charge for Gas:23

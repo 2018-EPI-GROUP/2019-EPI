@@ -1,0 +1,102 @@
+﻿  源.cpp
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(26): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: 参见“fopen”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(27): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: 参见“fscanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(35): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: 参见“fscanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(36): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: 参见“fscanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(37): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: 参见“fscanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(38): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: 参见“fscanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(39): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: 参见“fscanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(40): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: 参见“fscanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(41): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: 参见“fscanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(64): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: 参见“fopen”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(70): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: 参见“fscanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(71): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: 参见“fscanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(63): warning C4101: “totalnum”: 未引用的局部变量
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(63): warning C4101: “i”: 未引用的局部变量
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(93): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: 参见“fopen”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(122): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: 参见“fopen”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(148): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(150): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(152): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(154): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(156): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(158): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(145): warning C4101: “number”: 未引用的局部变量
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(180): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(185): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(191): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(193): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(195): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(197): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(199): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(201): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(214): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(256): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(263): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(290): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(317): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(344): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(435): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(494): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(507): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(602): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(609): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(621): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(632): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(645): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(656): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(694): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(701): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(707): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(715): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(673): warning C4101: “ans”: 未引用的局部变量
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(674): warning C4101: “number”: 未引用的局部变量
+d:\文件\大学\课程文件\c语言课设\小区物业管理系统\小区物业管理系统\源.cpp(672): warning C4101: “i”: 未引用的局部变量
+  小区物业管理系统.vcxproj -> D:\文件\大学\课程文件\C语言课设\小区物业管理系统\Debug\小区物业管理系统.exe
